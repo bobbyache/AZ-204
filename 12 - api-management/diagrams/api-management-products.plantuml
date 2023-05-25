@@ -1,0 +1,41 @@
+@startuml "API Management Products"
+
+allowmixing
+
+class Product {
+    Title
+    Description
+    Terms of Use
+}
+
+entity "Open Product" as open
+note right
+    Approval not required
+end note
+entity "Protected Product" as protected
+note left
+    Approval required
+end note
+entity api1
+entity api2
+entity "Subscription" as sub 
+
+control "packages" as packages
+control "approve" as approve
+
+Product - packages
+packages -up- api1
+packages -up- api2
+
+Product <|-down- open
+Product <|-left- protected
+
+'product - protected
+protected -down- approve
+approve - sub
+
+
+
+
+
+@enduml

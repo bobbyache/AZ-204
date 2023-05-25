@@ -1,0 +1,27 @@
+@startmindmap
+* Azure Event Hubs
+** "Front door" for an event pipeline
+** Event Ingestor
+*** Component or service between event publishers and event consumers
+** Unified streaming platform
+*** Time retention buffer
+*** Decoupling event producers from event consumers
+** Fully managed Platform-as-a-Service (PaaS)
+*** Little configuration or management overhead
+*** Focus on business solutions
+** Event Hubs for Apache Kafka ecosystems
+*** PaaS Kafka experience
+*** No need to manage, configure, or run clusters
+** Partitioned consumer model
+*** Enables multiple applications to process the stream concurrently
+** Data capture
+*** Near-real time
+**** Azure Blob storage
+**** Azure Data Lake Storage
+*** Long-term retention or micro-batch processing
+** Scaling options
+*** Auto-inflate
+*** Scale number of throughput units
+** Rich ecosystem
+*** Enables Apache Kafka clients and applications to talk to Event Hubs
+@endmindmap

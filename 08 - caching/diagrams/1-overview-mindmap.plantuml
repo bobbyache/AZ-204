@@ -1,0 +1,50 @@
+@startmindmap
+* Caching
+** Technique to improve performance and scalability
+** Copies frequently accessed data to fast storage
+*** Located close to the application
+*** Significantly improves response times
+** Azure Cache for Redis
+*** In-memory data store based on Redis software
+*** Improves performance and scalability
+*** Processes large volumes of application requests
+**** Keeps frequently accessed data in server memory
+** Redis
+*** Critical low-latency and high-throughput data storage solution
+*** Modern applications
+** Redis options in Azure Cache for Redis
+*** Redis open-source (OSS Redis)
+*** Redis Enterprise (commercial product)
+** Cache-aside pattern
+*** Loads data into cache only as needed
+*** Updates cache when system makes changes to data
+**** Distributed to other clients
+** In-memory cache for static content
+*** Provides quick access to static items
+*** Headers, footers, banners, etc.
+** User history data and cookies
+*** In-memory cache association with user information
+*** Faster than interacting with a full relational database
+** Task queuing
+*** Deferring work for longer running operations
+*** Processed in sequence by another server
+** Batch commands as a single transaction
+*** Supported by Azure Cache for Redis
+** Azure Cache for Redis tiers
+*** Basic Tier
+**** OSS Redis cache on a single VM
+**** Suitable for development/test and noncritical workloads
+*** Standard Tier
+**** OSS Redis cache on two VMs in a replicated configuration
+*** Premium Tier
+**** High-performance OSS Redis caches
+**** Higher throughput, lower latency, better availability, and more features
+*** Enterprise Tier
+**** High-performance caches powered by Redis Enterprise software
+**** Redis modules support (RediSearch, RedisBloom, RedisTimeSeries)
+**** Higher availability than the Premium tier
+*** Enterprise Flash Tier
+**** Cost-effective large caches powered by Redis Enterprise software
+**** Extends Redis data storage to nonvolatile memory
+**** Reduces overall per-GB memory cost
+@endmindmap

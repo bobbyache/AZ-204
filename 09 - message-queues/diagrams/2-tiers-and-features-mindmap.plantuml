@@ -1,0 +1,51 @@
+@startmindmap
+* Explore Azure Service Bus
+** Microsoft Azure Service Bus is a fully managed enterprise integration message broker
+*** Service Bus can decouple applications and services
+*** Data is transferred between different applications and services using messages
+*** A message is a container decorated with metadata and contains data
+*** The data can be any kind of information, including structured data encoded with JSON, XML, Apache Avro, Plain Text
+** Service Bus tiers
+*** Premium tier provides high throughput, predictable performance, fixed pricing, and the ability to scale workload up or down
+*** Standard tier provides variable throughput, variable latency, and pay-as-you-go pricing
+*** Premium tier supports message size up to 100 MB, while the standard tier supports message size up to 256 KB
+** Common messaging scenarios
+*** Messaging: Transfer business data, such as sales or purchase orders, journals, or inventory movements
+*** Decouple applications: Improve reliability and scalability of applications and services, allowing them to operate independently
+*** Topics and subscriptions: Enable 1:n relationships between publishers and subscribers
+*** Message sessions: Implement workflows that require message ordering or message deferral
+
+* Service Bus
+** First-in, first-out (FIFO) guarantee
+*** Sessions
+** Autoforwarding feature
+*** Queue or Subscription chaining
+*** Same namespace
+** Dead-letter queue (DLQ)
+** Delayed processing
+*** Scheduled job
+** Defer retrieval
+** Client-side batching
+** Transaction
+*** Grouping operations
+*** Execution scope
+** Subscribers
+*** Subscription rules
+** Autodelete on idle
+*** Queue deletion
+*** Idle interval
+** Duplicate detection
+*** Resend message
+*** Discard duplicate copies
+** Security protocols
+*** Shared Access Signatures (SAS)
+*** Role Based Access Control (RBAC)
+*** Managed identities for Azure resources
+** Geo-disaster recovery
+*** Continuation of data processing
+*** Different region or datacenter
+** Protocols
+*** AMQP 1.0
+*** HTTP/REST
+
+@endmindmap

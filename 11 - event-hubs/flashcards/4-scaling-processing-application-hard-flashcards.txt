@@ -1,0 +1,33 @@
+How can you scale your event processing application?|You can run multiple instances of the application and have them balance the load among themselves.
+What did EventProcessorHost allow you to do in the older versions?|EventProcessorHost allowed you to balance the load between multiple instances of your program and checkpoint events when receiving.
+What allows you to do the same in the newer versions (5.0 onwards)?|EventProcessorClient (.NET and Java), or EventHubConsumerClient (Python and JavaScript) allows you to do the same.
+What is the key to scale for Event Hubs?|The key to scale for Event Hubs is the idea of partitioned consumers.
+How does the partitioned consumer pattern enable high scale?|The partitioned consumer pattern enables high scale by removing the contention bottleneck and facilitating end to end parallelism.
+What is an example scenario mentioned in the content?|An example scenario is a home security company that monitors 100,000 homes.
+What does the company provide for residents?|The company provides a website for residents to monitor the activity of their home in near real time.
+Where does each sensor push data?|Each sensor pushes data to an event hub.
+How is the event hub configured?|The event hub is configured with 16 partitions.
+What is needed on the consuming end?|On the consuming end, a mechanism is needed to read the events, consolidate them, and dump the aggregate to a storage blob.
+What requirements must the scenario handle when designing the consumer in a distributed environment?|The scenario must handle requirements such as scale and load balance when designing the consumer in a distributed environment.
+When would the operator increase the number of consumer instances?|The operator would increase the number of consumer instances when a new sensor type (e.g., a carbon monoxide detector) is added to each home and the number of events increases.
+What can the pool of consumers do in case of operator-triggered increase in consumer instances?|The pool of consumers can rebalance the number of partitions they own to share the load with the newly added consumers in case of an operator-triggered increase in consumer instances.
+What functionality do Azure Event Hubs SDKs provide?|The Azure Event Hubs SDKs provide event processor client functionality.
+What are the recommended use cases for the event processor client?|The event processor client is recommended for reading and processing events.
+How does an event processor claim ownership of partitions?|An event processor claims ownership of partitions by adding or updating an entry in a checkpoint store.
+What is the responsibility of an event processor instance?|An event processor instance owns and processes events from one or more partitions.
+How is the ownership of partitions distributed among active event processor instances?|The ownership of partitions is evenly distributed among all the active event processor instances associated with an event hub and consumer group combination.
+What information do you specify when creating an event processor?|When creating an event processor, you specify the functions that process events and errors.
+What does each call to the function that processes events deliver?|Each call to the function that processes events delivers a single event from a specific partition.
+What should you do to ensure every message is processed at least once?|To ensure every message is processed at least once, you need to write your own code with retry logic.
+What is the recommended approach for processing events?|The recommended approach is to do things relatively fast and perform as little processing as possible.
+What is the suggested setup for writing to storage and doing routing?|It's better to use two consumer groups and have two event processors for writing to storage and doing routing.
+What is checkpointing in event processing?|Checkpointing is the process of marking or committing the position of the last successfully processed event within a partition.
+Where is checkpointing typically done?|Checkpointing is typically done within the function that processes the events on a per-partition basis within a consumer group.
+What happens if an event processor disconnects from a partition?|If an event processor disconnects from a partition, another instance can resume processing the partition at the checkpoint.
+What information does the processor pass when connecting to the event hub?|When the processor connects, it passes the offset to the event hub to specify the location at which to start reading.
+What is the purpose of checkpointing in event processing?|Checkpointing is used to mark events as "complete" by downstream applications and provide resiliency when an event processor goes down.
+How can you access older data using checkpointing?|You can access older data by specifying a lower offset from the checkpointing process.
+How is the function that processes events called by default?|By default, the function that processes events is called sequentially for a given partition.
+How are events processed concurrently in different partitions?|Events from different partitions can be processed concurrently.
+How do event processor instances communicate with the checkpoint store?|Event processor instances communicate with the checkpoint store periodically to update their processing state and learn about other active instances.
+How do event processor clients work within a consumer group?|Event processor clients work cooperatively within the context of a consumer group for a given event hub.

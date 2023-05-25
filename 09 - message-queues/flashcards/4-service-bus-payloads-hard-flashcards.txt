@@ -1,0 +1,16 @@
+What does the metadata in a Service Bus message describe?|The metadata in a Service Bus message describes the payload and provides handling instructions to Service Bus and applications.
+What are the two sets of properties in a Service Bus message?|The two sets of properties in a Service Bus message are broker properties and user properties.
+How can applications route messages to particular destinations?|Applications can route messages to particular destinations using broker properties such as To, ReplyTo, ReplyToSessionId, MessageId, CorrelationId, and SessionId.
+How does the session feature enable multiplexing of related messages?|The session feature enables multiplexing of related messages by routing messages with matching SessionId values to a specific receiver.
+How can multiple publishers share a reply queue in the multiplexed request/reply pattern?|Multiple publishers can share a reply queue by setting ReplyToSessionId to instruct the consumer(s) to copy that value into the SessionId property of the reply message.
+How can routing across Service Bus namespaces be performed?|Routing across Service Bus namespaces can be performed using Azure LogicApps.
+How can applications take explicit control of object serialization?|Applications can take explicit control of object serialization by turning their object graphs into streams before including them in a message.
+What is the suggested format for describing the payload in the ContentType property?|The suggested format for describing the payload in the ContentType property is a MIME content-type description according to IETF RFC2045.
+How are objects serialized in the AMQP protocol?|Objects are serialized into an AMQP graph of ArrayList and IDictionary<string,object> objects in the AMQP protocol.
+What should applications do to decode AMQP payloads with HTTP clients?|To decode AMQP payloads with HTTP clients, applications should reverse the operation of object serialization on the receiver side.
+What are the routing patterns in Service Bus message handling?|The routing patterns in Service Bus message handling include simple request/reply, multicast request/reply, multiplexing, and multiplexed request/reply.
+How is payload handled by Service Bus on the service-side?|Payload is handled as an opaque, binary block by Service Bus on the service-side.
+What should applications rely on for routing instead of the To property?|Applications should rely on user properties for routing instead of the To property.
+How does the .NET Framework version of Service Bus API support creating BrokeredMessage instances?|The .NET Framework version of Service Bus API supports creating BrokeredMessage instances by passing arbitrary .NET objects into the constructor.
+How are objects serialized in the legacy SBMP protocol?|Objects are serialized with the default binary serializer or with a serializer that is externally supplied in the legacy SBMP protocol.
+How can AMQP clients retrieve objects from serialized payloads?|AMQP clients can retrieve objects from serialized payloads using the GetBody<T>() method, supplying the expected type.

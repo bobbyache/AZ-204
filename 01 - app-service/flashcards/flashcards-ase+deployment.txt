@@ -1,0 +1,27 @@
+What is the purpose of the App Service Environment (ASE)?|ASE provides a fully isolated and dedicated environment for running App Service apps at high scale.
+How can ASEs integrate with other resources?|ASEs can run within a Virtual Network (VNet), allowing easy integration with other resources in that network.
+What types of workloads are ASEs suitable for?|ASEs are suitable for workloads that require high scale, network isolation, secure access, and high memory utilization.
+What are the benefits of using an ASE?|Benefits of ASEs include scalability, network isolation, secure access, and the ability to configure a secure architecture.
+What are the deployment types for ASEs?|There are two deployment types: External ASE and ILB ASE.
+What is the difference between External ASE and ILB ASE?|External ASE exposes ASE-hosted apps on an internet-accessible IP address, while ILB ASE exposes them on an IP address within the VNet using an internal load balancer (ILB).
+What are some options for automated deployment?|Azure DevOps Services, GitHub, Bitbucket
+Name some methods for manual deployment.|Git, CLI, Zip Deploy, FTP/S
+Why is it recommended to use deployment slots?|To minimize downtime during production builds by swapping staging and production slots.
+What are the benefits of automated deployment?|Fast and repetitive deployment of new features and bug fixes.
+What are the options for manual deployment?|Git, CLI, Zip Deploy, FTP/S
+What are the tools that support continuous deployment?|Private Git repositories, GitHub, Bitbucket, Azure repos.
+What is the best practice when deploying?|To make use of deployment slots.
+What is automated deployment?|Automated deployment is a process used to push out new features and bug fixes in a fast and repetitive pattern with minimal effect on end users.
+How does automated deployment minimize the impact on end users?|Automated deployment minimizes the impact on end users by pushing out new features and bug fixes in a fast and repetitive pattern.
+What are the options for automated deployment in Azure?|The options for automated deployment in Azure are Azure DevOps Services, GitHub, and Bitbucket.
+How can you deploy your code automatically from GitHub to Azure?|You can deploy your code automatically from GitHub to Azure by connecting your GitHub repository to Azure for automated deployment. Any changes you push to your production branch on GitHub will be automatically deployed.
+What are the options for manual deployment to Azure?|The options for manual deployment to Azure are Git and FTP/S.
+How can you manually push your code to Azure using Git?|You can manually push your code to Azure using Git by adding the Git URL of your App Service web app as a remote repository and pushing your code to that repository.
+Why should you use deployment slots when deploying a new production build?|You should use deployment slots when deploying a new production build to eliminate downtime. Deploying to a staging environment and then swapping staging and production slots warms up the necessary worker instances to match your production scale.
+What is the benefit of swapping staging and production slots when using deployment slots?|Swapping staging and production slots when using deployment slots eliminates downtime by warming up the necessary worker instances to match your production scale.
+What does Azure App Service provide in terms of authentication and authorization support?|Azure App Service provides built-in authentication and authorization support, allowing you to sign in users and access data in your web app, RESTful API, mobile back end, and Azure Functions.
+How does built-in authentication in Azure App Service save time and effort?|Built-in authentication in Azure App Service saves time and effort by providing out-of-the-box authentication with federated identity providers, reducing the need for writing extensive code for authentication and allowing you to focus on other aspects of your application.
+Are you required to use App Service for authentication and authorization?|No, you are not required to use App Service for authentication and authorization. You can use other web frameworks with security features or write your own utilities for more flexibility if needed.
+What options do you have if you need more flexibility than what App Service provides for authentication and authorization?|If you need more flexibility than what App Service provides for authentication and authorization, you can write your own utilities to implement the desired functionality.
+How does App Service handle user identities and authentication flow?|App Service uses federated identity, where a third-party identity provider manages the user identities and authentication flow.
+What is the role of a third-party identity provider in App Service?|In App Service, a third-party identity provider manages the user identities and authentication flow, handling the authentication process and verifying user credentials.

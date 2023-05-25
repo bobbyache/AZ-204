@@ -1,0 +1,31 @@
+Azure supports two types of queue mechanisms: Service Bus queues and Storage queues.|Azure supports two types of queue mechanisms: Service Bus queues and Storage queues.
+Service Bus queues are part of a broader Azure messaging infrastructure that supports _______.|Service Bus queues are part of a broader Azure messaging infrastructure that supports queuing, publish/subscribe, and more advanced integration patterns.
+Service Bus queues are designed to integrate applications or application components that may span multiple _______.|Service Bus queues are designed to integrate applications or application components that may span multiple communication protocols, data contracts, trust domains, or network environments.
+Storage queues allow you to store _______.|Storage queues allow you to store large numbers of messages.
+You can access messages from anywhere in the world via authenticated calls using _______.|You can access messages from anywhere in the world via authenticated calls using HTTP or HTTPS.
+A queue message can be up to _______ in size.|A queue message can be up to 64 KB in size.
+Queues are commonly used to create _______.|Queues are commonly used to create a backlog of work to process asynchronously.
+Solution architects and developers should consider these recommendations when determining which _______ fits the purpose of a given solution.|Solution architects and developers should consider these recommendations when determining which queuing technology fits the purpose of a given solution.
+Service Bus queues are suitable when your solution needs to receive messages without _______.|Service Bus queues are suitable when your solution needs to receive messages without having to poll the queue.
+Service Bus queues provide _______ delivery.|Service Bus queues provide guaranteed first-in-first-out (FIFO) ordered delivery.
+Service Bus queues support _______ detection.|Service Bus queues support automatic duplicate detection.
+Service Bus queues allow processing messages as _______.|Service Bus queues allow processing messages as parallel long-running streams.
+Service Bus queues are suitable when your solution requires _______ behavior.|Service Bus queues are suitable when your solution requires transactional behavior and atomicity.
+Storage queues are suitable when your application must store over _______ in a queue.|Storage queues are suitable when your application must store over 80 gigabytes of messages in a queue.
+Storage queues allow tracking progress for processing a _______.|Storage queues allow tracking progress for processing a message in the queue.
+Storage queues provide server side logs of all _______ against your queues.|Storage queues provide server side logs of all of the transactions executed against your queues.
+Azure Service Bus queues are ideal for scenarios where _______.|Azure Service Bus queues are ideal for scenarios where decoupling applications and enabling reliable messaging are required.
+Service Bus queues allow _______ and _______ pattern.|Service Bus queues allow queuing and publish/subscribe pattern.
+Storage queues provide _______ and _______ of messages.|Storage queues provide storage and retrieval of messages.
+Storage queues are suitable when you need _______ messaging.|Storage queues are suitable when you need simple point-to-point messaging.
+Service Bus queues support _______ for messages.|Service Bus queues support session state for messages.
+Storage queues have a _______ limit on the message size.|Storage queues have a 64 KB limit on the message size.
+Service Bus queues offer _______ features such as _______ detection.|Service Bus queues offer advanced features such as duplicate detection.
+Storage queues are designed for _______-term _______ storage.|Storage queues are designed for short-term asynchronous storage.
+Service Bus queues provide _______ transaction support.|Service Bus queues provide distributed transaction support.
+Storage queues offer _______ for scaling _______ workloads.|Storage queues offer elasticity for scaling out workloads.
+Service Bus queues guarantee _______ for _______ delivery.|Service Bus queues guarantee ordering for ordered delivery.
+Storage queues provide _______ throughput for _______ scenarios.|Storage queues provide high throughput for high-scale scenarios.
+Service Bus queues support _______ messaging _______ via REST APIs.|Service Bus queues support brokered messaging protocols via REST APIs.
+Storage queues can be accessed using _______-level _______ keys.|Storage queues can be accessed using account-level access keys.
+Service Bus queues are designed for _______ integration _______ across platforms.|Service Bus queues are designed for seamless integration capabilities across platforms.

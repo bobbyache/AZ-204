@@ -1,0 +1,9 @@
+What does Azure Event Hubs represent?|Azure Event Hubs represents the "front door" for an event pipeline.
+What is an event ingestor?|An event ingestor is a component or service that sits between event publishers and event consumers.
+What does Event Hubs provide?|Event Hubs provides a unified streaming platform with time retention buffer, decoupling event producers from event consumers.
+How does Event Hubs simplify management?|Event Hubs is a fully managed Platform-as-a-Service (PaaS) with little configuration or management overhead, allowing you to focus on your business solutions.
+What does Event Hubs for Apache Kafka ecosystems offer?|Event Hubs for Apache Kafka ecosystems gives you the PaaS Kafka experience without having to manage, configure, or run your clusters.
+How does Event Hubs handle multiple applications processing the stream concurrently?|Event Hubs uses a partitioned consumer model, enabling multiple applications to process the stream concurrently.
+Where can you capture your data in near-real time?|You can capture your data in near-real time in Azure Blob storage or Azure Data Lake Storage for long-term retention or micro-batch processing.
+How can you scale the number of throughput units in Event Hubs?|Scaling options, like Auto-inflate, scale the number of throughput units to meet your usage needs.
+What does Event Hubs for Apache Kafka ecosystems enable?|Event Hubs for Apache Kafka ecosystems enables Apache Kafka clients and applications to talk to Event Hubs.

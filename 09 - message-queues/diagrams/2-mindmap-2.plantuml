@@ -1,0 +1,16 @@
+@startmindmap
+* Compliance with standards and protocols
+
+** Primary wire protocol
+*** Advanced Messaging Queueing Protocol (AMQP) 1.0
+
+** Service Bus Premium
+*** Java/Jakarta EE Java Message Service (JMS) 2.0 API
+
+** Client libraries
+*** Azure Service Bus for .NET
+*** Azure Service Bus libraries for Java
+*** Azure Service Bus provider for Java JMS 2.0
+*** Azure Service Bus Modules for JavaScript and TypeScript
+*** Azure Service Bus libraries for Python
+@endmindmap

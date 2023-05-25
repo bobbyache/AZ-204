@@ -1,0 +1,15 @@
+What does a stored access policy provide an extra level of control over?|Service-level shared access signatures (SAS) on the server side.
+What does establishing a stored access policy do?|It groups SAS and provides more restrictions for signatures that are bound by the policy.
+Which storage resources support stored access policies?|Blob containers, file shares, queues, and tables.
+What does the access policy for a SAS consist of?|The start time, expiry time, and permissions for the signature.
+How can you specify the parameters for a SAS and a stored access policy?|You can specify all parameters on the signature URI or all parameters within the stored access policy, or a combination of the two, but you can't specify a given parameter on both the SAS token and the stored access policy.
+How can you create or modify a stored access policy?|By calling the Set ACL operation for the respective resource type with a request body that specifies the terms of the access policy.
+How long does it take for a stored access policy to take effect?|It may take up to 30 seconds for the stored access policy to become active.
+Can table entity range restrictions be specified in a stored access policy?|No, table entity range restrictions (startpk, startrk, endpk, and endrk) cannot be specified in a stored access policy.
+How can you modify the parameters of a stored access policy?|By calling the access control list operation for the resource type to replace the existing policy.
+How can you revoke a stored access policy?|By deleting it, renaming it by changing the signed identifier, or changing the expiry time to a value in the past.
+What happens when you change the signed identifier of a stored access policy?|It breaks the associations between any existing signatures and the stored access policy.
+What happens when you change the expiry time of a stored access policy to a value in the past?|Any associated signatures expire.
+How does deleting or modifying the stored access policy affect the associated SAS?|It immediately affects all of the SAS associated with the policy.
+How can you remove a single access policy?|By calling the resource's Set ACL operation and passing in the set of signed identifiers that you wish to maintain on the container.
+How can you remove all access policies from a resource?|By calling the Set ACL operation with an empty request body.

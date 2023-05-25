@@ -1,0 +1,23 @@
+@startmindmap "API Management"
+
++ API Management
+++ Benefits
++++_ Facade for backend services
++++_ Caches responses to improve performance
++++_ Limit (throttle) number of API calls.
++++_ Secure the APIs and granting of access
++++_ Support for creating product using API groups
++++_ Developer portal for developers to consume
++++_ Provides insight into utilization of APIs
+++ Components
++++ Developer Portal
++++ Gateway
++++ API Management Service
+++++_ Define a new API (HTTP, Websocket, GraphQL)
+++++_ Create from definition (OpenAPI, WSDL)
+++++_ Create from Azure resource (Logic App, App Service, Function App)
+++++_ Echo API automatically configured
++++ Management services
+
+
+@endmindmap

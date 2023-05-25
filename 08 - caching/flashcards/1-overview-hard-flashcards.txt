@@ -1,0 +1,22 @@
+What technique aims to improve the performance and scalability of a system?|Caching
+What does Azure Cache for Redis provide?|An in-memory data store based on Redis software
+What options does Azure Cache for Redis offer as a managed service?|Redis open-source (OSS Redis) and Redis Enterprise (a commercial product)
+How is data loaded into the cache using the cache-aside pattern?|As needed
+What type of content can an in-memory cache provide quick access to?|Static content like headers, footers, and banners
+Why is using an in-memory cache faster than interacting with a full relational database?|It associates information with a user without storing excessive data in a cookie
+When are tasks added to a queue?|When the operations associated with the request take time to execute
+What does Azure Cache for Redis support for executing a batch of commands?|Executing them as a single transaction
+What is the Basic Tier of Azure Cache for Redis suitable for?|Development/test and noncritical workloads
+How many VMs are used in the Standard Tier of Azure Cache for Redis?|Two VMs in a replicated configuration
+What is the purpose of Azure Cache for Redis?|To improve the performance and scalability of an application
+What is Redis?|Redis is an in-memory data store software
+What are the benefits of using Redis for backend data stores?|Improved performance, scalability, and the ability to process large volumes of application requests
+What are the two options for Redis products in Azure Cache for Redis?|Redis open-source (OSS Redis) and Redis Enterprise
+What is the advantage of using Azure Cache for Redis for static content?|Quick access to static content compared to backend datastores
+What are some examples of user history data that can be associated with cookies?|Shopping carts and other user-related data
+What is the drawback of storing too much information in a cookie?|Negative impact on performance as the cookie size grows and is passed with every request
+What is the purpose of task queuing in applications?|To defer longer running operations and process them in sequence
+What is the advantage of executing a batch of commands as a single transaction in Azure Cache for Redis?|Ensuring that all commands succeed or are rolled back to the initial state
+What are the characteristics of the Premium Tier in Azure Cache for Redis?|Higher throughput, lower latency, better availability, and more features compared to Basic and Standard tiers
+What is the Enterprise Tier of Azure Cache for Redis suitable for?|High-performance applications with Redis modules support and even higher availability than the Premium tier
+What is the purpose of the Enterprise Flash Tier in Azure Cache for Redis?|To provide cost-effective large caches by extending Redis data storage to nonvolatile memory

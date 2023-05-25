@@ -1,0 +1,28 @@
+What are the different access tiers offered by Azure storage for blob object data?|Hot, Cool, Archive
+Can the access tier be set on a blob after upload?|Yes
+Can the access tier be set at the account level for all access tiers?|No, only the hot and cool access tiers can be set at the account level. The archive access tier can only be set at the blob level.
+What are the characteristics of data in the cool access tier?|Data in the cool access tier has slightly lower availability but still has high durability, retrieval latency, and throughput characteristics similar to hot data.
+Where is data in the archive access tier stored?|Data in the archive access tier is stored offline.
+What are the characteristics of the archive access tier?|The archive tier offers the lowest storage costs but also the highest access costs and latency.
+Which redundancy options are supported by the hot and cool tiers?|The hot and cool tiers support all redundancy options.
+Which redundancy options are supported by the archive tier?|The archive tier supports only LRS, GRS, and RA-GRS.
+Are data storage limits set per access tier or at the account level?|Data storage limits are set at the account level and not per access tier.
+What are the capabilities of Azure Blob storage lifecycle management policy?|The lifecycle management policy allows you to transition blobs to a cooler storage tier, delete blobs at the end of their lifecycles, define rules to be run once per day at the storage account level, and apply rules to containers or a subset of blobs using prefixes as filters.
+When is hot storage the best option?|Hot storage is the best option during the early stages when data gets frequent access.
+When is cool storage most appropriate?|Cool storage is most appropriate for occasional access.
+When is archive storage the best tier option?|Archive storage is the best tier option after the data ages over a month.
+What can lifecycle management policy rules help achieve?|Lifecycle management policy rules can help move aging data to cooler tiers and optimize storage options for performance and cost.
+Can data stored in a premium block blob storage account be tiered to Hot, Cool, or Archive using Set Blob Tier or Azure Blob Storage lifecycle management?|No, data stored in a premium block blob storage account cannot be tiered to Hot, Cool, or Archive using Set Blob Tier or Azure Blob Storage lifecycle management.
+How can you move data from a premium block blob storage account to the Hot tier in a different account?|To move data, you must synchronously copy blobs from the block blob storage account to the Hot tier in a different account using the Put Block From URL API or a version of AzCopy that supports this API.
+What does the Put Block From URL API do?|The Put Block From URL API synchronously copies data on the server, meaning the call completes only once all the data is moved from the original server location to the destination location.
+What is a lifecycle management policy?|A lifecycle management policy is a collection of rules in a JSON document.
+What does each rule definition within a policy include?|Each rule definition within a policy includes a filter set and an action set.
+What does the filter set in a rule do?|The filter set limits rule actions to a certain set of objects within a container or object names.
+What does the action set in a rule do?|The action set applies tier or delete actions to the filtered set of objects.
+How many rules can you define in a policy?|You can define up to 100 rules in a policy.
+What are the parameters of each rule within a policy?|The parameters of each rule within a policy include name, enabled, type, definition, and more.
+What do filters do in lifecycle management?|Filters limit rule actions to a subset of blobs within the storage account, and a logical AND runs on all filters if more than one is defined.
+When are actions applied to the filtered blobs?|Actions are applied to the filtered blobs when the run condition is met.
+What actions are supported by lifecycle management?|Lifecycle management supports tiering and deletion of blobs and deletion of blob snapshots.
+What happens if you define multiple actions on the same blob?|If you define multiple actions on the same blob, lifecycle management applies the least expensive action to the blob.
+What is the basis for the run conditions in lifecycle management?|The run conditions in lifecycle management are based on age, where base blobs use the last modified time and blob snapshots use the snapshot creation time to track age.

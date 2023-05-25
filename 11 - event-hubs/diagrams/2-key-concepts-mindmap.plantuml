@@ -1,0 +1,47 @@
+@startmindmap
++ Event Hubs
+++ Event Hubs Client
++++_ Primary interface for developers
++++ Dedicated to specific use
+++++_ Publishing events
+++++_ Consuming events
+++ Event Hubs Producer
++++ Source of data
+++++_ Telemetry data
+++++_ Diagnostics information
+++++_ Usage logs
+++++_ Other log data
++++ Could be...
+++++_ Embedded device solution
+++++_ Mobile device application
+++++_ Server-based business solution
+++++_ Website
+++ Event Hubs Consumer
++++ Reads information
++++ Allows processing
+++++_ Aggregation
+++++_ Computation
+++++_ Filtering
+++++_ Distribution
+++++_ Storage
++++ Could be...
+++++_ Azure Stream Analytics
+++++_ Apache Spark
+++ Partition
++++_ Ordered sequence of events
++++_ Organize data to align with\n   parallel processing required by event consumers.
++++_ Each consumer only reads a specific subset,\n   or partition, of the message stream
+++ Consumer Group
++++_ Separate, distinct view of event stream
++++_ Read stream independently and at own pace
++++ Multiple concurrent readers/consumers
+++++_ Recommended one active reader\n   per partition and consumer group combination
+++++_ Readers receive all events for the same partition
+++ Event Receivers
++++_ Entity that reads event data
++++_ Connect via AMQP 1.0 session
++++_ Kafka consumers connect via Kafka protocol 1.0 or later.
+++ Throughput Units
++++_ Control throughput capacity
++++_ Pre-purchased units of capacity
+@endmindmap

@@ -1,0 +1,29 @@
+@startmindmap "Storage Accounts"
+
++ Azure Storage Accounts
+++ Plans
+
++++ General Purpose V2
+
+++++ Tiers (Blob, Files)
++++++_ Archived - Offline (requires hydration to hot or cold)
++++++_ Cool - Pay less for storage, more for transactions
++++++_ Hot - Pay more for storage, less for transactions
+++++ Tiers (Files)
++++++_ Transaction optimized - level up from hot
+
++++ Premium
+++++_ Optimized for fast interaction
+
+++ Redundancy
++++ LRS
+++++_ 3 copies in local data center
++++ ZRS
+++++_ 3 copies across data centers in a region
++++ GRS
+++++_ 3 copies in local data center
++++ GZRS
+++++_ ???
+
+
+@endmindmap

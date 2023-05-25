@@ -1,0 +1,18 @@
+@startmindmap
+* App Service Environment (ASE)
+** Fully isolated and dedicated environment
+** High-scale running of App Service apps
+** Integration with Virtual Networks
+** Network isolation and secure access
+** Suitable for high-scale and secure workloads
+** High memory utilization
+** Pricing tier: Isolated Tier
+** Configuration of security architecture
+** Deployment in Availability Zones
+** Deployment Types
+*** External ASE
+**** Exposes apps on internet-accessible IP address
+*** ILB ASE
+**** Exposes apps on IP address within VNet
+***** Internal Load Balancer (ILB)
+@endmindmap

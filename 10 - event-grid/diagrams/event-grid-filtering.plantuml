@@ -1,0 +1,13 @@
+@startmindmap
+* Event Subscription Filtering Options
+** Event Types Filter Options
+*** Receive all event types (default)
+*** Specify certain event types
+** Subject Filtering
+*** Filter by subject starting or ending value
+** Advanced Filtering
+*** Filter by data field values
+**** Operator type
+**** Key
+**** Value or values
+@endmindmap

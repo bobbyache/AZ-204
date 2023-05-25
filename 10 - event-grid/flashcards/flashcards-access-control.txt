@@ -1,0 +1,18 @@
+Azure Event Grid allows you to control the level of access given to different users for various management operations. What are some of these operations?|List event subscriptions, create new event subscriptions, and generate keys.
+What does Azure Event Grid use to control access levels?|Azure role-based access control (Azure RBAC).
+Which roles are important for managing event subscriptions in Azure Event Grid?|Event Grid Subscription Reader and Event Grid Subscription Contributor roles.
+Do the Event Grid Subscription roles grant access for creating topics?|No, they are focused on event subscriptions and do not grant access for creating topics.
+What can you do with the Event Grid Contributor role?|Create and manage Event Grid resources.
+If you're using a non-WebHook event handler, what access do you need for that resource?|Write access.
+What permission is required to write a new subscription at the resource scope?|Microsoft.EventGrid/EventSubscriptions/Write permission.
+What is the required resource for subscribing to a system topic or a custom topic?|The required resource differs based on the type of topic.
+What are webhooks used for in Azure Event Grid?|Webhooks in Azure Event Grid allow you to receive events by receiving an HTTP request with event details.
+Why is ownership verification of the webhook endpoint important in Event Grid?|Ownership verification prevents misuse and unauthorized flooding of the endpoint with excessive events.
+Which Azure services automatically handle ownership verification for webhook endpoints?|Azure Logic Apps with Event Grid Connector, Azure Automation via webhooks, and Azure Functions with Event Grid Trigger.
+What are the two methods for validating subscriptions in Event Grid?|Event Grid offers synchronous and asynchronous handshake methods for validating subscriptions.
+Explain the synchronous handshake method for subscription validation.|In the synchronous method, Event Grid sends a validation event with a code, and the endpoint must respond with the code synchronously.
+Describe the asynchronous handshake method for subscription validation.|The asynchronous method involves a manual validation process using a validation URL provided by Event Grid.
+What is the validity duration of the validation URL in the asynchronous handshake method?|The validation URL remains valid for 5 minutes.
+What happens if the manual validation is not completed within 5 minutes in the asynchronous handshake method?|If the manual validation is not completed within 5 minutes, the subscription provisioning fails, and it needs to be recreated.
+What HTTP status code should the endpoint return for the validation event?|The endpoint should return a 200 status code for the validation event.
+Are self-signed certificates supported for validation in Event Grid?|No, self-signed certificates are not supported for validation in Event Grid.

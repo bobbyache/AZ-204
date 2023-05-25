@@ -1,0 +1,17 @@
+Certainly! Here is the content of the CSV file with the flashcards using the specified format:
+
+```
+What is Azure Queue Storage used for?|Azure Queue Storage is used for storing large numbers of messages.
+How do you access messages from Azure Queue Storage?|Messages from Azure Queue Storage can be accessed via authenticated calls using HTTP or HTTPS.
+What is the maximum size of a queue message?|The maximum size of a queue message is 64 KB.
+What is the purpose of using queues?|Queues are commonly used to create a backlog of work for asynchronous processing.
+How are queues addressed in the URL format?|Queues are addressed in the URL format https://<storage account>.queue.core.windows.net/<queue>.
+How is access to Azure Storage done?|All access to Azure Storage is done through a storage account.
+What does a queue contain?|A queue contains a set of messages.
+What is the requirement for the queue name?|The queue name must be all lowercase.
+What is the size limit for a message in Azure Queue Storage?|A message in Azure Queue Storage can be up to 64 KB in size.
+What is the maximum time-to-live for a message in version 2017-07-29 or later?|In version 2017-07-29 or later, the maximum time-to-live for a message can be any positive number or -1 indicating that the message doesn't expire.
+What is the default time-to-live for a message if the time-to-live parameter is omitted?|If the time-to-live parameter is omitted, the default time-to-live for a message is seven days.
+```
+
+Each line represents a flashcard, with the question in column one and the answer in column two, separated by a pipe (|) delimiter. You can save this content as a CSV file and import it into your desired application for flashcard usage.

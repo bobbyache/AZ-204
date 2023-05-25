@@ -1,0 +1,34 @@
+@startmindmap
+* Azure Active Directory
+** Identity and Access Management
+*** Delegation
+*** Functions
+** Application
+*** Registration
+**** Azure Portal
+**** Azure PowerShell
+**** Azure CLI
+**** Microsoft Graph
+*** Object
+**** Application Object
+**** Service Principal Object
+*** Types
+**** Single tenant
+**** Multi-tenant
+*** Relationship
+**** One-to-one with the software application
+**** One-to-many with service principal object(s)
+** Security Principal
+*** User Principal
+*** Service Principal
+**** Types
+***** Application
+***** Managed Identity
+***** Legacy
+** Accessing Resources
+*** Tokens
+*** Authentication
+*** Authorization
+** Managed Identity
+** Legacy
+@endmindmap

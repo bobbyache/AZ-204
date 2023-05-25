@@ -1,0 +1,32 @@
+@startmindmap
+
++ Event Processing
+++ Azure Event Hubs SDKs
++++ Event Processor Client
+++++ Reading and Processing Events
+++++ Cooperative Work Distribution
+++ Partition Ownership
++++ Even Distribution
++++ Checkpoint Store
++++ Load Balancing
+++ Event Processor Instance
++++ Ownership of Partitions
++++ Processing Events
+++ Receive Messages
++++ Functions for Event Processing
++++ Handling Events and Errors
++++ Ensuring Message Processing
+++ Checkpointing
++++ Marking Last Processed Event
++++ Per-Partition Basis
++++ Resuming Processing
++++ Older Data Accessibility
+++ Thread Safety
++++ Sequential Event Processing
++++ Concurrent Processing
++++ Synchronization of Shared State
+++ Recommended Practices
++++ Minimal Processing
++++ Multiple Consumer Groups and Processors
+
+@endmindmap

@@ -1,0 +1,16 @@
+What are log-based metrics translated into?|Log-based metrics are translated into Kusto queries from stored events.
+How are standard metrics stored?|Standard metrics are stored as pre-aggregated time series.
+Which type of metrics have better performance at query time?|Standard metrics have better performance at query time.
+What makes log-based metrics the superior option for data analysis and ad-hoc diagnostics?|Log-based metrics have more dimensions, which makes them the superior option for data analysis and ad-hoc diagnostics.
+How can developers send events manually?|Developers can use the SDK to send events manually by writing code that explicitly invokes the SDK.
+What does the Application Insights backend store all collected events as?|The Application Insights backend stores all collected events as logs.
+How can using logs to retain a complete set of events bring value?|Using logs to retain a complete set of events can bring great analytical and diagnostic value.
+What type of information can significantly improve visibility into the application health and usage?|Having a complete set of events can significantly improve visibility into the application health and usage.
+What techniques does Application Insights implement for telemetry volume reduction?|Application Insights implements several telemetry volume reduction techniques.
+What happens to the accuracy of metrics when the number of stored events is lowered?|Lowering the number of stored events also lowers the accuracy of the metrics.
+How are pre-aggregated metrics stored?|Pre-aggregated metrics are stored as pre-aggregated time series, and only with key dimensions.
+What are the two types of metrics that coexist in Application Insights?|Both log-based and pre-aggregated metrics coexist in Application Insights.
+What are the pre-aggregated metrics called in the Application Insights UX?|The pre-aggregated metrics are now called "Standard metrics (preview)" in the Application Insights UX.
+What applies to standard metrics sent by default in the newer SDKs?|Pre-aggregation applies to standard metrics sent by default in the newer SDKs.
+How can you achieve better performance and support near real-time dimensional alerting with SDKs that don't pre-aggregate metrics during collection?|You can achieve better performance and support near real-time dimensional alerting with SDKs that don't pre-aggregate metrics during collection by using the pre-aggregated metrics provided by the Application Insights backend.
+What is the impact of ingestion sampling on the accuracy of pre-aggregated metrics?|Ingestion sampling does not impact the accuracy of pre-aggregated metrics.

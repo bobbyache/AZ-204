@@ -1,0 +1,15 @@
+What does Azure Event Hubs enable you to automatically capture?|Azure Event Hubs enables you to automatically capture the streaming data in Event Hubs.
+What can you do with Event Hubs Capture on the same stream?|You can process real-time and batch-based pipelines with Event Hubs Capture on the same stream.
+What is Event Hubs in relation to telemetry ingress?|Event Hubs is a time-retention durable buffer for telemetry ingress, similar to a distributed log.
+How does scaling work in Event Hubs?|Scaling in Event Hubs is achieved through the partitioned consumer model.
+In what format is the captured data written?|The captured data is written in Apache Avro format.
+What can you specify with Event Hubs Capture for storing the captured data?|You can specify your own Azure Blob storage account and container or Azure Data Lake Store account for storing the captured data.
+How is capturing controlled in Event Hubs Capture?|Capturing is controlled by setting up a window with a "first wins policy."
+What does each partition do at the time of capture?|Each partition captures independently and writes a completed block blob at the time of capture.
+What does the storage naming convention include?|The storage naming convention includes {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}.
+What controls the traffic in Event Hubs?|The traffic in Event Hubs is controlled by throughput units.
+How much data can a single throughput unit allow for ingress and egress?|A single throughput unit allows 1 MB per second or 1000 events per second of ingress and twice that amount of egress.
+How many throughput units can Standard Event Hubs be configured with?|Standard Event Hubs can be configured with 1-20 throughput units.
+When does Event Hubs Capture run automatically?|Event Hubs Capture runs automatically when you send your first event.
+What does Event Hubs write when there's no data?|Event Hubs writes empty files when there's no data.
+What does Event Hubs Capture provide as a marker for batch processors?|Event Hubs Capture provides a predictable cadence and marker that can feed your batch processors.

@@ -1,0 +1,37 @@
+What is an example use case of policy expressions and the set-header policy?|An example use case is adding user data to incoming requests, such as the user ID associated with the subscription key and the region of the processing gateway.
+What is the purpose of the control flow policy?|The control flow policy conditionally applies policy statements based on the evaluation of Boolean expressions.
+What does the forward request policy do?|The forward request policy forwards the incoming request to the specified backend service.
+How does the limit concurrency policy work?|The limit concurrency policy restricts the execution of enclosed policies to a specified number of requests at a time.
+What is the function of the log to Event Hub policy?|The log to Event Hub policy sends messages to an Event Hub defined by a Logger entity for logging and analysis purposes.
+What does the mock response policy do?|The mock response policy aborts pipeline execution and returns a mocked response directly to the caller.
+How does the retry policy work?|The retry policy retries the execution of enclosed policy statements until a specified condition becomes false or the retry count is exhausted.
+What is the purpose of the choose policy?|The choose policy applies enclosed policy statements based on the evaluation of Boolean expressions, similar to if-then-else or switch constructs in programming languages.
+What are the elements included in the control flow policy?|The control flow policy includes <when/> and <otherwise/> elements for conditional execution of enclosed policies.
+What happens when the forward-request policy is removed?|Removing the forward-request policy prevents the request from being forwarded to the backend service, and outbound policies are evaluated immediately after the successful completion of inbound policies.
+How does the limit-concurrency policy handle excessive requests?|The limit-concurrency policy fails new requests immediately with a 429 Too Many Requests status code when the specified number of concurrent requests is exceeded.
+What is the purpose of the log-to-eventhub policy?|The log-to-eventhub policy is used for saving selected request or response context information in a specified format to an Event Hub for online or offline analysis.
+What are the possible response types in the mock-response policy?|The mock-response policy returns mocked responses of the highest fidelity, preferring response content examples, generating sample responses from schemas when available, and returning responses with no content when neither examples nor schemas are found.
+How does the retry policy determine the retry condition?|The retry policy executes child policies once and retries their execution until the retry condition becomes false or the specified retry count is exhausted.
+What does the return-response policy do?|The return-response policy terminates pipeline execution and returns either a default or custom response to the caller, modifying the response using context variables or policy statements.
+What is commonly used to secure access to published APIs in API Management?|Subscription keys
+What happens if a valid subscription key is not included in HTTP requests to API Management?|The calls are immediately rejected by the API Management gateway and not forwarded to the back-end services.
+What is a subscription in API Management?|A named container for a pair of subscription keys
+Can developers obtain subscriptions without approval from API publishers?|Yes
+What is a subscription key in API Management?|A unique auto-generated key associated with a subscription
+How can a subscription key be passed in client requests?|In the headers or as a query string parameter
+How many subscription keys are available for each subscription?|Two: primary and secondary
+Why are there two subscription keys in each subscription?|To make it easier to regenerate a key without causing downtime
+What must applications include in their requests when calling a protected API?|A valid subscription key
+Can subscription keys be regenerated?|Yes, they can be regenerated at any time
+What response is received if a valid key is not passed in the request when calling a protected API?|A 401 Access Denied response
+What can certificates be used for in API Management?|To provide Transport Layer Security (TLS) mutual authentication between the client and the API gateway
+How can the API Management gateway be configured to allow requests with specific certificates?|By specifying a thumbprint requirement for the certificates
+What handles authorization at the gateway level in API Management?|Inbound policies
+What properties of client certificates can be checked by the API Management gateway?|Certificate Authority, Thumbprint, Subject, Expiration Date
+Can different certificate properties be combined to form custom policy requirements?|Yes, they can be mixed together
+Why are client certificates signed?|To ensure they are not tampered with
+What are the two common methods to verify a certificate?|Checking the issuer and verifying the source
+What is the purpose of the Consumption tier in API Management?|To conform with serverless design principles
+What step is required to enable the use of client certificates in the Consumption tier?|Explicitly enabling it on the Custom domains page
+What is a thumbprint in a client certificate?|A hash calculated from other certificate properties to ensure its integrity
+How can partner certificates be managed in API Management?|By uploading them to the Client certificates page in the Azure portal

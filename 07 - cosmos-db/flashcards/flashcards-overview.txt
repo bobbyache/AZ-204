@@ -1,0 +1,15 @@
+What is Azure Cosmos DB?|Azure Cosmos DB is a fully managed NoSQL database designed to provide low latency, elastic scalability of throughput, well-defined semantics for data consistency, and high availability.
+What are the benefits of globally distributing your databases in Azure Cosmos DB?|The benefits of globally distributing your databases in Azure Cosmos DB include: lower latency by placing data close to users, global reach for your application, and the ability to add or remove regions without pausing or redeploying the application.
+What are the key benefits of global distribution in Azure Cosmos DB?|The key benefits of global distribution in Azure Cosmos DB are: unlimited elastic write and read scalability, 99.999% read and write availability worldwide, and guaranteed reads and writes served in less than 10 milliseconds at the 99th percentile.
+How does Azure Cosmos DB handle data replication between regions?|Azure Cosmos DB internally handles the data replication between regions with consistency level guarantees of the level you've selected.
+What is the availability offered by Azure Cosmos DB for multi-region databases?|Azure Cosmos DB offers 99.999% read and write availability for multi-region databases.
+What is the fundamental unit of global distribution and high availability in Azure Cosmos DB?|The Azure Cosmos DB account
+How can you manage an Azure Cosmos DB account?|Through the Azure portal, Azure CLI, or language-specific SDKs
+What can you do to globally distribute data and throughput in Azure Cosmos DB?|Add and remove Azure regions to your account
+What is the fundamental unit of scalability in Azure Cosmos DB?|An Azure Cosmos DB container
+What does Azure Cosmos DB use to elastically scale provisioned throughput and storage?|Logical partition key
+How many Azure Cosmos DB accounts can you create under an Azure subscription?|Up to 50 (can be increased via support request)
+What is the unit of management for a set of Azure Cosmos DB containers?|An Azure Cosmos DB database
+How are items grouped in an Azure Cosmos DB container?|Items are automatically grouped into logical partitions based on the partition key
+What are the two modes of configuring throughput on an Azure Cosmos DB container?|Dedicated provisioned throughput mode and shared provisioned throughput mode
+What is the default indexing behavior for items in an Azure Cosmos DB container?|All items are automatically indexed without requiring explicit index or schema management

@@ -1,0 +1,23 @@
+@startmindmap
+* Azure Event Hubs
+** Capture
+*** Automatically capture streaming data
+*** Specify storage accounts for captured data
+*** Capture windowing with "first wins policy"
+*** Data stored in Apache Avro format
+** Scaling
+*** Partitioned consumer model
+*** Throughput units control traffic
+*** Standard Event Hubs configurable with 1-20 units
+** Event Hubs
+*** Time-retention durable buffer for telemetry ingress
+*** Independent data partitions
+*** Storage naming convention
+**** {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}
+*** Traffic copying directly from internal storage
+** Event Hubs Capture
+*** Real-time and batch-based pipelines on the same stream
+*** Flexibility in choosing storage accounts
+*** Automatic running once configured
+*** Empty files for process indication
+@endmindmap

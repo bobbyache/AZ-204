@@ -1,0 +1,15 @@
+Azure Event Hubs enables you to automatically capture the streaming data in ________.|Azure Event Hubs enables you to automatically capture the streaming data in Event Hubs.
+Event Hubs Capture enables you to process ________ on the same stream.|Event Hubs Capture enables you to process real-time and batch-based pipelines on the same stream.
+Event Hubs is a ________ for telemetry ingress, similar to a distributed log.|Event Hubs is a time-retention durable buffer for telemetry ingress, similar to a distributed log.
+The key to scaling in Event Hubs is the ________ model.|The key to scaling in Event Hubs is the partitioned consumer model.
+Captured data is written in ________ format.|Captured data is written in Apache Avro format.
+Event Hubs Capture enables you to specify your own ________ which are used to store the captured data.|Event Hubs Capture enables you to specify your own Azure Blob storage account and container or Azure Data Lake Store account, which are used to store the captured data.
+Event Hubs Capture enables you to set up a ________ with a "first wins policy."|Event Hubs Capture enables you to set up a window to control capturing with a "first wins policy."
+Each partition captures independently and writes a completed ________ at the time of capture.|Each partition captures independently and writes a completed block blob at the time of capture.
+The storage naming convention includes ________.|The storage naming convention includes {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}.
+Event Hubs traffic is controlled by ________.|Event Hubs traffic is controlled by throughput units.
+A single throughput unit allows ________ of ingress and twice that amount of egress.|A single throughput unit allows 1 MB per second or 1000 events per second of ingress and twice that amount of egress.
+Standard Event Hubs can be configured with ________.|Standard Event Hubs can be configured with 1-20 throughput units.
+Once configured, Event Hubs Capture runs automatically when you ________.|Once configured, Event Hubs Capture runs automatically when you send your first event.
+Event Hubs writes empty files when there's ________.|Event Hubs writes empty files when there's no data.
+Event Hubs Capture provides a ________ that can feed your batch processors.|Event Hubs Capture provides a predictable cadence and marker that can feed your batch processors.

@@ -1,0 +1,26 @@
+@startmindmap
+skinparam nodeMargin 10
+skinparam nodeFontSize 14
+skinparam ArrowColor #808080
+skinparam ArrowThickness 1.5
+skinparam BorderThickness 1.5
+
+* Application Insights
+** Log-based metrics
+*** Translated into Kusto queries from stored events
+*** More dimensions for data analysis and ad-hoc diagnostics
+** Pre-aggregated metrics
+*** Stored as pre-aggregated time series
+*** Better performance at query time
+** Telemetry Volume Reduction
+*** Sampling and filtering techniques
+*** Impact on metrics accuracy
+** SDKs
+*** Manual event sending using SDK
+*** Automatic collection from auto-instrumentation
+*** Pre-aggregation in newer SDKs
+** Benefits of Logs
+*** Retain complete set of events
+*** Analytical and diagnostic value
+*** Improved visibility into application health and usage
+@endmindmap

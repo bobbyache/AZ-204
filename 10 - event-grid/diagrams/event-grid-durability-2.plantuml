@@ -1,0 +1,30 @@
+@startmindmap
+* Output batching
+** Configure Event Grid to batch events for improved HTTP performance
+** Batching settings:
+*** Max events per batch (1-5,000)
+*** Preferred batch size in kilobytes
+* Delayed delivery
+** Event Grid delays delivery and retries to endpoints with failures
+** Protects unhealthy endpoints and the Event Grid system
+** Delays retries and new deliveries for a specified time
+* Dead-letter events
+** Undelivered events sent to a storage account (dead-lettering)
+** Conditions for dead-lettering:
+*** Event not delivered within time-to-live period
+*** Exceeded delivery attempts limit
+** Dead-lettering can be enabled with a specified storage account
+** 400 or 413 response codes schedule events for dead-lettering
+** 5-minute delay before moving event to dead-letter location
+** If dead-letter location unavailable for 4 hours, event is dropped
+* Custom delivery properties
+** Event subscriptions allow setting up custom HTTP headers
+** Up to 10 headers can be defined
+** Each header value limited to 4,096 bytes
+** Custom headers for:
+*** Webhooks
+*** Azure Service Bus topics and queues
+*** Azure Event Hubs
+*** Relay Hybrid Connections
+** Requires storage account and container for dead-letter location
+@endmindmap

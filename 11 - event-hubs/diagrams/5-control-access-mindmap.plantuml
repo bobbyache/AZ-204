@@ -1,0 +1,26 @@
+@startmindmap
+* Azure Event Hubs
+** Authentication and Authorization
+*** Azure Active Directory
+**** Azure Event Hubs Data Owner
+**** Azure Event Hubs Data Sender
+**** Azure Event Hubs Data Receiver
+*** Shared Access Signatures (SAS)
+**** Event Publishers
+***** Fine-grained access control
+**** Event Consumers
+***** Manage rights or listen privileges
+** Managed Identities
+*** Azure Role-based Access Control
+** Microsoft Identity Platform
+*** OAuth 2.0 access token
+*** Authentication with Azure AD
+** Event Hubs Publishers
+*** Virtual endpoint
+*** Send messages
+** Event Hubs Consumers
+*** Data consumption
+*** Consumer Groups
+** Data Durability and Availability
+*** Partitioning
+@endmindmap

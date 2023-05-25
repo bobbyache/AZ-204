@@ -1,0 +1,23 @@
+@startwbs "Permissions and Consent"
+* Applications on the Microsoft Identity Platform
+** Permission Types
+*** Delegated
+****_ Signed in user
+*** App-Only Access
+****_ No user present
+****_ Requires admin consent
+** Consent Types
+*** Static User Consent
+****_ Client app must specify all required permisson up front.
+****_ Code is clean and simple... admin consents permissions for all org users.
+**** Possible issues
+*****_ App needs to request all permissions up front.
+*****_ User must approve long list of permissions at sign-in.
+*** Incremental and Dynamic User Consent
+****_ Only applies to delegated permission types
+****_ Permissions consented to incrementally\nChallenged on demand
+****_ If require admin consent... must register all permissions in portal
+*** Admin Consent
+****_ App requires access to high-privlege permissions.
+****_ Requires static permissions registered in app registration portal.
+@endwbs

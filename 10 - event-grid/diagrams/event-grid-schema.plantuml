@@ -1,0 +1,33 @@
+@startmindmap
+* Azure Event Grid
+** Event Schemas
+*** Event Grid event schema
+*** Cloud event schema
+** Events
+*** Four required string properties
+*** Common to all publishers
+** Data Object
+*** Specific to each publisher
+*** System topics
+**** Properties specific to resource providers
+***** Azure Storage
+***** Azure Event Hubs
+** Event Sources
+*** Events sent as an array
+*** Multiple event objects
+** Posting Events
+*** Event Grid topic
+*** Array size: up to 1 MB
+*** Event size: up to 1 MB
+*** Response: 413 "Payload Too Large"
+** Operations Charges
+*** Charged in 64 KB increments
+*** Events over 64 KB incur charges as multiple events
+*** Example: 130 KB event = charges for three separate events
+** Event Dispatch
+*** Subscribers receive events as an array
+*** Single event in the array
+** Event Schema Store
+*** JSON schema for Event Grid event
+*** Azure publishers' data payload
+@endmindmap

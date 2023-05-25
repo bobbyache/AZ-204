@@ -1,0 +1,17 @@
+@startmindmap "MFA"
+
++ MFA
+++_ Challenges\nAt least 2 should be satisfied.
+++_ Single Sign On (SSO) will expire if Conditional Access not passed
+++ Something I...
++++ Know
+++++_ Password
+++++_ Pin
++++ Have
+++++_ Token
+++++_ Authenticator
+++++_ Phone
++++ Am
+++++_ Biometrics
+
+@endmindmap

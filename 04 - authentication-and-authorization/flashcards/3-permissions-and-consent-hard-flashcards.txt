@@ -1,0 +1,21 @@
+What authorization model do applications that integrate with the Microsoft identity platform follow?|Applications that integrate with the Microsoft identity platform follow an authorization model that gives users and administrators control over how data can be accessed.
+What is OAuth 2.0?|OAuth 2.0 is a method through which a third-party app can access web-hosted resources on behalf of a user.
+What is the resource identifier used in the Microsoft identity platform?|The resource identifier used in the Microsoft identity platform is the application ID URI.
+Give an example of a Microsoft web-hosted resource.|An example of a Microsoft web-hosted resource is Microsoft Graph.
+What are the two types of permissions supported by the Microsoft identity platform?|The two types of permissions supported are delegated permissions and app-only access.
+How are permissions represented in the Microsoft identity platform?|Permissions are represented as string values in the Microsoft identity platform.
+What is the purpose of scopes in OAuth 2.0?|Scopes are used to define permission sets that allow third-party apps to request only the permissions they need to perform their function.
+What are the three types of consent in the Microsoft identity platform?|The three types of consent are static user consent, incremental and dynamic user consent, and admin consent.
+When are delegated permissions used by apps?|Delegated permissions are used by apps that have a signed-in user present.
+When are app-only access permissions used?|App-only access permissions are used by apps that run without a signed-in user present.
+What types of resources can integrate with the Microsoft identity platform?|Any web-hosted resource that integrates with the Microsoft identity platform can be accessed.
+What are some examples of Microsoft web-hosted resources?|Some examples of Microsoft web-hosted resources are Microsoft Graph, Microsoft 365 Mail API, and Azure Key Vault.
+What are permission sets called in OAuth 2.0?|Permission sets are called scopes in OAuth 2.0.
+What does the scope parameter specify in OAuth 2.0?|The scope parameter specifies the permissions an app requests when communicating with the Microsoft identity platform.
+How can an app request the permissions it needs in the Microsoft identity platform?|An app most commonly requests permissions by specifying the scopes in requests to the Microsoft identity platform's authorize endpoint.
+When can high-privilege permissions be granted for an app?|High-privilege permissions can be granted only through administrator consent.
+What happens if the resource identifier is omitted in the scope parameter of a request to the Microsoft identity platform?|If the resource identifier is omitted, the resource is assumed to be Microsoft Graph.
+What are the two types of permissions supported by the Microsoft identity platform?|The two types of permissions supported are delegated permissions and app-only access.
+What is dynamic consent in the Microsoft identity platform?|Dynamic consent allows requesting additional permissions incrementally as the customer uses more app features.
+When is admin consent required for an app?|Admin consent is required when an app needs access to certain high-privilege permissions.
+What does admin consent ensure in the Microsoft identity platform?|Admin consent ensures that administrators have control over authorizing apps or users to access highly privileged data from the organization.

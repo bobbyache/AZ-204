@@ -1,0 +1,9 @@
+Question|Answer
+What are the three types of resources offered by Blob storage?|Storage account, container, blob
+What is the purpose of a storage account in Azure Blob storage?|A storage account provides a unique namespace in Azure for data storage.
+How are containers used in Blob storage?|Containers organize a collection of blobs, similar to directories in a file system.
+What are the rules for naming a container in Blob storage?|Container names must be between 3 and 63 characters long, start with a letter or number, and can contain only lowercase letters, numbers, and the dash (-) character. Consecutive dash characters are not allowed.
+What are the three types of blobs supported by Azure Storage?|Block blobs, append blobs, and page blobs
+What is the capacity limit of a block blob in Azure Storage?|Block blobs can store up to approximately 190.7 TiB of data.
+How are append blobs different from block blobs?|Append blobs are optimized for append operations and are commonly used for scenarios such as logging data from virtual machines.
+What is the purpose of page blobs in Azure Storage?|Page blobs store random access files up to 8 TB in size and serve as disks for Azure virtual machines.

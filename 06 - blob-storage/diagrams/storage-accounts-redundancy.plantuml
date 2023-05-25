@@ -1,0 +1,29 @@
+@startmindmap "Storage Accounts"
+
++ Azure Storage Redundancy
+++ Primary Region\n(sync replication)
++++ LRS
+++++_ Locally redundant storage
+++++_ 3 copies in a single zone (datacenter)
+++++_ Not recommended for high availability and durability concerns
++++ ZRS
+++++_ Zone redundant storage
+++++_ 3 replicas copied sync across primary region zones
+++++_ Apps that require higher availability
+++++_ May not survive regional disaster
+++ Primary +\nSecondary Region
++++ GRS
+++++_ Geo-redundant service
+++++_ LRS + async copy to 3 replicas in same zone in secondary region
+++++ RA GRS
++++++_ GRS + failover switch to access secondary zone (read-access)
++++ GZRS
+++++_ Geo-zone redundant storage
+++++_ ZRS + async copy to 3 replicas in same zone in secondary region
+++++_ Recommended by MS
+++++ RA GZRS
++++++_ GZRS + failover switch to access secondary zone (read-access)
+
+++ Block blob\nObject Replication
++++_ Replicate blob in region 1, container 1\n  to region 2, container 1 and region 3, container 2
+@endmindmap

@@ -1,0 +1,22 @@
+@startmindmap
+* Microsoft identity platform
+** Build applications for users and customers
+*** Sign in with Microsoft identities or social accounts
+*** Provide authorized access to APIs
+**** Own APIs
+**** Microsoft APIs like Microsoft Graph
+** Components
+*** OAuth 2.0 and OpenID Connect standard-compliant authentication service
+**** Work or school accounts (Azure Active Directory)
+**** Personal Microsoft account (Skype, Xbox, Outlook.com)
+**** Social or local accounts (Azure Active Directory B2C)
+*** Open-source libraries
+**** Microsoft Authentication Libraries (MSAL)
+**** Support for other standards-compliant libraries
+*** Application management portal (Azure portal)
+*** Application configuration API and PowerShell
+** Modern innovations for developers
+*** Passwordless authentication
+*** Step-up authentication
+*** Conditional Access
+@endmindmap

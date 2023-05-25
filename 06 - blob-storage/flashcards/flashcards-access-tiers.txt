@@ -1,0 +1,14 @@
+What is Azure Blob storage?|Azure Blob storage is Microsoft's object storage solution for the cloud.
+What type of data is Blob storage optimized for?|Blob storage is optimized for storing massive amounts of unstructured data.
+Name some use cases for Blob storage.|Blob storage is designed for serving images or documents directly to a browser, storing files for distributed access, streaming video and audio, writing to log files, storing data for backup and restore, disaster recovery, and archiving, and storing data for analysis by an on-premises or Azure-hosted service.
+How can users or client applications access objects in Blob storage?|Users or client applications can access objects in Blob storage via HTTP/HTTPS, from anywhere in the world, using the Azure Storage REST API, Azure PowerShell, Azure CLI, or an Azure Storage client library.
+What is an Azure Storage account?|An Azure Storage account is the top-level container for all of your Azure Blob storage. It provides a unique namespace for your Azure Storage data that is accessible from anywhere in the world over HTTP or HTTPS.
+What are the two performance levels of Azure Storage accounts?|Azure Storage offers two performance levels of storage accounts: standard and premium.
+What is the recommended storage account for most scenarios using Azure Storage?|The recommended storage account for most scenarios using Azure Storage is the standard general-purpose v2 account.
+What is the difference between a standard storage account and a premium storage account?|Premium accounts offer higher performance by using solid-state drives, while standard accounts do not have solid-state drives.
+What are the three account types available for premium storage accounts?|The three account types available for premium storage accounts are block blobs, page blobs, and file shares.
+What are the available access tiers for blob data in Azure Storage?|The available access tiers for blob data in Azure Storage are Hot, Cool, and Archive.
+Which access tier is optimized for frequent access of objects in the storage account?|The Hot access tier is optimized for frequent access of objects in the storage account.
+Which access tier is optimized for storing large amounts of infrequently accessed data stored for at least 30 days?|The Cool access tier is optimized for storing large amounts of infrequently accessed data stored for at least 30 days.
+Which access tier is optimized for data that can tolerate several hours of retrieval latency and will remain in the Archive tier for at least 180 days?|The Archive tier is optimized for data that can tolerate several hours of retrieval latency and will remain in the Archive tier for at least 180 days.
+Can you switch between access tiers in Azure Storage?|Yes, if there's a change in the usage pattern of your data, you can switch between the access tiers (Hot, Cool, Archive) at any time.

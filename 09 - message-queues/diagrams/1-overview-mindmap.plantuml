@@ -1,0 +1,19 @@
+@startmindmap
+* Azure Queue Mechanisms
+** Service Bus queues
+*** Integration of applications/components
+*** Queuing and publish/subscribe pattern
+*** Long-polling receive operation
+*** Guaranteed FIFO ordered delivery
+*** Automatic duplicate detection
+*** Parallel long-running streams
+*** Transactional behavior and atomicity
+** Storage queues
+*** Large message storage
+*** Accessible via HTTP/HTTPS
+*** Maximum message size of 64 KB
+*** Backlog of work for asynchronous processing
+*** Over 80 GB storage capacity
+*** Progress tracking for message processing
+*** Server-side transaction logs
+@endmindmap

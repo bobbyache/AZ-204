@@ -1,0 +1,11 @@
+What is required to delegate Identity and Access Management functions to Azure Active Directory?|Registering an application with an Azure Active Directory tenant.
+What does registering an application with Azure Active Directory create?|It creates an application object and a service principal object in the home tenant.
+What is the purpose of an application object in Azure Active Directory?|It serves as a template or blueprint to create service principal objects.
+How can you create service principal objects in a tenant?|You can create service principal objects using Azure PowerShell, Azure CLI, Microsoft Graph, and other tools.
+What defines an Azure Active Directory application?|An Azure Active Directory application is defined by its application object.
+What does a security principal represent in Azure Active Directory?|A security principal represents the entity that requires access, such as users or applications.
+What are the three types of service principals?|The three types are Application, Managed identity, and Legacy.
+How is a service principal different from an application object?|A service principal is the local representation in a specific tenant, while an application object is the global representation across all tenants.
+What is the relationship between an application object and a service principal object?|An application object has a one-to-many relationship with its corresponding service principal object(s).
+How many service principals does a single-tenant application have?|A single-tenant application has only one service principal in its home tenant.
+In which tenants are service principals created for a multi-tenant application?|Service principals are created in each tenant where a user from that tenant has consented to its use.

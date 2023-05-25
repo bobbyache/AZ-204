@@ -1,0 +1,143 @@
+@startmindmap "Landscape"
+
++ Landscape
+++ Storage
++++_ Microsoft Azure Data Factory
++++ SDKs
+++++_ Azure.Storage.Blobs
++++ Blob Storage
+++++ Azure Storage Encryption
++++++_ for data at rest (256-bit AES)
+++++_ Accessible through
++++++_ HTTP/HTTPS
++++++_ Azure Storage REST API
++++++_ Azure PowerShell
++++++_ Azure CLI
++++++_ Azure Storage client library
+
++++ Azure File share
+++++_ Accessible via
++++++ Server Message Block (SMB) protocol
+
++++ Azure Cosmos DB
+++++_ Language-specific SDKs
+++++_ Azure Cosmos TLA+ Specification\n    5 consistency levels
+++++ Database APIs
++++++_ No SQL
++++++_ MongoDB
++++++_ PostgreSQL
++++++_ Appache Cassandra
++++++_ Table
++++++_ Apache Gremlin
+
+++ Security
++++ Auth
+++++_ MS Identity Platform
++++++_ Managed Identity Resource Provider
++++++_ MS Entra
++++++_ Azure AD Connect
++++++ SDKs
+++++++_ Azure.Identity
+++++++_ Azure.Secret.KeyVault.Secrets
+++++_ MS Graph\n(REST API + SDKs)
++++++_ REST and OData
++++++_ MS Graph connectors (Google Drive, Jira, Box, ...)
++++++_ MS Graph Data Connect
++++++_ API
+++++++_ MS PowerShell (REST)
+++++++_ MS Graph PowerShell SDK
+++++++_ MS Graph Explorer
+++++++_ Postman
++++ Azure App Configuration
+++++ App Configuration store
++++++_ Hierarchical (:) Key + Label -- Value
+++++ Feature Manager
++++++_ Manages lifecycle of feature flags
++++++_ additionally handles caching and updating of their states
++++++_ Two Components
+++++++_ Application support
+++++++_ Seperate repository to store feature flags and current states
++++++ Feature Flag
+++++++_ Multiple filters
+++++++_ If one filter on, flag is on. If none are on, flag is off.
+++++++_ Feature manager supports **appSettings.json**.
+
+
+++ Key Vaults
++++_ Managed HSM Pools
++++_ APIs
+++++_ Key Vault SDK uses...\n    Azure Identity Client Library
++++++_ .NET = Azure Identity SDK.NET
++++++_ Python = Azure Identity SDK Python
++++++_ Azure Identity SDK JavaScript
+
+++ Function Apps
++++_ are function hosts and units of scale.
++++_ Unit of deployment and management of functions.
++++ Scale Controller
+++++_ Determines whether to scale out or in.
+
+++ Governance
++++_ Templates
++++_ Blueprints
+
+++ Resiliancy
++++ Paired regions
+++++_ Always use at least 2 regions
+++++_ Updates not applied simultanously to both
+++++_ Two instances on Availability Sets or Availability Zones
+
+++ App Service Plan (PaaS)
++++_ App Services (Web Apps)
++++_ Supports Web apps, REST APIs, and mobile backends
++++_ Heroku equivalent on Azure
+++++ Deployment
++++++_ Deployment slots (blue/green deployment)
++++++ Azure Resource Manager (ARM Templates)
++++ App Service Environment (ASE)
+++++_ Isolated deployed into VNET
+++++_ Highly scalable, dedicated. External or internal load balancer
++++ WebJobs
+++++_ Run scripts within Azure App Service
+++++_ Continuous and triggered
+
+++ Containerized Solutions
++++ Azure Container Registry (ACR)
+++++_ Manages containers\n...personal container registry.
++++ Azure Container Registry Tasks
+++++_ Automate (re)building, testing, pushing, deploying of images\nwhen base images are updated.
++++ Container Group
+++++_ Collection of containers that share life-cycle, resources, local network, and storage volumes
+++++_ Think automated postman tests against Web API using localhost
+++++_ Similar to pod in Kubernetes
++++ Azure Container Apps
+++++_ Run microservices and containerized applications on a serverless platform.
+++++ Dapr (Distributed Application Runtime)
++++++_ Microservice support :observability, retries, mutual TLS
+++++ Sidecar Pattern
++++++_ Multiple containers: primary app with supporting apps to logging, 3rd party proxy
+
+
++ Logging
+++_ Azure Monitor
+
++ Networks
+++ Microsoft backbone network
++++_ Access only via VPN or ExpressRoute
++++_ Virtual Network (VNet) for private endpoints
++++_ Eliminates exposure to public internet
++++_ Connect using VPN or ExpressRoutes with private peering
+
++ Azure API Management
+
++ Load Balancing
+++ Traffic Manager
+
++ Event Architecture
+++ Event Grid
++++_ Register as
+++++ Resource Provider
++++ Event Schema Store
+++++_ View Azure publisher's data payload
+
+@endmindmap

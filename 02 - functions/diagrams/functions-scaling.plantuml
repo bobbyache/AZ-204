@@ -1,0 +1,28 @@
+@startmindmap
+* Azure Functions Scaling
+** Consumption Plan
+*** CPU and memory scale by adding host instances
+*** Each instance has 1.5 GB memory and one CPU
+*** Function apps within a plan scale independently
+** Premium Plan
+*** Memory and CPU based on plan size
+*** All apps in a plan share resources on an instance
+** Function Code Files
+*** Stored on Azure Files shares
+*** Deletion of main storage account is irreversible
+** Scale Controller
+*** Monitors event rate and triggers scaling
+*** Scaling behavior based on trigger type
+** Unit of Scale
+*** Function app is scaled out or in
+*** Multiple instances of Functions host allocated
+*** Instances scaled in to zero when no functions running
+** Scaling Behavior
+*** Maximum instances: 200 per function app
+*** No set limit on concurrent executions
+*** New instance rate: HTTP (once per second), non-HTTP (once every 30 seconds)
+** Restricting Maximum Instances
+*** Modify functionAppScaleLimit
+*** Default: Consumption (200 instances), Premium (100 instances)
+*** Set lower maximum value or 0/null for unrestricted scaling
+@endmindmap

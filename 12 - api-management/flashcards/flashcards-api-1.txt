@@ -1,0 +1,27 @@
+What are the core functionalities provided by API Management?|API Management provides core functionalities such as developer engagement, business insights, analytics, security, and protection.
+What are APIs composed of?|APIs are composed of one or more operations.
+How can developers access an API?|Developers can access an API by subscribing to a product that contains the API and then calling its operations, subject to any usage policies.
+What are the main components of Azure API Management?|Azure API Management consists of the API gateway, the management plane, and the developer portal.
+What can be done using the management plane of API Management?|Using the management plane, you can provision and configure API Management service settings, define or import API schema, package APIs into products, set up policies, gather insights from analytics, and manage users.
+What are the features of the developer portal?|The developer portal provides API documentation, an interactive console to call APIs, user account creation and API key subscription, analytics on usage, API definition downloads, and API key management.
+What are the two types of products in API Management?|The two types of products in API Management are Open and Protected. Protected products require subscription before use, while open products can be used without a subscription.
+What are the different tiers available in Azure API Management?|Azure API Management is available in various tiers that differ in capacity and features.
+What is the purpose of the API gateway in API Management?|The API gateway accepts API calls, verifies credentials, enforces usage quotas and rate limits, transforms requests and responses, caches responses, and emits logs, metrics, and traces.
+What can be done using the management plane of API Management?|Using the management plane, you can provision and configure API Management service settings, define or import API schema, package APIs into products, set up policies, gather insights from analytics, and manage users.
+What is the difference between Open and Protected products in API Management?|Open products can be used without a subscription, while Protected products require subscription before they can be used.
+What are the components of Azure API Management?|Azure API Management consists of the API gateway, the management plane, and the developer portal.
+What is the role of products in API Management?|Products serve as a way to surface APIs to developers and can contain one or more APIs. They can be configured with a title, description, and terms of use.
+What can developers do through the developer portal?|Developers can read API documentation, call APIs via an interactive console, create an account and subscribe to obtain API keys, access analytics on their usage, download API definitions, and manage API keys.
+How can developers access APIs in API Management?|Developers can access APIs by subscribing to a product that contains the desired API and then calling its operations, subject to any usage policies.
+What are the main components of Azure API Management?|The main components of Azure API Management are the API gateway, the management plane, and the developer portal.
+What can be done using the management plane of API Management?|Using the management plane, you can provision and configure API Management service settings, define or import API schemas, package APIs into products, set up policies like quotas or transformations, and manage users.
+What are the types of products in API Management?|The types of products in API Management are Open and Protected, where Protected products require subscription before use, while Open products can be used without a subscription.
+What are the features of the developer portal in API Management?|The developer portal allows developers to read API documentation, call APIs through an interactive console, create accounts and subscribe to obtain API keys, access analytics on their usage, download API definitions, and manage API keys.
+What is the purpose of groups in API Management?|Groups are used to manage the visibility of products to developers.
+What are the immutable system groups in API Management?|The immutable system groups in API Management are Administrators, Developers, and Guests.
+What is the role of the Administrators group?|The Administrators group manages API Management service instances, creates APIs, operations, and products, and includes Azure subscription administrators.
+Who are the Developers in API Management?|Developers are authenticated users in the developer portal who build applications using APIs.
+What access do Guests have in API Management?|Guests are unauthenticated users in the developer portal with limited read-only access, such as viewing APIs without the ability to call them.
+Can custom groups be created in API Management?|Yes, administrators can create custom groups or use external groups from associated Azure Active Directory tenants.
+How can developers be added to an API Management service instance?|Developers can be created or invited by administrators or sign up through the Developer portal.
+What is the purpose of policies in API Management?|Policies in API Management are collections of statements that are executed sequentially on API requests or responses, providing functionalities such as format conversion and call rate limiting.

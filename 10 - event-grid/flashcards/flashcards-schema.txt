@@ -1,0 +1,27 @@
+What are the two types of event schemas supported by Azure Event Grid?|Event Grid event schema and Cloud event schema
+How many required string properties do events consist of?|Four
+Are the properties common to all events from any publisher?|Yes
+What does the data object in events contain?|Properties specific to each publisher
+Which resource providers do the properties in the data object correspond to for system topics?|Azure Storage or Azure Event Hubs
+How are events sent to Azure Event Grid?|As an array
+Can the array of events posted to an Event Grid topic exceed 1 MB in total size?|No, the maximum size is 1 MB
+What happens if an event or the array exceeds the size limits?|A response with the code 413 "Payload Too Large" is received
+How are operations charged for events larger than 64 KB?|They are charged as multiple events in 64 KB increments
+When Event Grid sends events to subscribers, how are they organized?|As an array with a single event
+Where can you find the JSON schema for the Event Grid event and Azure publisher's data payload?|In the Event Schema store
+What determines the data object for custom topics?|The event publisher determines the data object.
+What should the top-level data in custom topics have?|The top-level data should have the same fields as standard resource-defined events.
+How do subjects help subscribers in event filtering and routing?|Subjects help subscribers identify their interest and are used for filtering and routing events.
+How can the path where an event occurred be used for filtering events?|Subscribers can filter events by segments of the path to narrow down or broaden their event filtering.
+Give an example of using path filtering in event subjects.|A three-segment path like /A/B/C allows subscribers to filter by the first segment (/A) for a broad set of events.
+What is an example of providing more detail in event subjects?|The Storage Accounts publisher uses the subject /blobServices/default/containers/<container-name>/blobs/<file> when a file is added to a container.
+How can subscribers filter events for a specific container?|Subscribers can filter events by the path /blobServices/default/containers/testcontainer to receive events related to that container.
+How can subscribers handle specific file types in event filtering?|Subscribers can filter or route events based on suffixes like .txt to handle specific file types.
+In what formats does Azure Event Grid support events? | Azure Event Grid supports events in the JSON implementation of CloudEvents v1.0 and HTTP protocol binding.
+What is CloudEvents? | CloudEvents is an open specification for describing event data.
+How does CloudEvents simplify interoperability? | CloudEvents simplifies interoperability by providing a common event schema for publishing and consuming cloud-based events.
+What are the benefits of the common event schema provided by CloudEvents? | The common event schema allows for uniform tooling, standard ways of routing and handling events, and universal ways of deserializing the outer event schema.
+What is the difference in header values between CloudEvents schema and Event Grid schema? | The header value for content-type in the CloudEvents schema is "application/cloudevents+json; charset=utf-8," while in the Event Grid schema, it is "application/json; charset=utf-8."
+What can Event Grid be used for in relation to CloudEvents schema? | Event Grid can be used for both input and output of events in the CloudEvents schema.
+What can CloudEvents be used for? | CloudEvents can be used for system events like Blob Storage events and IoT Hub events, as well as custom events.
+Can events be transformed during transmission using CloudEvents? | Yes, CloudEvents allows for the transformation of events back and forth during transmission.

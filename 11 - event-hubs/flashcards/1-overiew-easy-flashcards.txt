@@ -1,0 +1,17 @@
+Azure Event Hubs represents the "front door" for _____|Azure Event Hubs represents the "front door" for an event pipeline.
+An event ingestor is a component or service that sits between _____ and _____|An event ingestor is a component or service that sits between event publishers and event consumers.
+Event Hubs provides a unified streaming platform with _____, decoupling event producers from event consumers|Event Hubs provides a unified streaming platform with time retention buffer, decoupling event producers from event consumers.
+Event Hubs is a fully managed Platform-as-a-Service (PaaS) with _____, so you focus on _____|Event Hubs is a fully managed Platform-as-a-Service (PaaS) with little configuration or management overhead, so you focus on your business solutions.
+Event Hubs for Apache Kafka ecosystems give you _____ without having to _____, _____, or _____|Event Hubs for Apache Kafka ecosystems give you the PaaS Kafka experience without having to manage, configure, or run your clusters.
+Event Hubs uses a partitioned consumer model, enabling multiple applications to _____|Event Hubs uses a partitioned consumer model, enabling multiple applications to process the stream concurrently.
+Capture your data in near-real time in _____ for long-term retention or _____|Capture your data in near-real time in Azure Blob storage or Azure Data Lake Storage for long-term retention or micro-batch processing.
+Scaling options, like _____, scale the number of throughput units to meet your usage needs|Scaling options, like Auto-inflate, scale the number of throughput units to meet your usage needs.
+Event Hubs for Apache Kafka ecosystems enables Apache Kafka clients and applications to talk to _____|Event Hubs for Apache Kafka ecosystems enables Apache Kafka clients and applications to talk to Event Hubs.
+Azure Event Hubs represents the _____ for event pipeline|Azure Event Hubs represents the "front door" for an event pipeline.
+An _____ is a component or service that sits between event publishers and event consumers|An event ingestor is a component or service that sits between event publishers and event consumers.
+Event Hubs provides a ______ with time retention buffer, decoupling event producers from event consumers|Event Hubs provides a unified streaming platform with time retention buffer, decoupling event producers from event consumers.
+Event Hubs is a fully managed _____ with little configuration or management overhead, so you focus on _____|Event Hubs is a fully managed Platform-as-a-Service (PaaS) with little configuration or management overhead, so you focus on your business solutions.
+Event Hubs for Apache Kafka ecosystems give you _____ without having to _____, _____, or _____|Event Hubs for Apache Kafka ecosystems give you the PaaS Kafka experience without having to manage, configure, or run your clusters.
+Event Hubs uses a _____, enabling multiple applications to process the stream concurrently|Event Hubs uses a partitioned consumer model, enabling multiple applications to process the stream concurrently.
+Scaling options, like Auto-inflate, scale the number of _____ to meet your usage needs|Scaling options, like Auto-inflate, scale the number of throughput units to meet your usage needs.
+Event Hubs for ______ enables Apache Kafka clients and applications to talk to Event Hubs|Event Hubs for Apache Kafka ecosystems enables Apache Kafka clients and applications to talk to Event Hubs.

@@ -1,0 +1,20 @@
+How can you create a Redis cache?|You can create a Redis cache using the Azure portal, the Azure CLI, or Azure PowerShell.
+What does the Redis cache need to be?|The Redis cache needs to be a globally unique name.
+Why does the name of the Redis cache need to be unique within Azure?|The name of the Redis cache needs to be unique within Azure because it's used to generate a public-facing URL to connect and communicate with the service.
+What are the requirements for the cache name?|The cache name must be between 1 and 63 characters, composed of numbers, letters, and the '-' character. It can't start or end with the '-' character, and consecutive '-' characters aren't valid.
+Why is it recommended to place the cache instance and the application in the same region?|It is recommended to place the cache instance and the application in the same region to avoid increased latency and reduced reliability when connecting to a cache in a different region.
+What does the tier determine?|The tier determines the size, performance, and features that are available for the cache.
+Which tier does Microsoft recommend using for production systems?|Microsoft recommends using Standard tier or higher for production systems.
+What are some features of the Basic tier?|The Basic tier is a single node system with no data replication and no SLA.
+How can you implement clustering in the Premium, Enterprise, and Enterprise Flash tiers?|In the Premium, Enterprise, and Enterprise Flash tiers, you can implement clustering to automatically split your dataset among multiple nodes.
+What tool can you use to interact with an Azure Cache for Redis as a client?|You can use the Redis command-line tool to interact with an Azure Cache for Redis as a client.
+Where can you download the Redis command-line tools for Windows?|You can download the Redis command-line tools for Windows from the Redis website.
+Why is caching important?|Caching is important because it allows us to store commonly used values in memory.
+How is expiration of values achieved in Redis?|In Redis, expiration of values is achieved by applying a time to live (TTL) to a key.
+What happens when the TTL elapses for a key in Redis?|When the TTL elapses for a key in Redis, the key is automatically deleted, exactly as if the DEL command were issued.
+What are some details about TTL expirations in Redis?|Expirations can be set using seconds or milliseconds precision. The expire time resolution is always 1 millisecond. Information about expires is replicated and persisted on disk, so the expiration time is maintained even if the Redis server remains stopped.
+What information do clients need to connect to an Azure Cache for Redis instance?|Clients need the host name, port, and an access key for the cache to connect to an Azure Cache for Redis instance.
+Where can you retrieve the required information to connect to an Azure Cache for Redis instance?|You can retrieve the required information in the Azure portal through the Settings > Access Keys page.
+What is the host name used for in connecting to an Azure Cache for Redis?|The host name is the public Internet address of your cache, created using the name of the cache.
+What is the purpose of the access key in connecting to an Azure Cache for Redis?|The access key acts as a password for your cache and allows performing operations on the cache.
+Why should you consider the access keys confidential?|You should consider the access keys confidential because anyone with an access key can perform any operation on your cache, similar to a password.

@@ -1,0 +1,22 @@
+What security capabilities does Azure Storage provide?|Azure Storage provides a comprehensive set of security capabilities that enable developers to build secure applications.
+How is data written to Azure Storage encrypted?|All data (including metadata) written to Azure Storage is automatically encrypted using Storage Service Encryption (SSE).
+What authentication mechanisms are supported for Azure Storage?|Azure Active Directory (Azure AD) and Role-Based Access Control (RBAC) are supported for Azure Storage.
+How can RBAC roles be assigned for Azure Storage?|RBAC roles scoped to the storage account can be assigned to security principals, and Azure AD can be used to authorize resource management operations such as key management.
+How is Azure AD integration supported for blob and queue data operations?|Azure AD integration is supported for blob and queue data operations by assigning RBAC roles scoped to various levels (subscription, resource group, storage account, container, or queue) to security principals or managed identities.
+How can data be secured in transit between an application and Azure?|Data can be secured in transit between an application and Azure by using Client-Side Encryption, HTTPS, or SMB 3.0.
+How can OS and data disks used by Azure virtual machines be encrypted?|OS and data disks used by Azure virtual machines can be encrypted using Azure Disk Encryption.
+How can delegated access to data objects in Azure Storage be granted?|Delegated access to data objects in Azure Storage can be granted using a shared access signature.
+How does Azure Storage automatically encrypt data at rest?|Azure Storage automatically encrypts data at rest using 256-bit AES encryption, one of the strongest block ciphers available, and is FIPS 140-2 compliant.
+Can Azure Storage encryption be disabled?|No, Azure Storage encryption is enabled for all new and existing storage accounts and can't be disabled.
+Which Azure Storage resources are encrypted?|All Azure Storage resources are encrypted, including blobs, disks, files, queues, tables, and object metadata.
+Does encryption impact Azure Storage performance?|No, encryption doesn't affect Azure Storage performance, and there's no extra cost for Azure Storage encryption.
+What are the options for encryption key management in Azure Storage?|The options for encryption key management in Azure Storage are Microsoft-managed keys or customer-managed keys.
+How can a customer specify a key for encrypting and decrypting all data in the storage account?|A customer can specify a customer-managed key to use for encrypting and decrypting all data in the storage account.
+How can a client have granular control over the encryption of Blob storage data?|A client can include a customer-provided key on Blob storage operations to have granular control over how blob data is encrypted and decrypted.
+What does the table compare regarding key management options for Azure Storage encryption?|The table compares the different key management options for Azure Storage encryption.
+What encryption is used by Azure Storage for data at rest?|256-bit AES encryption
+Which encryption option is enabled by default for all new and existing storage accounts?|Azure Storage encryption
+What are the supported security capabilities in Azure Storage?|Storage Service Encryption, Azure AD integration, RBAC, Client-Side Encryption, Azure Disk Encryption, Shared access signatures
+How can data be secured during transit between an application and Azure Storage?|Client-Side Encryption, HTTPS, SMB 3.0
+What is the impact of encryption on Azure Storage performance?|No impact on performance
+What are the key management options for Azure Storage encryption?|Microsoft-managed keys, Customer-managed keys, Customer-provided keys

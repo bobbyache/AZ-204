@@ -1,0 +1,32 @@
+@startmindmap "Azure App Configuration"
++ App Configuration
+
+++ Benefits
+++ Storing Information
++++_ Query key values that match a pattern (Key + Label)
++++_ Hierarchical delimited with : or /
++++_ Keys are case sensitive
++++_ Reserved chars (*,\) are escaped with \.
++++_ Full single config setting content limited to 10,000 chars
+++++ Example Structure
++++++_ Based on component services:\n   **AppName:Service1:ApiEndpoint**
++++++_ Based on deployment regions:\n   **AppName:Region1:DbEndpoint**
++++ Labels
+++++_ Optional and default to null (or empty)
+++++_ Commonly usage
++++++_ Specify multi environments\n  **Key = AppName:DbEndpoint: & Label = Production**
++++++_ Create multiple versions\n  Git commit ID or App version number
+
+++ Feature management
++++_ Turn on and off features
++++_ Requires client support ie. .NET **Microsoft.FeatureManagement**
++++_ Can be configured in the resource and supported by appSettings.json
+
+++ Secure access
++++ Customer-managed keys
+++++_ Alternative to standard Microsoft Managed Key
+++++_ Requires managed identity with access to a specially configured Key Vault\n  containing the wrapped access key
++++ Private endpoints
+++++_ Clients connect over private virtual network (VNET)
+
+@endmindmap

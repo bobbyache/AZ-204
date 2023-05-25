@@ -1,0 +1,40 @@
+@startmindmap
+* Azure App Service
+** Built-in Authentication
+*** Time and effort-saving
+*** Federated identity providers
+**** Microsoft Identity Platform
+**** Facebook
+**** Google
+**** Twitter
+**** Any OpenID provider
+** Authentication and Authorization Module
+*** Runs alongside application code
+*** Handles authentication and authorization tasks
+**** User and client authentication
+**** Token validation and management
+**** Session management
+**** Identity information injection
+*** Configuration options
+**** Azure Resource Manager settings
+**** Configuration file
+** Authentication Flow
+*** Without Provider SDK
+**** Federated sign-in delegated to App Service
+**** Server-directed flow
+*** With Provider SDK
+**** Manual sign-in by the application
+**** Token submission for validation
+**** Client-directed flow
+** Authorization Behavior
+*** Allow unauthenticated requests
+*** Require authentication
+**** Redirect to identity providers
+**** HTTP status codes
+** Token Store
+*** Built-in repository of tokens
+*** Associated with users of apps
+** Logging and Tracing
+*** Authentication and authorization traces
+*** Collected in application log files
+@endmindmap

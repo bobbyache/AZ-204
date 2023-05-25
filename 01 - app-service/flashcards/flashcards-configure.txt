@@ -1,0 +1,12 @@
+What are app settings in App Service?|App settings in App Service are variables passed as environment variables to the application code.
+How does App Service handle app settings for Linux apps and custom containers?|App Service passes app settings to the container using the --env flag to set the environment variable in the container.
+How are app settings in App Service different from settings in Web.config or appsettings.json for ASP.NET and ASP.NET Core developers?|App settings in App Service override the ones in Web.config or appsettings.json.
+What is the purpose of storing app settings in App Service?|Storing app settings in App Service allows you to keep production secrets safely separate from development settings.
+How are app settings stored in App Service?|App settings are always encrypted when stored (encrypted-at-rest).
+How can you add a new app setting in App Service?|To add a new app setting, select "New application setting."
+How can you edit a setting in App Service?|To edit a setting, select the "Edit" button.
+How can you configure nested JSON key structures in the app setting name for a Linux container in App Service?|In a Linux container, any nested JSON key structure should be configured in App Service by replacing ":" with "__" (double underscore).
+How can you add or edit app settings in bulk in App Service?|To add or edit app settings in bulk, select the "Advanced edit" button.
+How do connection strings in App Service relate to Web.config settings for ASP.NET and ASP.NET Core developers?|Connection strings in App Service override the ones in Web.config.
+What can be configured in the General settings section of App Service?|In the General settings section, you can configure various common settings for your app, such as the software stack, platform settings, and more.
+How can you customize IIS handler mappings and virtual applications and directories for Windows apps in App Service?|You can customize IIS handler mappings and virtual applications and directories by adding or editing them based on your requirements.

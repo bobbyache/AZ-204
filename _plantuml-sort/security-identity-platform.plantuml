@@ -1,0 +1,26 @@
+@startmindmap "Security"
+
++ Microsoft Identity Platform
+++ Authentication services
++++ OAuth2 and Open API Connect
+++++_ Sign in with...
++++++_ Work and school accounts (AAD)
++++++_ Personal MS accounts (Outlook, Skype, XBox)
++++++_ Social acounts (AAD B2C)
+++++_ Access to Microsoft APIs
++++++_ Microsoft Graph
+++++_ Own APIs
+++ Open Source Libraries
++++_ MSAL and others
+++ Application Management Tools\n(Azure Management Portal)
++++_ Registration + configuration and other management tools
+++ Application Config API and PowerShell
++++_ Programmatic configuration for automation
+++++_ Microsoft Graph API
+++++_ PowerShell
+++ Native support for...
++++_ Passwordless authentication
++++_ Step-up authentication
++++_ Conditional access 
+
+@endmindmap

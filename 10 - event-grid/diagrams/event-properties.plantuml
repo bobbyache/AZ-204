@@ -1,0 +1,20 @@
+@startmindmap "Custom Topics"
+* Custom Topics
+** Event Publisher determines data object
+** Top-level data matches standard resource-defined events
+** Subjects for Events
+*** Help subscribers identify interest
+*** Used for filtering and routing events
+** Path Filtering
+*** Include path where event occurred
+*** Subscribers filter events by path segments
+*** Enables narrow or broad event filtering
+**** Example: /A/B/C for broad set of events
+**** Example: /A/B for narrower set of events
+** Detailed Subjects
+*** Storage Accounts publisher example
+*** Subject: /blobServices/default/containers/<container-name>/blobs/<file>
+*** Subscribers filter events based on path or suffix
+**** Filter by path: /blobServices/default/containers/testcontainer
+**** Filter by suffix: .txt
+@endmindmap

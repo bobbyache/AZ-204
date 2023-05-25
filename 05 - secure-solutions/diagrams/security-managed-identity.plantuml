@@ -1,0 +1,41 @@
+@startmindmap "Managed Identity"
+
++ Managed Identity
+
+++ Benefits
++++_ Obtain tokens without having to manage credentials
++++_ Automatically rotate the service principal
++++_ No app registration necessary
+++ Limitations
++++_ Must be single-tenant (have no App ID)
+
+++ Types
++++_ Resource can have 1 system assigned and multiple user assigned...
++++_ System Assigned
+++++_ Either turned on or off for resource
+++++_ Life-cycle linked to resource
++++_ User Assigned
+++++_ Can assign more than one to resource
+++++_ Life-cycle is independent of resource
+
+++ Acquire Access Token
++++ DefaultAzureCredential
+++++_ Add package **Azure.Identity** to access Azure Identity SDK.
+++++_ Authenticate to **Azure.Security.KeyVault.Secrets**
+++++_ Simplifies getting started with SDK.
+++++_ Handles common scenarios with reasonable default behaviors.
+++++_ **var cred = new DefaultAzureCredential(cred)**
+++++ Authentication Mechanisms
++++++_ Environment variables
++++++_ Managed Identity
++++++_ Visual Studio
++++++_ Azure CLI (and VS Code)
++++++_ Azure PowerShell
++++++_ Interactive Browser
++++++_ sdf
++++ ChainedTokenCredential
+++++_ More advanced and versatile.
+++++_ Combine multiple instances try one fall back to another.
+++++_ **var cred = new ChainedTokenCredential(cred1, cred2, ...)**
+
+@endmindmap

@@ -1,0 +1,61 @@
+@startmindmap
+skinparam backgroundColor #FFFFFF
+
+* Azure Container Apps
+** Flexibility
+*** Serverless container service
+*** Built for microservice applications
+*** Robust autoscaling capabilities
+*** No complex infrastructure management
+** Explore Azure Container Apps
+*** Run microservices and containerized applications
+*** Serverless platform on Azure Kubernetes Service
+*** Common uses: API endpoints, background processing, event-driven processing, microservices
+*** Dynamic scaling based on HTTP traffic, event-driven processing, CPU or memory load, KEDA-supported scaler
+*** HTTPS ingress without managing other Azure infrastructure
+*** Traffic splitting for Blue/Green deployments and A/B testing
+*** Internal ingress and service discovery for secure internal-only endpoints
+*** Microservices with Dapr integration
+*** Run containers from any registry: Docker Hub, Azure Container Registry (ACR)
+*** Manage applications with Azure CLI, Azure portal, ARM templates
+*** Provide existing virtual network for container apps environment
+*** Securely manage secrets directly in the application
+*** Monitor logs using Azure Log Analytics
+** Azure Container Apps environments
+*** Individual container apps in a single environment
+*** Secure boundary with virtual network and Log Analytics workspace
+*** Deploy related services together
+*** Different applications in the same virtual network
+*** Instrument Dapr applications via Dapr service invocation API
+*** Share Dapr configuration and log analytics workspace
+*** Different environments for resource isolation and communication restrictions
+** Microservices with Azure Container Apps
+*** Independent scaling, versioning, and upgrades
+*** Service discovery
+*** Native Dapr integration
+** Dapr integration
+*** Support for microservices system
+*** Distributed function calls
+*** Failure handling, retries, timeouts
+*** Observability, pub/sub, service-to-service invocation with mutual TLS, retries, and more
+** Explore containers in Azure Container Apps
+*** Managed Kubernetes and container orchestration
+*** Support for any runtime, programming language, development stack
+*** No required base container image
+*** Automatic restart of crashed containers
+** Configuration
+*** Setup containers using properties.template in ARM templates
+*** Array of containers for sidecar pattern
+** Container registries
+*** Deploy images from private registries
+*** Credentials in Container Apps configuration
+*** Define registry fields in properties.configuration section
+** Limitations
+*** No privileged containers
+*** Linux-based (linux/amd64) container images required
+** Implement authentication and authorization in Azure Container Apps
+*** Built-in authentication and authorization features
+*** Secure external ingress-enabled container apps
+*** No code required
+*** Federated identity providers: Microsoft Identity Platform, Facebook, GitHub, Google, Twitter, Any OpenID Connect provider
+@endmindmap

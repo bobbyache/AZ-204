@@ -1,0 +1,17 @@
+@startmindmap
+* Azure Event Grid
+** Supports events in JSON implementation of CloudEvents v1.0
+** Supports HTTP protocol binding
+** Common Schema
+*** Provides a common event schema for publishing and consuming cloud-based events
+*** Enables uniform tooling
+*** Standard ways of routing and handling events
+*** Universal ways of deserializing the outer event schema
+** Header Values
+*** CloudEvents Schema: "content-type": "application/cloudevents+json; charset=utf-8"
+*** Event Grid Schema: "content-type": "application/json; charset=utf-8"
+** Event Handling
+*** Event Grid: Input and output of events in CloudEvents schema
+*** CloudEvents: Used for system events (Blob Storage, IoT Hub) and custom events
+*** Allows transformation of events during transmission
+@endmindmap

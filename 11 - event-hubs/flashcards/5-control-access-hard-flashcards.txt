@@ -1,0 +1,20 @@
+What does Azure Event Hubs support for authentication and authorization?|Azure Event Hubs supports both Azure Active Directory and shared access signatures (SAS) for authentication and authorization.
+What role grants complete access to Event Hubs resources?|The Azure Event Hubs Data Owner role grants complete access to Event Hubs resources.
+What role grants send access to Event Hubs resources?|The Azure Event Hubs Data Sender role grants send access to Event Hubs resources.
+What role grants receiving access to Event Hubs resources?|The Azure Event Hubs Data Receiver role grants receiving access to Event Hubs resources.
+How do you authorize a request to Event Hubs service from a managed identity in your application?|To authorize a request to Event Hubs service from a managed identity in your application, you need to configure Azure role-based access control settings for that managed identity.
+What is the advantage of using Azure AD with Event Hubs?|The advantage of using Azure AD with Event Hubs is that your credentials no longer need to be stored in your code.
+What does an event publisher define for an Event Hubs?|An event publisher defines a virtual endpoint for an Event Hubs.
+What are all tokens assigned with in Event Hubs?|All tokens are assigned with shared access signature keys in Event Hubs.
+What does Event Hubs token authentication require for back-end applications consuming data from Event Hubs producers?|Event Hubs token authentication requires its clients to either have the manage rights or the listen privileges assigned to its Event Hubs namespace or event hub instance or topic.
+How is data consumed from Event Hubs?|Data is consumed from Event Hubs using consumer groups.
+What are the two options for handling authentication and authorization in Azure Event Hubs?|The two options for handling authentication and authorization in Azure Event Hubs are Azure Active Directory and shared access signatures (SAS).
+What does the Azure Event Hubs Data Owner role provide?|The Azure Event Hubs Data Owner role provides complete access to Event Hubs resources.
+What is the purpose of the Azure Event Hubs Data Sender role?|The Azure Event Hubs Data Sender role is used to grant send access to Event Hubs resources.
+What does the Azure Event Hubs Data Receiver role enable?|The Azure Event Hubs Data Receiver role enables receiving access to Event Hubs resources.
+How can you authorize a request to Event Hubs from a managed identity in your application?|that managed identity.
+What is the benefit of using Azure AD with Event Hubs in terms of credentials?|The benefit of using Azure AD with Event Hubs is that it eliminates the need to store credentials in your code.
+What is the purpose of an event publisher in Event Hubs?|An event publisher defines a virtual endpoint for sending messages to an Event Hubs instance.
+How do Event Hubs clients operate on tokens?|Event Hubs clients operate on the same tokens until they expire.
+What is the main benefit of shared access signatures for Event Hubs resources?|The main benefit of shared access signatures is that they provide fine-grained access control for Event Hubs resources.
+How does Event Hubs ensure data durability and availability?|Event Hubs ensures data durability and availability through partitioning.

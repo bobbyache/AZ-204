@@ -1,0 +1,48 @@
+@startmindmap
+* Events
+** Common information
+*** Source of the event
+*** Time the event took place
+*** Unique identifier
+** Specific information
+*** Relevant to the specific type of event
+** Event size
+*** General Availability (GA) SLA
+**** Up to 64 KB
+*** Currently in preview
+**** Up to 1 MB
+*** Events over 64 KB charged in 64-KB increments
+* Event sources
+** Where the event happens
+** Related to one or more event types
+** Responsible for sending events to Event Grid
+** Examples
+*** Azure Storage
+*** IoT Hub
+*** Your application (custom events)
+* Topics
+** Event Grid topic
+*** Endpoint where the source sends events
+*** Created by the publisher
+*** Can have one or more topics for a collection of related events
+** System topics
+*** Built-in topics provided by Azure services
+*** Subscribing requires providing information about the resource
+** Custom topics
+*** Application and third-party topics
+*** Visible in your subscription when created or assigned access
+* Event subscriptions
+** Tells Event Grid which events you're interested in receiving
+** Provides an endpoint for handling the event
+** Can filter events by event type or subject pattern
+** Expiration can be set for limited-time subscriptions
+* Event handlers
+** Place where the event is sent
+** Takes further action to process the event
+** Handler types
+*** Supported Azure services
+*** HTTP webhook
+**** Retried until the handler returns 200 - OK
+*** Azure Storage Queue
+**** Retried until successfully processed by the Queue service
+@endmindmap

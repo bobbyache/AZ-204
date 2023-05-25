@@ -1,0 +1,41 @@
+@startmindmap "Access Tiers"
+
+' Azure Blob Storage
+* Azure Blob Storage
+
+** Blob storage is designed for:
+*** Serving images or documents directly to a browser.
+*** Storing files for distributed access.
+*** Streaming video and audio.
+*** Writing to log files.
+*** Storing data for backup and restore, disaster recovery, and archiving.
+*** Storing data for analysis by an on-premises or Azure-hosted service.
+
+** Accessing Blob storage:
+*** HTTP/HTTPS
+*** Azure Storage REST API
+*** Azure PowerShell
+*** Azure CLI
+*** Azure Storage client library
+
+** Azure Storage Account
+*** Top-level container for Azure Blob storage
+*** Provides a unique namespace
+*** Accessible worldwide over HTTP/HTTPS
+
+** Types of Storage Accounts
+*** Standard (recommended for most scenarios)
+*** Premium (higher performance using solid-state drives)
+**** Block blobs
+**** Page blobs
+**** File shares
+
+** Access Tiers for Blob Data
+*** Hot (frequent access, highest storage costs, lowest access costs)
+*** Cool (infrequent access, lower storage costs, higher access costs)
+*** Archive (data tolerance for latency, cost-effective but more expensive access)
+
+** Switching Access Tiers
+*** Can switch between Hot, Cool, and Archive tiers
+
+@endmindmap

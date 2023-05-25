@@ -1,0 +1,53 @@
+@startmindmap "Storage Accounts"
+
++ Azure Storage Lifecycle
+++ General Purpose V2
++++ Tiers (Blob, Files)
+++++ Archived
++++++_ Rarely accessed, store for at least 180 days
++++++_ Flexible latency on order of hours
++++++_ Offline (requires hydration to hot or cold)
++++++_ Highest access costs and lowest storage costs
++++++_ Supports only LRS, GRS, and RA-GRS
++++++ Rehydrate
+++++++_ MS recommends "Copy Blob" or\n  "Copy Blob from URL" over "Set Blob Tier"
+++++++_ Priorities are
++++++++_ Standard - up to 15 hours
++++++++_ High - from 1 hour
+++++++_ http header <u>x-ms-rehydrate-priority</u>
+++++ Cool
++++++_ Infrequently accessed, store for at least 30 days
++++++_ Pay less for storage, more for transactions
++++++_ Slightly less availability than "hot"
++++++_ Same durability, latency, and throughput as "hot"
+++++ Hot
++++++_ Accessed frequently
++++++_ Pay more for storage, less for transactions
++++ Tiers (Files)
+++++_ Transaction optimized - level up from hot
+++ Premium
++++_ Optimized for fast interaction
+
++ Blob Storage\nLifecycle Management
+-- Transition
+---_ Transition to cooler tiers
+-- Delete
+---_ Delete at end of life cycles
+-- Rules
+---_ Run once a day
+---_ Act on subsets (prefix filters)
+
++ Lifecycle Policy
+++ rules\n(up to 100)
++++ Rule
+++++_ ...
++++ Rule
+++++_ name, type, and enabled/disabled
+++++ definition
++++++_ filter set \n  logical AND applied to multiple filters
+++++++_ type (required)
+++++++_ prefix (up to 10)
+++++++_ index match (up to 10)
++++++_ action set\n  applies delete or actions (transition rules) to filtered set
+
+@endmindmap

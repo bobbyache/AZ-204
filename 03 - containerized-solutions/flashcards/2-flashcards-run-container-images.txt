@@ -1,0 +1,54 @@
+What does Azure Container Instances (ACI) offer?|The fastest and simplest way to run a container in Azure without managing virtual machines or adopting a higher-level service.
+What are some benefits of Azure Container Instances (ACI)?|Fast startup, container access with IP address and FQDN, hypervisor-level security, minimal customer data storage, custom sizes for CPU cores and memory, persistent storage with Azure Files, and support for both Linux and Windows containers.
+What is a container group in Azure Container Instances?|It is a collection of containers that are scheduled on the same host machine, share a lifecycle, resources, local network, and storage volumes.
+How can you deploy a multi-container group in Azure Container Instances?|By using either a Resource Manager template or a YAML file, depending on the need for additional Azure service resources or only container instances in the deployment.
+How does Azure Container Instances allocate resources to a container group?|By adding up the resource requests of the instances in the group, such as CPUs, memory, and optionally GPUs.
+How do container groups in Azure Container Instances handle networking?|They share an IP address and port namespace, and to enable external access, the port must be exposed on the IP address and from the container. Containers within the group can reach each other via localhost.
+What types of external volumes can be mounted within a container group in Azure Container Instances?|Azure file share, secret, empty directory, and cloned git repo.
+In what scenarios are multi-container groups useful in Azure Container Instances?|They are useful when dividing a single functional task into multiple container images, allowing separate teams and resource requirements.
+What are the three restart policy settings for container groups in Azure Container Instances?|The restart policy settings are Always, Never, and OnFailure.
+When are containers in a container group restarted with the "Always" restart policy?|Containers in a container group with the "Always" restart policy are always restarted.
+What happens when containers in a container group have the "Never" restart policy?|Containers in a container group with the "Never" restart policy run at most once and are never restarted.
+Under what conditions are containers in a container group restarted with the "OnFailure" restart policy?|Containers in a container group with the "OnFailure" restart policy are restarted only when the executed process in the container fails (terminates with a nonzero exit code).
+How does Azure Container Instances handle containers with the "Never" or "OnFailure" restart policies when they stop?|Azure Container Instances sets the status of containers with the "Never" or "OnFailure" restart policies to Terminated when they stop.
+Why is setting environment variables in container instances useful?|Setting environment variables in container instances allows dynamic configuration of the application or script run by the container.
+What are secure values used for in Azure Container Instances?|Secure values in Azure Container Instances are used to hold sensitive information like passwords or keys for the application.
+How are environment variables with secure values displayed in container properties?|Environment variables with secure values are not visible in container properties and can only be accessed from within the container.
+How can you set a secure environment variable in Azure Container Instances?|Secure environment variables can be set by specifying the secureValue property instead of the regular value for the variable's type.
+What is required to persist state in Azure Container Instances beyond the container's lifetime?|To persist state beyond the container's lifetime, a volume from an external store must be mounted.
+What type of containers can mount Azure Files shares in Azure Container Instances?|Only Linux containers can mount Azure Files shares in Azure Container Instances.
+What is required for a Linux container to mount an Azure File share volume?|The Linux container must run as root to mount an Azure File share volume.
+What are the limitations of Azure File share volume mounts in Azure Container Instances?|The limitations include being limited to CIFS support and only available for Linux containers.
+How can you mount an Azure file share as a volume in a container using the Azure CLI?|You can use the Azure CLI and specify the share and volume mount point when creating the container with the `az container create` command.
+When is deploying a container group and mounting a volume using a YAML template the preferred method?|Deploying by YAML template is the preferred method when deploying container groups consisting of multiple containers.
+What approach should you use to mount multiple volumes in a container instance?|To mount multiple volumes in a container instance, you should use an Azure Resource Manager template or a YAML file.
+How do you define the volumes for mounting multiple volumes in a container instance?|In the template or YAML file, you need to provide the share details and define the volumes by populating the volumes array in the properties section.
+How can you specify the volume mounts for each container in a container group when mounting multiple volumes?|For each container, you populate the volumeMounts array in the properties section of the container definition.
+What is one of the benefits of using Azure Container Instances (ACI)?|Fast startup: ACI can start containers in Azure in seconds, without the need to provision and manage VMs.
+How does ACI enable container access?|ACI enables exposing your container groups directly to the internet with an IP address and a fully qualified domain name (FQDN).
+How does ACI ensure application isolation and security?|ACI provides hypervisor-level security, isolating your application as completely as it would be in a VM.
+What type of customer data does the ACI service store?|The ACI service stores the minimum customer data required to ensure your container groups are running as expected.
+What customization options does ACI provide for resource allocation?|ACI provides custom sizes, allowing exact specifications of CPU cores and memory for optimum utilization.
+How can you achieve persistent storage in ACI?|You can mount Azure Files shares directly to a container in order to retrieve and persist state.
+What types of containers can you schedule using ACI?|You can schedule both Windows and Linux containers using the same API.
+When should you consider using Azure Kubernetes Service (AKS) instead of ACI?|For scenarios requiring full container orchestration, service discovery across multiple containers, automatic scaling, and coordinated application upgrades, AKS is recommended.
+What is the top-level resource in Azure Container Instances?|The container group.
+What is a container group?|A collection of containers that get scheduled on the same host machine.
+What do the containers in a container group share?|They share a lifecycle, resources, local network, and storage volumes.
+How is a container group in Azure Container Instances similar to a pod in Kubernetes?|They are similar in concept.
+What are the two common ways to deploy a multi-container group in Azure Container Instances?|Using a Resource Manager template or a YAML file.
+When is using a Resource Manager template recommended for deploying a multi-container group?|It is recommended when you need to deploy additional Azure service resources along with the container instances.
+When is using a YAML file recommended for deploying a multi-container group?|It is recommended when your deployment includes only container instances.
+How does Azure Container Instances allocate resources to a container group?|By adding up the resource requests of the instances in the group.
+What happens when you create a container group with two instances, each requesting one CPU?|The container group is allocated two CPUs.
+How do container groups in Azure Container Instances share network and port resources?|They share an IP address and a port namespace.
+What must you do to enable external clients to reach a container within a container group?|You must expose the port on the IP address and from the container.
+How can containers within a group communicate with each other?|They can reach each other via localhost on the ports they've exposed.
+What can you specify within a container group to mount external volumes?|You can specify external volumes to mount within a container group.
+What types of volumes are supported in Azure Container Instances?|Supported volumes include Azure file share, Secret, Empty directory, and Cloned git repo.
+When are multi-container groups useful?|They are useful when you want to divide a single functional task into multiple container images.
+Give an example usage of multi-container groups.|An example usage could include a container serving a web application and a container pulling the latest content from source control.
+In a multi-container group, what does the logging container do?|The logging container collects the logs and metrics output by the main application and writes them to long-term storage.
+In a multi-container group, what does the monitoring container do?|The monitoring container periodically makes a request to the application to ensure that it's running and responding correctly, and raises an alert if it's not.
+In a multi-container group, what is the purpose of the back-end container?|The back-end container runs a service to retrieve data.
+What is the relationship between the front-end container and the back-end container in a multi-container group?|The front-end container serves a web application, while the back-end container retrieves data.

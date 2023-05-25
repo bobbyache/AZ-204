@@ -1,0 +1,38 @@
+@startmindmap
+* Service Bus
+** Message Payloads and Serialization
+*** Payload (Opaque, Binary Block)
+**** ContentType (MIME content-type)
+**** Serialization
+***** .NET Framework
+***** Legacy SBMP Protocol
+***** AMQP Protocol
+*** Metadata (Key-Value Pair Properties)
+**** Describes Payload
+**** Handling Instructions
+*** Object Model (for .NET and Java Clients)
+*** Binary Payload Section
+*** Properties
+**** Broker Properties
+***** To
+***** ReplyTo
+***** ReplyToSessionId
+***** MessageId
+***** CorrelationId
+***** SessionId
+**** User Properties
+*** Routing and Correlation
+**** Simple Request/Reply
+**** Multicast Request/Reply
+**** Multiplexing
+**** Multiplexed Request/Reply
+*** Routing Patterns
+**** Autoforward Chaining
+**** Topic Subscription Rules
+**** Azure LogicApps
+**** To Property (Reserved for Future Use)
+*** Payload Serialization
+**** ContentType Property
+**** Serialization Control
+*** Explicit Object Serialization Control
+@endmindmap

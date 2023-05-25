@@ -1,0 +1,26 @@
+@startmindmap "Microsoft Graph"
+
++ MS Graph
+++ SDKs
++++_ Fluent APIs\nLINQ to filter and order
+++++_ .GetAsync()
+++++_ .AddAsync()
+++++_ .DeleteAsync()
++++ Core Library
+++++_ Retry handling
+++++_ Secure redirects
+++++_ Transparent authentication
+++++_ Payload compression
+++++_ Paging and batch requests
+++++_ **Microsoft.Graph.Core**
++++ Service Library
+++++_ Models and request builders
++++++_ Generated from metadata
++++++_ rich, strongly typed, discoverable experience
+++++_ **Microsoft.Graph**\n**Microsoft.Graph.Beta**
+
+
+
+
+
+@endmindmap

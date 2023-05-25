@@ -1,0 +1,9 @@
+@startwbs "Application Object"
+* Application Object (Global Representation)
+** Security Principal (Local Representation)
+*** User Principal
+*** Service Principal
+**** Application
+**** Managed Identity
+**** Legacy
+@endwbs

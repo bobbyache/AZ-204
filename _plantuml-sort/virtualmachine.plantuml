@@ -1,0 +1,29 @@
+@startmindmap "Virtual Machines"
+
++ Virtual Machines
+++ Availability
++++ Availability Set
+++++_ Copies on diff physical servers\n in same zone (datacenter)
++++ Availability Zone
+++++_ Copies in different zones (datacenters)
++++ Virtual Machine Scale Set
+++++_ Copies across zones\nScale according to demand
+++ VM Sizes
++++ Series
+++++ B
++++++_ Burstable (varying performance)
+++++ D
++++++_ Good general purpose
+++++ F
++++++_ Compute optimized
+++++ E
++++++_ Memory optimized
+++++ L
++++++_ Storage optimized
+++++ DC + EC
++++++_ Confidential compute
+++++ H
++++++_ High performance\n(very expensive)
+
+
+@endmindmap

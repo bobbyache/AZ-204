@@ -1,0 +1,21 @@
+@startuml "Make decision based on storage"
+    start
+        ' switch (data shape)
+        '     case (unstructured)
+        '         :if ();
+        '     case (structured)
+        '         :decision 3;
+        ' endswitch
+        if (structured) then (yes)
+            :non-relational, relational;
+        else
+            :blob storage;
+        endif
+    stop
+@enduml
+
+@startuml "Make ..."
+    start
+        :Make another decision;
+    stop
+@enduml

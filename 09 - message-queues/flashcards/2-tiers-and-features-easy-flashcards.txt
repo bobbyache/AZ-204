@@ -1,0 +1,41 @@
+Microsoft Azure Service Bus is a fully managed enterprise integration _______|Microsoft Azure Service Bus is a fully managed enterprise integration message broker.
+Service Bus can decouple applications and _______|Service Bus can decouple applications and services.
+Data is transferred between different applications and services using _______|Data is transferred between different applications and services using messages.
+A message is a container decorated with metadata and _______|A message is a container decorated with metadata and contains data.
+The data can be any kind of information, including structured data encoded with _______|The data can be any kind of information, including structured data encoded with the common formats such as JSON, XML, Apache Avro, Plain Text.
+Service Bus enables transfer of business data, such as _______|Service Bus enables transfer of business data, such as sales or purchase orders, journals, or inventory movements.
+Service Bus helps improve reliability and scalability of _______|Service Bus helps improve reliability and scalability of applications and services.
+Topics and subscriptions enable _______|Topics and subscriptions enable 1:n relationships between publishers and subscribers.
+Message sessions are used to implement workflows that require _______|Message sessions are used to implement workflows that require message ordering or message deferral.
+The premium tier of Service Bus Messaging addresses customer requests around _______|The premium tier of Service Bus Messaging addresses customer requests around scale, performance, and availability for mission-critical applications.
+The premium tier is recommended for _______|The premium tier is recommended for production scenarios.
+Premium tier provides high _______|Premium tier provides high throughput.
+Standard tier provides _______|Standard tier provides variable throughput.
+Premium tier provides predictable _______|Premium tier provides predictable performance.
+Standard tier provides _______|Standard tier provides variable latency.
+Premium tier provides fixed _______|Premium tier provides fixed pricing.
+Standard tier provides _______|Standard tier provides pay as you go pricing.
+Premium tier provides the ability to scale workload _______|Premium tier provides the ability to scale workload up or down.
+Premium tier provides message size up to _______|Premium tier provides message size up to 100 MB.
+Standard tier provides message size of up to _______|Standard tier provides message size of up to 256 KB.
+To create a _____ guarantee in Service Bus, use sessions.|To create a first-in, first-out (FIFO) guarantee in Service Bus, use sessions.
+The autoforwarding feature chains a _____ or subscription to _____.|The autoforwarding feature chains a queue or subscription to another queue or topic that is in the same namespace.
+Service Bus supports a _____ queue (DLQ).|Service Bus supports a dead-letter queue (DLQ).
+You can submit messages to a queue or topic for _____ processing.|You can submit messages to a queue or topic for delayed processing.
+A queue or subscription client can defer retrieval of a message until _____.|A queue or subscription client can defer retrieval of a message until a later time.
+Client-side batching enables a queue or topic client to delay _____.|Client-side batching enables a queue or topic client to delay sending a message for a certain period of time.
+A _____ groups two or more operations together into an execution scope.|A transaction groups two or more operations together into an execution scope.
+Subscribers can define which messages they want to receive from a _____.|Subscribers can define which messages they want to receive from a topic.
+Autodelete on idle enables you to specify an idle interval after which a _____ is automatically deleted.|Autodelete on idle enables you to specify an idle interval after which a queue is automatically deleted.
+An error could cause the client to have a doubt about the outcome of a _____ operation.|An error could cause the client to have a doubt about the outcome of a send operation.
+Service Bus supports security protocols such as Shared Access Signatures (SAS), Role Based Access Control (RBAC), and _____.|Service Bus supports security protocols such as Shared Access Signatures (SAS), Role Based Access Control (RBAC), and Managed identities for Azure resources.
+When Azure regions or datacenters experience downtime, Geo-disaster recovery enables data processing to continue operating _____.|When Azure regions or datacenters experience downtime, Geo-disaster recovery enables data processing to continue operating in a different region or datacenter.
+Service Bus supports standard _____ and HTTP/REST protocols.|Service Bus supports standard AMQP 1.0 and HTTP/REST protocols.
+The primary wire protocol for Service Bus is _______ 1.0, an open ISO/IEC standard.|The primary wire protocol for Service Bus is Advanced Messaging Queueing Protocol (AMQP) 1.0, an open ISO/IEC standard.
+Service Bus Premium is fully compliant with the Java/Jakarta EE _______ 2.0 API.|Service Bus Premium is fully compliant with the Java/Jakarta EE Java Message Service (JMS) 2.0 API.
+Fully supported Service Bus client libraries are available via the Azure _______.|Fully supported Service Bus client libraries are available via the Azure SDK.
+Azure Service Bus for _______ is a fully supported Service Bus client library.|Azure Service Bus for .NET is a fully supported Service Bus client library.
+Azure Service Bus libraries for _______ are available as fully supported client libraries.|Azure Service Bus libraries for Java are available as fully supported client libraries.
+Azure Service Bus provider for Java _______ is a fully supported client library.|Azure Service Bus provider for Java JMS 2.0 is a fully supported client library.
+Azure Service Bus Modules for JavaScript and TypeScript are available as _______ libraries.|Azure Service Bus Modules for JavaScript and TypeScript are available as fully supported libraries.
+Azure Service Bus libraries for _______ are available as fully supported client libraries.|Azure Service Bus libraries for Python are available as fully supported client libraries.

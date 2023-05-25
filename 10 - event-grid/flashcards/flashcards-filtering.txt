@@ -1,0 +1,10 @@
+What are the three options for filtering when creating an event subscription?|Event types, Subject begins with or ends with, Advanced fields and operators
+By default, which event types are sent to the endpoint when creating an event subscription?|All event types for the event source
+How can you filter event types to only receive certain ones for an event subscription?|Specify the desired event types in an array or use "All" to get all event types for the event source
+For subject filtering, what options are available?|Filter by subject starting or ending value
+Can you provide an example of subject filtering?|Filtering for events related to uploading a text file to a storage account by specifying the subject ends with ".txt"
+How can you filter events for a specific container in a storage account?|Filter the subject by beginning with "/blobServices/default/containers/testcontainer"
+What are the components of advanced filtering for event subscriptions?|Operator type, key (field in the event data), value or values (to compare with the key)
+What is the purpose of the operator type in advanced filtering?|To specify the type of comparison to be performed
+What are some examples of valid keys in advanced filtering?|Number, boolean, or string values from the event data
+What is the purpose of the value or values in advanced filtering?|To define the value(s) against which the key will be compared

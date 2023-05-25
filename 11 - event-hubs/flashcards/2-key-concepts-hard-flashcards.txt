@@ -1,0 +1,10 @@
+What is an Event Hubs client?|An Event Hubs client is the primary interface for developers interacting with the Event Hubs client library.
+What is an Event Hubs producer?|An Event Hubs producer serves as a source of telemetry data, diagnostics information, usage logs, or other log data.
+What is an Event Hubs consumer responsible for?|An Event Hubs consumer reads information from the Event Hubs and allows processing of it.
+What is the purpose of partitions in Event Hubs?|Partitions are a means of data organization associated with the parallelism required by event consumers.
+How does Azure Event Hubs provide message streaming?|Azure Event Hubs provides message streaming through a partitioned consumer pattern where each consumer only reads a specific subset, or partition, of the message stream.
+What is the purpose of consumer groups in Event Hubs?|Consumer groups enable multiple consuming applications to have a separate view of the event stream and read it independently.
+How many concurrent readers can there be on a partition per consumer group?|There can be at most five concurrent readers on a partition per consumer group.
+What happens if there are multiple readers on the same partition?|Each active reader receives all the events from its partition, and if there are multiple readers on the same partition, they'll receive duplicate events.
+How do Event Hubs consumers connect to receive event data?|Event Hubs consumers connect via the AMQP 1.0 session.
+How does the Event Hubs service deliver events?|The Event Hubs service delivers events through a session as they become available.

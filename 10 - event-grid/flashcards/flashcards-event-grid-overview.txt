@@ -1,0 +1,29 @@
+What is Azure Event Grid used for?|Azure Event Grid is used as a serverless event broker for integrating applications through events.
+Where are events delivered by Event Grid?|Events are delivered to subscriber destinations such as applications, Azure services, or any endpoint accessible to Event Grid.
+What are the possible sources of events in Event Grid?|The sources of events can be other applications, SaaS services, and Azure services.
+Do publishers have expectations on how events are handled?|No, publishers emit events without imposing any expectations on how they should be handled.
+Who decides which events to handle?|Subscribers decide on which events they want to handle.
+What does Event Grid facilitate in terms of application development?|Event Grid allows for the easy development of applications with event-based architectures.
+What types of events does Event Grid have built-in support for?|Event Grid has built-in support for events coming from Azure services, such as storage blobs and resource groups.
+Can Event Grid handle custom events?|Yes, Event Grid has support for custom events using custom topics.
+How can specific events be routed to different endpoints in Event Grid?|Filters can be used to route specific events to different endpoints.
+What does Event Grid ensure in terms of event delivery?|Event Grid ensures that events are reliably delivered.
+Is the provided image a comprehensive list of supported integrations in Event Grid?|No, the image only represents the connection between sources and handlers in Event Grid and is not a comprehensive list of supported integrations.
+What common information is included in every event?|Every event includes common information such as the source of the event, time the event took place, and a unique identifier.
+What specific information is included in an event?|An event also includes specific information that is relevant to the type of event, such as details about a file or the URL of a Capture file.
+What is the General Availability (GA) Service Level Agreement (SLA) for event size?|Events of size up to 64 KB are covered by the GA SLA.
+What is the size limit for events currently in preview?|Events of size up to 1 MB are currently in preview.
+How are events over 64 KB charged?|Events over 64 KB are charged in 64-KB increments.
+What is an event source?|An event source is where the event happens and is responsible for sending events to Event Grid.
+What are system topics in Event Grid?|System topics are built-in topics provided by Azure services that you can subscribe to receive events from.
+What are custom topics in Event Grid?|Custom topics are application and third-party topics that you can create or be assigned access to in your subscription.
+What is an event subscription?|An event subscription tells Event Grid which events on a topic you're interested in receiving and specifies an endpoint for handling the event.
+How can you filter the events sent to an endpoint in Event Grid?|You can filter events by event type or subject pattern.
+Is it possible to set an expiration for event subscriptions?|Yes, you can set an expiration for event subscriptions that are only needed for a limited time.
+What is an event handler in Event Grid?|An event handler is the place where the event is sent for further action processing.
+What types of event handlers are supported in Event Grid?|Event Grid supports supported Azure services and HTTP webhooks as event handlers.
+How does Event Grid ensure delivery for HTTP webhook event handlers?|Event Grid retries the event until the handler returns a status code of 200 – OK.
+How does Event Grid ensure delivery for Azure Storage Queue event handlers?|Event Grid retries the event until the Queue service successfully processes the message push into the queue.
+What are used to group Event Grid topics that are related to the same application for easier management?|Domains
+What do you call the app or service that receives the events?|Event Handlers
+What is the service that published the event called|Publisher

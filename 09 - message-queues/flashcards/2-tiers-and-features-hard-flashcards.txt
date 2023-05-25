@@ -1,0 +1,33 @@
+What is Microsoft Azure Service Bus?|Microsoft Azure Service Bus is a fully managed enterprise integration message broker.
+How does Service Bus decouple applications?|Service Bus decouples applications by transferring data between them using messages.
+What is a message in Service Bus?|A message is a container decorated with metadata that contains data.
+What are some common formats in which data can be encoded in Service Bus messages?|Data can be encoded in Service Bus messages using formats like JSON, XML, Apache Avro, or Plain Text.
+How does Service Bus improve the reliability and scalability of applications and services?|Service Bus improves reliability and scalability by enabling applications and services to operate independently of each other.
+How do topics and subscriptions work in Service Bus?|Topics and subscriptions in Service Bus enable a one-to-many relationship between publishers and subscribers.
+What are message sessions used for in Service Bus?|Message sessions in Service Bus are used to implement workflows that require message ordering or message deferral.
+What are the differences between the standard and premium tiers of Service Bus?|The premium tier provides higher throughput, predictable performance, fixed pricing, the ability to scale workload up or down, and supports larger message sizes compared to the standard tier.
+When is the premium tier of Service Bus recommended?|The premium tier of Service Bus is recommended for production scenarios.
+What is the advantage of using the premium tier of Service Bus over the standard tier?|The premium tier of Service Bus offers higher throughput, predictable performance, and the ability to scale workload up or down.
+What is the maximum message size supported in the premium tier of Service Bus?|The premium tier of Service Bus supports message sizes up to 100 MB.
+What is the maximum message size supported in the standard tier of Service Bus?|The standard tier of Service Bus supports message sizes of up to 256 KB.
+What is used to create a first-in, first-out (FIFO) guarantee in Service Bus?|Sessions
+What does the autoforwarding feature in Service Bus chain to another queue or topic?|A queue or subscription
+What does Service Bus support to hold messages that can't be delivered to any receiver?|A dead-letter queue (DLQ)
+How can you submit messages to a queue or topic for delayed processing?|By scheduling a job to become available for processing at a certain time
+What happens when a queue or subscription client defers retrieval of a message?|The message remains in the queue or subscription, but it's set aside for later retrieval
+What does client-side batching enable a queue or topic client to do?|Delay sending a batch of messages for a certain period of time
+What does a transaction do in Service Bus?|Groups two or more operations together into an execution scope
+What can subscribers define in Service Bus?|Subscription rules to specify which messages they want to receive from a topic
+What does autodelete on idle enable you to specify for a queue in Service Bus?|An idle interval after which a queue is automatically deleted if no activity occurs within that time
+What does duplicate detection in Service Bus enable?|The sender to resend the same message or for the queue or topic to discard any duplicate copies
+What security protocols does Service Bus support?|Shared Access Signatures (SAS), Role Based Access Control (RBAC), and Managed identities for Azure resources
+What does Geo-disaster recovery in Azure enable when regions or datacenters experience downtime?|Data processing to continue operating in a different region or datacenter
+What protocols does Service Bus support?|Standard AMQP 1.0 and HTTP/REST protocols
+What is the primary wire protocol for Service Bus?|The primary wire protocol for Service Bus is Advanced Messaging Queueing Protocol (AMQP) 1.0, an open ISO/IEC standard.
+What is Service Bus Premium fully compliant with?|Service Bus Premium is fully compliant with the Java/Jakarta EE Java Message Service (JMS) 2.0 API.
+How can you access fully supported Service Bus client libraries?|Fully supported Service Bus client libraries are available via the Azure SDK.
+What is Azure Service Bus for .NET?|Azure Service Bus for .NET is a fully supported Service Bus client library.
+What are the available fully supported client libraries for Azure Service Bus?|Azure Service Bus libraries for Java are available as fully supported client libraries.
+What is the Azure Service Bus provider for Java JMS 2.0?|Azure Service Bus provider for Java JMS 2.0 is a fully supported client library.
+What are Azure Service Bus Modules for JavaScript and TypeScript?|Azure Service Bus Modules for JavaScript and TypeScript are available as fully supported libraries.
+Which programming language has fully supported client libraries for Azure Service Bus?|Azure Service Bus libraries for Python are available as fully supported client libraries.

@@ -1,0 +1,9 @@
+Azure Event Grid is a serverless _____ that you can use to integrate applications using events.|Azure Event Grid is a serverless event broker that you can use to integrate applications using events.
+Events are delivered by Event Grid to subscriber destinations such as applications, Azure services, or any _____ to which Event Grid has network access.|Events are delivered by Event Grid to subscriber destinations such as applications, Azure services, or any endpoint to which Event Grid has network access.
+The source of those events can be other _____, SaaS services, and Azure services.|The source of those events can be other applications, SaaS services, and Azure services.
+Publishers emit _____, but have no expectation about how the events are handled.|Publishers emit events, but have no expectation about how the events are handled.
+Subscribers decide on which events they want to _____.|Subscribers decide on which events they want to handle.
+Event Grid allows you to easily build applications with _____.|Event Grid allows you to easily build applications with event-based architectures.
+Event Grid has built-in support for events coming from _____ services, like storage blobs and resource groups.|Event Grid has built-in support for events coming from Azure services, like storage blobs and resource groups.
+Event Grid also has support for your own events, using _____.|Event Grid also has support for your own events, using custom topics.
+You can use filters to route specific events to different _____, multicast to multiple endpoints, and make sure your events are reliably delivered.|You can use filters to route specific events to different endpoints, multicast to multiple endpoints, and make sure your events are reliably delivered.

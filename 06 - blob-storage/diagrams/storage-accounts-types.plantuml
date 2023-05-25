@@ -1,0 +1,24 @@
+@startmindmap "Storage Accounts"
+
++ Azure Storage Account Types
+++ Table
++++_ Entities (key/value pairs), no real schema
+++ Files\(shares)
++++_ Folders and file sharing
++++_ SMB or NFS 4.1
++++_ Snapshots of prev versions
+++ Blob
++++ Block
+++++_ Multimedia, document files
+++++ Append
++++++_ Block Blobs optmized for append
++++++_ Log files\n  (logging from VMs)
++++ Page
+++++_ Random access files (of up to 8 terrabytes)
+++++_ Store virtual hard drive files (VHD) for Azure VMs
+++ Queue
++++_ FIFO not guaranteed
++++_ Messages queued and dequeued
+++ Static Website
++++_ Probably better to use Azure Static Web Apps\n  (more options such as CDN)
+@endmindmap

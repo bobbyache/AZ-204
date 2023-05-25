@@ -1,0 +1,34 @@
+What are the two types of queue mechanisms supported by Azure?|Azure supports two types of queue mechanisms: Service Bus queues and Storage queues.
+What do Service Bus queues integrate?|Service Bus queues integrate applications or application components that may span multiple communication protocols, data contracts, trust domains, or network environments.
+What can you store using Storage queues?|Storage queues allow you to store large numbers of messages.
+How can you access messages from Storage queues?|You can access messages from anywhere in the world via authenticated calls using HTTP or HTTPS.
+What is the maximum size of a queue message?|A queue message can be up to 64 KB in size.
+What is the purpose of using queues?|Queues are commonly used to create a backlog of work to process asynchronously.
+When should you consider using Service Bus queues?|Service Bus queues should be considered when your solution needs to receive messages without having to poll the queue.
+What type of delivery does Service Bus queues provide?|Service Bus queues provide guaranteed first-in-first-out (FIFO) ordered delivery.
+What is one of the features supported by Service Bus queues?|Service Bus queues support automatic duplicate detection.
+How can you process messages using Service Bus queues?|Service Bus queues allow processing messages as parallel long-running streams.
+What behavior does Service Bus queues provide for transactions?|Service Bus queues provide transactional behavior and atomicity when sending or receiving multiple messages from a queue.
+When should you consider using Storage queues?|Storage queues should be considered when your application must store over 80 gigabytes of messages in a queue.
+What is the benefit of using Storage queues for tracking progress?|Storage queues allow tracking progress for processing a message in the queue, even if a worker processing the message crashes.
+What do Storage queues provide logs for?|Storage queues provide server side logs of all the transactions executed against your queues.
+What are Service Bus queues designed to support?|Service Bus queues are designed to support queuing, publish/subscribe, and more advanced integration patterns.
+What size of messages can Storage queues handle?|Storage queues can handle messages up to 64 KB in size.
+What is a common use case for queues?|Queues are commonly used to create a backlog of work to process asynchronously.
+What benefits does Service Bus queues provide for message receiving?|Service Bus queues allow receiving messages without having to poll the queue.
+What feature does Service Bus queues provide for message delivery?|Service Bus queues provide guaranteed first-in-first-out (FIFO) ordered delivery.
+What type of detection does Service Bus queues support?|Service Bus queues support automatic duplicate detection.
+How can you process messages using Service Bus queues?|Service Bus queues allow processing messages as parallel long-running streams.
+What behavior do Service Bus queues provide for transactions?|Service Bus queues provide transactional behavior and atomicity when sending or receiving multiple messages from a queue.
+How much message storage capacity do Storage queues offer?|Storage queues offer the capacity to store over 80 gigabytes of messages in a queue.
+What benefit does Storage queues provide for message processing?|Storage queues allow tracking progress for processing a message in the queue, even if a worker processing the message crashes.
+What type of logs does Storage queues provide?|Storage queues provide server side logs of all the transactions executed against your queues.
+What are the ideal scenarios for using Azure Service Bus queues?|Azure Service Bus queues are ideal for scenarios where decoupling applications and enabling reliable messaging are required.
+What patterns are supported by Service Bus queues?|Service Bus queues support queuing and publish/subscribe pattern.
+What is the purpose of Storage queues?|Storage queues provide storage and retrieval of messages.
+When should you consider using Storage queues for messaging?|Storage queues are suitable when you need simple point-to-point messaging.
+What type of messaging does Service Bus queues support?|Service Bus queues support session state for messages.
+What is the maximum size limit for queue messages in Storage queues?|Storage queues have a 64 KB limit on the message size.
+What advanced features are provided by Service Bus queues?|Service Bus queues offer advanced features such as duplicate detection.
+What is the typical storage duration for messages in Storage queues?|Storage queues are designed for short-term asynchronous storage.
+What integration capabilities are provided by Service Bus queues?|Service Bus queues are designed for seamless integration capabilities across platforms.

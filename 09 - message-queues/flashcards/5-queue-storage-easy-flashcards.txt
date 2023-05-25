@@ -1,0 +1,12 @@
+Azure Queue Storage is a service for storing _______|Azure Queue Storage is a service for storing large numbers of messages.
+You access messages from anywhere in the world via authenticated calls using _______|You access messages from anywhere in the world via authenticated calls using HTTP or HTTPS.
+A queue message can be up to _______|A queue message can be up to 64 KB in size.
+A queue may contain _______ of messages, up to the total capacity limit of a storage account.|A queue may contain millions of messages, up to the total capacity limit of a storage account.
+Queues are commonly used to create _______ of work to process asynchronously.|Queues are commonly used to create a backlog of work to process asynchronously.
+URL format: Queues are addressable using the URL format _______|URL format: Queues are addressable using the URL format https://<storage account>.queue.core.windows.net/<queue>.
+All access to Azure Storage is done through a _______|All access to Azure Storage is done through a storage account.
+A queue contains a set of _______|A queue contains a set of messages.
+The queue name must be all _______|The queue name must be all lowercase.
+A message, in any format, of up to _______|A message, in any format, of up to 64 KB.
+For version 2017-07-29 or later, the maximum time-to-live can be any _______|For version 2017-07-29 or later, the maximum time-to-live can be any positive number, or -1 indicating that the message doesn't expire.
+If this parameter is omitted, the default time-to-live is _______|If this parameter is omitted, the default time-to-live is seven days.

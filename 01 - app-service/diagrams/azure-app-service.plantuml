@@ -1,0 +1,35 @@
+@startmindmap
+* Azure App Service
+** Cloud-based platform for building, deploying, and scaling web and mobile applications
+*** Supports programming languages: .NET, Node.js, Java, PHP
+*** Supports platforms: Windows, Linux, Docker containers
+*** Offers automatic scaling, load balancing, and high availability
+** Hosting Options
+*** Web Apps for hosting web applications
+*** Mobile Apps for mobile applications on iOS and Android
+*** API Apps for building RESTful APIs
+*** Function Apps for serverless applications with Azure Functions
+** Integration with Other Azure Services
+*** Virtual Machines
+*** SQL Database
+*** Active Directory
+** Azure DevOps for automation and application updates
+** App Service Plan
+*** Defines compute resources for effective app execution
+*** Multiple apps can share resources within a plan
+**** Operating system choice (Windows or Linux)
+**** Region for resource location
+**** Number and size of VM instances
+**** Pricing tier selection
+** Pricing Tiers
+*** Shared Compute (Free and Shared)
+**** Multiple apps run on the same Azure VM
+**** Allocated CPU quotas per app
+**** No support for scaling out
+*** Dedicated Compute (Basic, Standard, Premium, PremiumV2, PremiumV3)
+**** Apps run on dedicated Azure VMs
+**** Scaling capabilities based on tier
+*** Isolated Compute (Isolated, IsolatedV2)
+**** Compute and network isolation for apps
+**** Maximum scale-out capabilities
+@endmindmap

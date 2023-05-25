@@ -1,0 +1,40 @@
+@startmindmap
+* Instrumenting and monitoring
+** Application Insights
+*** Application Performance Monitoring (APM)
+*** Proactive understanding of application performance
+*** Reactive review of application execution data
+*** Collection of metrics, telemetry data, and trace logging data
+** Live Metrics
+*** Real-time observation of deployed application activity
+** Availability
+*** Synthetic Transaction Monitoring for testing availability and responsiveness
+** GitHub or Azure DevOps integration
+*** Creation of work items in context of Application Insights data
+** Usage
+*** Understanding popular features and user interactions
+** Smart Detection
+*** Automatic failure and anomaly detection through telemetry analysis
+** Application Map
+*** Top-down view of application architecture and component health
+** Distributed Tracing
+*** Search and visualization of end-to-end execution or transaction flow
+** Metrics and telemetry data
+*** Request rates, response times, and failure rates
+*** Dependency rates, response times, and failure rates
+*** Exceptions analysis
+*** Page views and load performance
+*** AJAX calls monitoring
+*** User and session counts
+*** Performance counters from server machines
+*** Host diagnostics from Docker or Azure
+*** Diagnostic trace logs from the app
+*** Custom events and metrics
+** Application Insights in Microsoft Azure
+*** Telemetry analysis and presentation
+*** Free sign-up and basic pricing plan
+** Monitoring and analyzing app performance
+*** Instrumentation at run time or development time
+*** Web page and mobile app usage analysis
+*** Availability tests
+@endmindmap

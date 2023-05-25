@@ -1,0 +1,21 @@
+@startmindmap
+* Azure Event Grid
+** Control access levels for users
+** Management operations
+*** List event subscriptions
+*** Create new event subscriptions
+*** Generate keys
+** Azure role-based access control (Azure RBAC)
+** Event Grid Subscription Reader role
+** Event Grid Subscription Contributor role
+** Managing event subscriptions
+*** Permissions to subscribe to topics
+*** No access for creating topics
+** Event Grid Contributor role
+** Non-WebHook event handlers
+*** Write access to the resource
+** Microsoft.EventGrid/EventSubscriptions/Write permission
+** Resource scope
+** System topic
+** Custom topic
+@endmindmap

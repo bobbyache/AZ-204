@@ -1,0 +1,36 @@
+@startmindmap
+
+* Application Map
+** Spot performance bottlenecks or failure hotspots
+** Each node represents an application component or its dependencies
+** Health KPI and alerts status
+** Click through to more detailed diagnostics, such as Application Insights events
+** Click through to Azure diagnostics if using Azure services, such as SQL Database Advisor recommendations
+
+* Components
+** Independently deployable parts of a distributed/microservices application
+** Code-level visibility or access to telemetry for developers and operations teams
+** Different from "observed" external dependencies
+** Run on any number of server/role/container instances
+** Can have separate Application Insights instrumentation keys or different roles reporting to a single key
+
+* Application Topology
+** Full view across multiple levels of related application components
+** Components could be different Application Insights resources or different roles in a single resource
+** Found by following HTTP dependency calls with Application Insights SDK installed
+
+* Progressive Discovery
+** Initial load discovers components and updates the count
+** "Update map components" refreshes the map with all discovered components
+** Complexity may affect loading time
+** No discovery step needed for components within a single Application Insights resource
+
+* Visualization and Insights
+** Visualize complex topologies with hundreds of components
+** Click on a component for related insights and performance/failure triage experience
+
+* Application Map Properties
+** Cloud role name property used to identify components
+** Manual override for displayed information
+
+@endmindmap

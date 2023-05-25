@@ -1,0 +1,21 @@
+@startmindmap
+* Queues
+** First In, First Out (FIFO) message delivery to one or more competing consumers
+** Receivers typically receive and process messages in the order in which they were added to the queue
+** Only one message consumer receives and processes each message
+** Messages are stored durably in the queue, so producers and consumers don't have to process messages concurrently
+** Load-leveling enables producers and consumers to send and receive messages at different rates
+** Using queues to intermediate between message producers and consumers provides an inherent loose coupling between the components
+** Consumers can be upgraded without having any effect on the producer
+** Queues can be created using the Azure portal, PowerShell, CLI, or Resource Manager templates
+** Messages can be sent and received using clients written in C#, Java, Python, and JavaScript
+** Receive modes
+*** Receive and delete
+**** Service Bus marks the message as being consumed and returns it to the consumer application
+*** Peek lock
+**** Receive operation becomes two-stage
+***** Locks the next message to be consumed to prevent other consumers from receiving it
+**** After processing the message, the application requests the Service Bus service to complete the second stage of the receive process
+**** If the application is unable to process the message, it can request the Service Bus service to abandon the message
+**** If the application fails to process the message before the lock timeout expires, Service Bus unlocks the message and makes it available to be received again
+@endmindmap

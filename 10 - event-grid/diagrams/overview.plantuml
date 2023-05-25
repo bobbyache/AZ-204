@@ -1,0 +1,23 @@
+@startmindmap
+* Azure Event Grid
+** Serverless event broker
+** Integration of applications using events
+** Events delivered to subscriber destinations
+*** Applications
+*** Azure services
+*** Any endpoint with network access
+** Events can originate from
+*** Applications
+*** SaaS services
+*** Azure services
+** Publishers emit events without expectations on handling
+** Subscribers choose which events to handle
+** Event-based architectures
+** Built-in support for events from Azure services
+*** Storage blobs
+*** Resource groups
+** Custom events using custom topics
+** Filters for event routing
+** Reliable event delivery
+** Supported integrations (not comprehensive)
+@endmindmap

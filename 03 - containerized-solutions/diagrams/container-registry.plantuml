@@ -1,0 +1,52 @@
+@startmindmap
+
++ Azure Container Registry (ACR)
+++ Use cases
++++ Scalable orchestration systems
+++++_ Kubernetes, DC/OS, Docker Swarm
++++ Azure services
+++++_ For building and running applications at scale
+++++_ Azure Kurbernetes Service (AKS)
+++++_ App Service, Batch, Service Fabric.
++++ Continuous integration and delivery
+++++_ Push from...
++++++_ Azure Pipelines
++++++_ Jenkins
++++ ACR Tasks
+++++_ Automatically rebuild application images when base images updated
+++++_ Create multi-step tasks (build, test, push, deploy)
+++ Service tiers
++++ Basic
+++++_ cost-optimized entry point for developers
++++ Standard
+++++_ Increased storage and image throughput
+++++_ Suitable for most production scenarios
++++ Premium
+++++_ Highest storage, concurrent operations, and additional features
+
+++ Supported images and artifacts
++++_ Windows and Linux images
++++_ Docker container images
++++_ Content Formats
+++++_ Helm charts
+++++_ Images built to the OCI Image Format Specification
+++ Automated image builds
++++ ACR Tasks
+++++_ Building, testing, pushing, and deploying images.
++++_ Container OS and framework patching pipeline automation
++++_ Automatic image builds on code commits
+++ Storage capabilities
++++ Encryption-at-rest
+++++_ for image data security
++++ Regional storage 
+++++_ for data residency and compliance
+++++_ paired regions if available (or enable geo-replication)
++++ Zone redundancy
+++++_ in the Premium service tier
+++++_ replication mininum of 3 zones in each enabled region
++++ Scalable storage
+++++_ for repositories, images, layers, and tags
++++ Performance
+++++_ periodic deletion (repos, tags) for maintenance
+
+@endmindmap

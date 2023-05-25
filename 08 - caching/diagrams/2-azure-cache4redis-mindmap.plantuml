@@ -1,0 +1,40 @@
+@startmindmap
+* Redis Cache
+** Creation Methods
+*** Azure portal
+*** Azure CLI
+*** Azure PowerShell
+** Name Requirements
+*** Globally unique name
+*** Between 1 and 63 characters
+*** Numbers, letters, and '-'
+*** Can't start or end with '-'
+*** Consecutive '-' not valid
+** Region Considerations
+*** Same region for cache and application
+*** Reduces latency and improves reliability
+*** Close location for external applications
+** Tier Selection
+*** Standard tier or higher recommended for production
+*** Basic tier: Single node, no data replication, no SLA
+*** Premium, Enterprise, Enterprise Flash: Clustering support
+** Redis Command-line Tool
+*** Interact with Azure Cache for Redis
+*** Available for Windows platforms
+*** Download from Redis website
+** Caching Importance
+*** Store commonly used values in memory
+** Expiration with Time to Live (TTL)
+*** Set TTL to key for expiration
+*** Key automatically deleted when TTL elapses
+*** Expiration information replicated and persisted on disk
+** Connecting to Azure Cache for Redis
+*** Required Information
+**** Host name
+**** Port
+**** Access key
+*** Retrieval from Azure portal
+** Access Key Confidentiality
+*** Consider keys as confidential information
+*** Anyone with access key can perform operations on cache
+@endmindmap

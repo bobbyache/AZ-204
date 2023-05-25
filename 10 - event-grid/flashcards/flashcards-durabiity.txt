@@ -1,0 +1,22 @@
+What does Event Grid provide in terms of event delivery?|Durable delivery.
+How does Event Grid handle event delivery failures?|It retries delivery based on a fixed retry schedule and retry policy.
+By default, how does Event Grid deliver events to subscribers?|One event at a time, with the payload as an array containing a single event.
+Does Event Grid guarantee the order of event delivery?|No, subscribers may receive events out of order.
+What factors does Event Grid consider when deciding the action for an error during event delivery?|Type of error and if it's configuration-related.
+Which error code responses are not retried for Azure Resources endpoints?|400 Bad Request, 413 Request Entity too Large, 403 Forbidden.
+Which error code responses are not retried for Webhook endpoints?|400 Bad Request, 413 Request Entity too Large, 403 Forbidden, 404 Not Found, 401 Unauthorized.
+What happens to events when dead-lettering is not configured for an endpoint and certain errors occur?|They are dropped.
+How long does Event Grid wait for a response from the endpoint before queuing a message for retry?|30 seconds.
+What happens if the endpoint responds within 3 minutes after the message is queued for retry?|Event Grid attempts to remove the event from the retry queue, but duplicates may still be received.
+What customization options are available for the retry policy in Event Grid?|Maximum number of attempts (1-30) and event time-to-live (TTL) in minutes (1-1440).
+What can be configured in Event Grid for improved HTTP performance in high-throughput scenarios?|Output batching
+How can you enable batched delivery in Event Grid?|Through the portal, CLI, PowerShell, or SDKs
+What are the two settings for batched delivery in Event Grid?|Max events per batch and Preferred batch size in kilobytes
+What is the purpose of delayed delivery in Event Grid?|To protect unhealthy endpoints and the Event Grid system
+What triggers the delay and retry mechanism in Event Grid?|Delivery failures to an endpoint
+Under what conditions does Event Grid dead-letter an event?|If the event isn't delivered within the time-to-live period or if the number of delivery tries exceeds the limit
+How can you enable dead-lettering in Event Grid?|Specify a storage account during event subscription creation
+What is the purpose of custom delivery properties in Event Grid?|To set up HTTP headers for delivered events
+How many custom headers can be defined in Event Grid?|Up to 10 headers
+Which destinations support custom headers in Event Grid?|Webhooks, Azure Service Bus topics and queues, Azure Event Hubs, and Relay Hybrid Connections
+What is required before setting the dead-letter location in Event Grid?|A storage account with a container

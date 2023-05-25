@@ -1,0 +1,28 @@
+What type of message delivery do queues offer?|Queues offer First In, First Out (FIFO) message delivery to one or more competing consumers.
+How do receivers typically process messages?|Receivers typically receive and process messages in the order in which they were added to the queue.
+How many message consumers receive and process each message?|Only one message consumer receives and processes each message.
+Why don't producers and consumers have to process messages concurrently?|Messages are stored durably in the queue, so producers and consumers don't have to process messages concurrently.
+What does load-leveling enable producers and consumers to do?|Load-leveling enables producers and consumers to send and receive messages at different rates.
+What does using queues to intermediate between message producers and consumers provide?|Using queues to intermediate between message producers and consumers provides an inherent loose coupling between the components.
+How does upgrading consumers affect the producer?|Consumers can be upgraded without having any effect on the producer.
+What languages can be used to write clients for sending and receiving messages?|Messages can be sent and received using clients written in C#, Java, Python, and JavaScript.
+What does Service Bus do when it receives a message in "Receive and delete" mode?|In "Receive and delete" mode, Service Bus marks the message as being consumed and returns it to the consumer application.
+What does Service Bus do first in "Peek lock" mode?|In "Peek lock" mode, the receive operation becomes two-stage. First, it locks the next message to be consumed to prevent other consumers from receiving it.
+What does the application request the Service Bus service to do after processing a message?|After the application finishes processing the message, it requests the Service Bus service to complete the second stage of the receive process.
+What can the application request the Service Bus service to do if it's unable to process a message?|If the application is unable to process the message, it can request the Service Bus service to abandon the message.
+What happens if the application fails to process a message before the lock timeout expires?|If the application fails to process the message before the lock timeout expires, Service Bus unlocks the message and makes it available to be received again.
+What does a queue allow?|Processing of a message by a single consumer.
+How do topics and subscriptions differ from queues?|Topics and subscriptions provide a one-to-many form of communication in a publish and subscribe pattern.
+How are messages distributed in a publish and subscribe pattern?|Each published message is made available to each subscription registered with the topic.
+What happens when a publisher sends a message to a topic?|One or more subscribers receive a copy of the message, depending on filter rules set on these subscriptions.
+What can subscriptions use to restrict the messages they receive?|Subscriptions can use filters to restrict the messages they want to receive.
+How do consumers receive messages from a topic?|Consumers receive messages from subscriptions of the topic.
+What does a topic subscription resemble?|A virtual queue that receives copies of the messages sent to the topic.
+How do consumers receive messages from a subscription?|Consumers receive messages from a subscription identically to the way they receive messages from a queue.
+How can you create topics and subscriptions?|Topics and subscriptions can be created using the Azure portal, PowerShell, CLI, or Resource Manager templates.
+What are the client languages that can be used to send and receive messages from topics and subscriptions?|C#, Java, Python, and JavaScript.
+Why would you configure subscriptions with filter expressions?|To process messages with specific characteristics in different ways.
+How can you copy a subset of messages to a virtual subscription queue?|By configuring subscription filters.
+What are modifications to message properties called?|Filter actions.
+What can a filter expression operate on?|The properties of the message, including system properties and custom application properties.
+What happens if a subscription has no SQL filter expression?|Any filter action defined on the subscription is performed on all the messages for that subscription.
