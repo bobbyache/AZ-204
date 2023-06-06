@@ -1,0 +1,20 @@
+@startmindmap "Security"
++ Security and Security Protocol
+-- Queues
+--- Azure Service Bus
+----_ Shared Access Signatures (SAS)
+----_ Role-based Access Control (RBAC)
+----_ Managed Identities for Azure Resources
+--- Storage Queues
+----_ Shared Access Signatures (SAS)
+----_ Role-based Access Control (RBAC)
+----_ Managed Identities for Azure Resources
+
+
+++ App Services\n(Web Apps)
++++_ Provider integration.\nFederated identity\nFor example, Azure AD, Facebook, Google, Twitter.
++++_ Built-in Authentication and authorization module (requires no SDKs)
++++_ Authentiation Flow:
+++++_ Without Provider SDK (browser)\nserver-directed-flow
+++++_ With Provider SDK (browserless)\nclient-directed flow
+@endmindmap 

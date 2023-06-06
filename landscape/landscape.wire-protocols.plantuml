@@ -1,0 +1,15 @@
+@startmindmap "Protocols"
++ Security and Security Protocol
+
+++ Azure Cache\nfor Redis
++++_ Clients need Host name, port and access key
+
+-- Queues
+--- Azure Service Bus
+----_ AMQP 1.0\nAdvanced Message Queueing Protocol
+----_ HTTP/REST
+--- Storage Queues
+----_ HTTP/REST
+
+
+@endmindmap 

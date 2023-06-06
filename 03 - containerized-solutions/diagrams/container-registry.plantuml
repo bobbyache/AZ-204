@@ -2,12 +2,13 @@
 
 + Azure Container Registry (ACR)
 ++ Use cases
-+++ Scalable orchestration systems
-++++_ Kubernetes, DC/OS, Docker Swarm
-+++ Azure services
-++++_ For building and running applications at scale
-++++_ Azure Kurbernetes Service (AKS)
-++++_ App Service, Batch, Service Fabric.
++++ Pull from...
+++++ Scalable orchestration systems
++++++_ Kubernetes, DC/OS, Docker Swarm
+++++ Azure services
++++++_ For building and running applications at scale
++++++_ Azure Kurbernetes Service (AKS)
++++++_ App Service, Batch, Service Fabric.
 +++ Continuous integration and delivery
 ++++_ Push from...
 +++++_ Azure Pipelines
@@ -46,7 +47,7 @@
 ++++_ replication mininum of 3 zones in each enabled region
 +++ Scalable storage
 ++++_ for repositories, images, layers, and tags
-+++ Performance
++++ Maintenance for Performance
 ++++_ periodic deletion (repos, tags) for maintenance
 
 @endmindmap

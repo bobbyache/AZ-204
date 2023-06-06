@@ -120,6 +120,7 @@
 
 + Logging
 ++_ Azure Monitor
+++ Application Insights
 
 + Networks
 ++ Microsoft backbone network
@@ -140,4 +141,18 @@
 +++ Event Schema Store
 ++++_ View Azure publisher's data payload
 
++ Queues
+++ Storage Queues
++++_ Large message stores
++++_ Progress tracking
++++_ server-side logs of transactions
+
+++ Service Bus queues
++++_ Long polling
++++_ FIFO delivery (using sessions)
++++_ Duplicate detection
++++_ Parallel processing and Transactions
+
++ Leader Election
+++ Service Fabric
 @endmindmap

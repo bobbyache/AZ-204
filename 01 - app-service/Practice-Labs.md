@@ -9,6 +9,55 @@
 
 https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-app-service/7-create-html-web-app
 
+> Note: To log in using the free sandbox provided to your at the above linke you can use `az login --tenant learn.docs.microsoft.com` to start working with stuff in the CLI.
+
+```
+mkdir htmlapp
+
+cd htmlapp
+
+git clone https://github.com/Azure-Samples/html-docs-hello-world.git
+
+resourceGroup=$(az group list --query "[].{id:name}" -o tsv)
+appName=az204app$RANDOM
+
+cd html-docs-hello-world
+
+az webapp up -g $resourceGroup -n $appName --html
+
+```
+
+You'll get the following output in the terminal:
+```
+The webapp 'az204app11502' doesn't exist
+Creating AppServicePlan 'rob_bl8ke_asp_8169' ...
+Creating webapp 'az204app11502' ...
+Configuring default logging for the app, if not already enabled
+Creating zip with contents of dir /home/rob_bl8ke/htmlapp/html-docs-hello-world ...
+Getting scm site credentials for zip deployment
+Starting zip deployment. This operation can take a while to complete ...
+Deployment endpoint responded with status code 202
+You can launch the app at http://az204app11502.azurewebsites.net
+Setting 'az webapp up' default arguments for current directory. Manage defaults with 'az configure --scope local'
+--resource-group/-g default: learn-8c300ff8-7db2-41be-8958-60979d43ac9c
+--sku default: F1
+--plan/-p default: rob_bl8ke_asp_8169
+--location/-l default: eastus
+--name/-n default: az204app11502
+{
+  "URL": "http://az204app11502.azurewebsites.net",
+  "appserviceplan": "rob_bl8ke_asp_8169",
+  "location": "eastus",
+  "name": "az204app11502",
+  "os": "Windows",
+  "resourcegroup": "learn-8c300ff8-7db2-41be-8958-60979d43ac9c",
+  "runtime_version": "-",
+  "runtime_version_detected": "-",
+  "sku": "FREE",
+  "src_path": "//home//rob_bl8ke//htmlapp//html-docs-hello-world"
+}
+```
+
 # Deploy an ASP.NET Core and Azure SQL Database app to Azure App Service
 
 The following [tutorial deploys an ASP.NET Core app to an Azure App Service and connects to an Azure SQL Database](https://learn.microsoft.com/en-us/azure/app-service/tutorial-dotnetcore-sqldb-app?pivots=platform-linux). It provisions the creation of the database and the web app and the database connection between them.
@@ -121,6 +170,8 @@ $appName = "mvcwebapp$random"
 dotnet new mvc -o .\$appName
 cd .\$appName
 dotnet publish -o publish
+
+# zip it (a stands for add)
 7zip a publish.zip .\publish\*
 
 #creating resources

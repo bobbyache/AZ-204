@@ -1,0 +1,56 @@
+@startmindmap "Service Tiers"
++ Service Tiers
+
+++ App Service (Web Apps)
++++_ Shared Compute\nAllocated CPU quotas\nNo Scaling
+++++_ Free
+++++_ Shared
++++_ Dedicated Compute\nDedicated Azure VMs
+++++_ Basic
+++++_ Standard - (and above have Deployment Slots)
+++++_ Premium
+++++_ PremiumV2
+++++_ PremiumV3
++++_ Isolated\n**Single tenant**\nDedicated tiers &\nNetwork isolation
+++++_ Isolated
+++++_ IsolatedV2
+
+-- Containers
+--- Azure Container Registry
+---_ Paid per day
+---_ Basic, Standard, Premium (supports replication)
+---_ Basic
+----_ Cost optimized entry point for developers
+----_ Same programmatic capabilities as Standard and Premium
+----_ Storage and image throughput appropriate for lower usage
+---_ Standard
+----_ Should satisfy the needs of most production scenarios
+---_ Premium
+----_ Highest amount of storage and concurrent operations, enabling high-volume scenarios
+----_ Geo replication
+----_ Content trust (image tag signing)
+----_ Private endpoints (restricted access)
+
+++ Azure Cache\nfor Redis
++++_ Basic
+++++_ OSS Redis, Single VM, no SLA
+++++_ dev/test non-critical workloads
++++_ Standard
+++++_ OSS Redis, replicate to 2 VMs
++++_ Premium
+++++_ OSS Redis, high performance
+++++_ Higher throughput, availability.
+++++_ Lower latency, more powerful VMs
++++_ Enterprise
+++++_ Redis Labs Enterprise, Higher performance + availability
+++++_ Redis modules
++++_ Enterprise Flash
+++++_ Redis Labs Enterpise, non-volatile memory
+++++_ Cost effective large caches
+
+++ Azure CDN
++++_ CDN Standard from Verizon (S1)
++++_ CDN Standard from Akamai (S2)
++++_ Microsoft (classic) (S3)
+
+@endmindmap 

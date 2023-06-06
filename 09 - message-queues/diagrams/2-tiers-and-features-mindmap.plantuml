@@ -1,51 +1,81 @@
 @startmindmap
 * Explore Azure Service Bus
-** Microsoft Azure Service Bus is a fully managed enterprise integration message broker
-*** Service Bus can decouple applications and services
-*** Data is transferred between different applications and services using messages
-*** A message is a container decorated with metadata and contains data
-*** The data can be any kind of information, including structured data encoded with JSON, XML, Apache Avro, Plain Text
-** Service Bus tiers
-*** Premium tier provides high throughput, predictable performance, fixed pricing, and the ability to scale workload up or down
-*** Standard tier provides variable throughput, variable latency, and pay-as-you-go pricing
-*** Premium tier supports message size up to 100 MB, while the standard tier supports message size up to 256 KB
-** Common messaging scenarios
-*** Messaging: Transfer business data, such as sales or purchase orders, journals, or inventory movements
-*** Decouple applications: Improve reliability and scalability of applications and services, allowing them to operate independently
-*** Topics and subscriptions: Enable 1:n relationships between publishers and subscribers
-*** Message sessions: Implement workflows that require message ordering or message deferral
+** Fully managed (PaaS)\nenterprise integration message broker
+***_ Decouple applications and services
+***_ Data is transferred between different applications and services using messages
+***_ A message is a container
+****_ decorated with metadata
+****_ and contains data
+*** The data can be...
+**** structured data encoded with
+*****_ JSON, XML
+*****_ Apache Avro
+**** Unstructured data
+*****_ Plain Text
+*****_ Any kind of data
 
-* Service Bus
+** Service Bus tiers
+*** Standard tier
+****_ variable throughput
+****_ variable latency
+****_ and pay-as-you-go pricing
+****_ message size up to 256 KB
+*** Premium tier
+****_ high throughput
+****_ predictable performance
+****_ fixed pricing
+****_ scale workload up or down
+****_ message size up to 100 MB
+
+** Common messaging scenarios
+***_ **Messaging:** Transfer business data, such as sales or purchase orders, journals, or inventory movements
+***_ **Decouple applications:** Improve reliability and scalability of applications and services,\n   allowing them to operate independently
+***_ **Topics and subscriptions:** Enable 1:n relationships between publishers and subscribers
+***_ **Message sessions:** Implement workflows that require message ordering or message deferral
+
+* Advanced Features\n(Service Bus)
 ** First-in, first-out (FIFO) guarantee
-*** Sessions
+*** Basic Queue + Sessions
+****_ Message sessions enable exclusive, ordered handling of\n   unbounded sequences of related messages.
 ** Autoforwarding feature
-*** Queue or Subscription chaining
-*** Same namespace
+***_ chains a queue or subscription to another queue or topic that is in the same namespace.
 ** Dead-letter queue (DLQ)
+***_ Messages not received by receiver
+***_ Can be interrogated later
 ** Delayed processing
 *** Scheduled job
+***_ Allow process at a certain time
 ** Defer retrieval
 ** Client-side batching
+***_ Delay sending a message for a period of time
 ** Transaction
-*** Grouping operations
-*** Execution scope
+***_ One or more transactions treated as a whole
+*** Execution scope/\nSingle messaging entity
+****_ queue
+****_ topic
+****_ subscription
+
 ** Subscribers
 *** Subscription rules
-** Autodelete on idle
-*** Queue deletion
-*** Idle interval
+****_ Subscribers can filter and apply actions to messages
+** Autodelete (queue) on idle
+***_ Idle interval
+****_ Default = 5 min
+
 ** Duplicate detection
-*** Resend message
-*** Discard duplicate copies
-** Security protocols
-*** Shared Access Signatures (SAS)
-*** Role Based Access Control (RBAC)
-*** Managed identities for Azure resources
+*** error occurs
+****_ Resend message
+****_ Discard duplicate copies
+** Security protocols (supported)
+***_ Shared Access Signatures (SAS)
+***_ Role Based Access Control (RBAC)
+***_ Managed identities for Azure resources
 ** Geo-disaster recovery
-*** Continuation of data processing
-*** Different region or datacenter
-** Protocols
-*** AMQP 1.0
-*** HTTP/REST
+***_ Enables data processing to continue operating in a\ndifferent region or datacenter
+** Protocols (supported)
+***_ AMQP 1.0
+***_ HTTP/REST
+***_ Java Message Service (JMS) 2.0
+***_ Active MQ, Rabbit MQ
 
 @endmindmap

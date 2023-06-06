@@ -1,0 +1,28 @@
+@startuml
+actor User as Alice
+boundary "CDN Server" as CDN
+boundary "POP Server" as POP
+boundary "Edge Server" as edge
+boundary "Origin Server" as Origin
+
+Alice -> CDN: Request File (URL)\n<endpoint name>.azureedge.net
+CDN -> POP: Route request to POP
+note over CDN
+Find best performing/closest
+end note
+
+loop for each edge server
+    POP -> edge: Check cache for file
+    edge -> edge: Check cache for file
+    alt File in cache
+        edge -> Alice: Return file from cache
+
+    else file NOT in cache
+        POP -> Origin: Request file
+        Origin -> POP: Return file
+        POP -> edge: Cache file
+        POP -> Alice: Return file
+    end
+end
+
+@enduml

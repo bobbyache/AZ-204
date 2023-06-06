@@ -1,27 +1,22 @@
 @startmindmap
 * Azure Queue Storage
+** Purpose
+***_ Creating backlog of work for asynchronous processing
 ** Storing Messages
-*** Large numbers of messages
-** Accessing Messages
-*** Authenticated calls using HTTP or HTTPS
-** Queue Message Size
-*** Up to 64 KB in size
-** Queue Capacity
-*** Millions of messages
-** Purpose of Queues
-*** Creating backlog of work for asynchronous processing
+***_ Large numbers of messages
+*** Accessing Messages
+****_ Authenticated calls using HTTP or HTTPS
+***_ Queue Message Size - Up to 64 KB in size
+***_ Queue Capacity - Millions of messages
 ** URL Format
-*** https://<storage account>.queue.core.windows.net/<queue>
-** Access to Azure Storage
-*** Through a storage account
+***_ https://<storage account>.queue.core.windows.net/<queue>
+** Access
+***_ Through a storage account
 ** Queue Content
+***_ Queue Name - lowercase
 *** Set of messages
-** Queue Name Requirement
-*** All lowercase
-** Message Size
-*** Up to 64 KB
-** Maximum Time-to-live
-*** Any positive number or -1 (no expiry)
-** Default Time-to-live
-*** Seven days
+**** Message
+*****_ Maximum Time-to-live - Any positive number or -1 (no expiry)
+***** Default Time-to-live
+******_ Seven days
 @endmindmap

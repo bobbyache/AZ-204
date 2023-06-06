@@ -2,14 +2,20 @@
 * Azure Container Instances (ACI)
 ** Benefits
 ***_ Fast startup
-***_ Container access
+***_ Container access - IP Address and FQDN
 ***_ Hypervisor-level security
-***_ Customer data
-***_ Custom sizes
-***_ Persistent storage
-***_ Linux and Windows support
-*** Full container orchestration
-****_ Azure Kubernetes Service (AKS) recommended
+***_ Minimum customer data in order to run
+***_ Custom sizes for CPU cores and memory
+***_ Mount Azure File shares directly to container
+***_ Linux and Windows support using same API
+*** Shortcomings
+****_ Falls short of...
+*****_ discovery across multiple containers
+*****_ Full container orchestration
+*****_ Automatic scaling and coordinated application upgrades
+*****_ Recommends Azure Kubernetes Service (AKS) recommended
+
+
 ** Container groups
 ***_ Collection of containers...\n ...scheduled on the same host machine
 ***_ Share lifecycle, resources,\nlocal network, storage volumes

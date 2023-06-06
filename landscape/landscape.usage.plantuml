@@ -1,0 +1,32 @@
+@startmindmap "Landscape"
++[#lightgreen] Landscape
+-- Message\nQueues
+---_ Queues are commonly used to create a backlog of work to process asynchronously.
+--- Azure Service Bus
+----_ Long-polling, FIFO delivery, duplicate detection,\n   parallel processing and transactions
+--- Storage Queues
+----_ Large message storage, progress tracking\n   transaction server-side logs
+++ Caching
++++_ Backend caching
++++ Azure Cache for Redis\n**Backend Caching**
+++++_ In-memory data store\nImproved performance and scalability
++++_ Frontend Caching
++++ Azure CDN\n**Frontend Caching**
+++++_ Distributed network of (edge) servers that store cached content\nin point-of-presence(POP) locations close to end users to minimize latency.
+++++_ Store session data, cached HTML or JSON, job or message queueing systems,\nin front of a database or storage account
+++++_ Aside-cache pattern
+
+++ Containerization
++++ Azure Container Registry (ACR)
+++++_ Registry for Docker images.
+++++_ Deployment targets
++++++_ Scalable orchestration systems\nKubernetes, DC/OS, and Docker Swarm
++++++_ Azure services\nAzure Kubernetes Service (AKS), App Service,\nBatch, Service Fabric, and others
+++++_ Push to ACR as part of a container development workflow
+++++ Azure Container Registry Tasks
++++++_ Schedule, automate, trigger a container image builds, multi-step tasks\nbased on source code updates, base image updates, or by scheduling tasks.
++++ Azure Container Instances (ACI)
+++++_ Simple solutions that can run in isolated containers
+++++_ Simple applications, task automation, and build jobs
+
+@endmindmap 

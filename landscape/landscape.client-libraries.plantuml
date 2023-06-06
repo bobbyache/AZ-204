@@ -1,0 +1,23 @@
+@startmindmap "Client Libraries"
++ Client Libaries
+-- Azure Service Bus
+---_ Azure Service Bus for .NET
+---_ Azure Service Bus libraries
+----_ Java
+----_ Python
+---_ Azure Service Bus provider for Java JMS 2.0
+---_ Azure Service Bus modules for\n   JavaScript and TypeScript
+-- Storage Queues
+---_ .NET client libaries
+---_ Azure.Storage.Common, Azure.Storage.Queues
+++ Azure Cache\nfor Redis
++++_ Redis command-line tools for Windows
++++_ Available for other platforms too
++++_ Nuget Package - StackExchange.Redis
++++_ Redis CLI
+
+++ Containers
++++_ Visual Studio
+++++_ Visual Studio Container Tools
+
+@endmindmap 

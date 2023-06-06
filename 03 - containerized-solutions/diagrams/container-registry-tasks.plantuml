@@ -1,7 +1,7 @@
 @startmindmap
 * ACR Tasks
-** Build and manage containers with tasks
-***_ ACR Tasks is a suite of features within Azure Container Registry
+** Build and manage containers
+***_ Suite of features within Azure Container Registry
 ***_ Provides cloud-based container image building for Linux, Windows, and Azure Resource Manager
 ***_ Can automate OS and framework patching for Docker containers
 ***_ Enables automated builds triggered by source code updates, base image updates, or timers
@@ -28,6 +28,6 @@
 ***_ Specify **--platform** tag to build Windows images or Linux images for other architectures
 ***_ Specify OS and optionally a supported architecture or variant
 ** Explore elements of a Dockerfile
-*** Dockerfile is a script containing instructions to build a Docker image
-*** Includes information on the base image, updating the base OS, installing software, build artifacts, services to expose, and the command to run
+***_ Dockerfile is a script containing instructions to build a Docker image
+***_ Includes information on the base image, updating the base OS,\ninstalling software, build artifacts, services to expose, and the command to run
 @endmindmap

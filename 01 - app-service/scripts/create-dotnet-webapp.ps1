@@ -1,5 +1,5 @@
 # Log in to Azure
-# Connect-AzAccount
+Connect-AzAccount
 
 # Define variables
 $num = Get-Random
@@ -7,7 +7,7 @@ $resourceGroup = "robazresourcegroup$num"
 $appServicePlan = "robazappserviceplan$num"
 $appName = "robazfreedotnetwebapp$num"
 $location = "eastus"  # e.g., westus
-$sku = "B1"
+$sku = "F1"
 
 # Set the active subscription
 $subscriptionId = (Get-AzContext).Subscription.Id

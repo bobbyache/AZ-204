@@ -1,0 +1,14 @@
+@startmindmap
+* Content Delivery Network (CDN)
+** Definition: A distributed network of servers that efficiently delivers web content to users
+** Minimizes latency by storing cached content on edge servers in POP locations close to users
+** Azure Content Delivery Network (CDN)
+*** Offers global solution for rapidly delivering high-bandwidth content to users
+*** Caches content at strategically placed physical nodes across the world
+*** Accelerates dynamic content using network optimizations and CDN POPs
+**** Example: Route optimization to bypass Border Gateway Protocol (BGP)
+** Benefits of using Azure CDN to deliver web site assets
+*** Better performance and improved user experience for end users
+*** Large scaling to handle instantaneous high loads
+*** Distribution of user requests and serving of content directly from edge servers
+@endmindmap

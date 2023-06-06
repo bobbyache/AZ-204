@@ -1,0 +1,36 @@
+@startmindmap
+* Azure CDN
+** Caching and Time to Live
+*** What determines the TTL duration?
+**** Cache-Control header
+*** Default TTL values
+**** Generalized web delivery optimizations - 7 days
+**** Large file optimizations - 1 day
+**** Media streaming optimizations - 1 year
+** Content updating
+*** TTL expiration on edge node
+**** Reconnect to origin server
+**** Fetch another copy of asset
+*** Ensuring latest asset version
+**** Include version string in asset URL
+**** Purge cached content from edge nodes
+** Purging and Preloading
+*** Purging cached content
+**** Endpoint by endpoint basis
+**** Specify file or assets
+**** Wildcards or root
+*** Preloading assets
+**** Improve user experience
+** Geo-filtering
+*** Allow or block content based on country/region
+*** Azure CDN Standard limitations
+**** Allow/block entire site
+*** Verizon and Akamai tiers
+**** Set restrictions on directory paths
+** Interacting with Azure CDN using .NET
+*** Azure CDN Library for .NET
+**** Automate creation and management
+*** Installation steps
+**** Microsoft.Azure.Management.Cdn.Fluent package
+**** Visual Studio Package Manager console or .NET CLI
+@endmindmap

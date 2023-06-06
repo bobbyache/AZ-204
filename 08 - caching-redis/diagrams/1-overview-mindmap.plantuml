@@ -32,19 +32,19 @@
 *** Supported by Azure Cache for Redis
 ** Azure Cache for Redis tiers
 *** Basic Tier
-**** OSS Redis cache on a single VM
-**** Suitable for development/test and noncritical workloads
+****_ OSS Redis cache on a single VM
+****_ Suitable for development/test and noncritical workloads
 *** Standard Tier
-**** OSS Redis cache on two VMs in a replicated configuration
+****_ OSS Redis cache on two VMs in a replicated configuration
 *** Premium Tier
-**** High-performance OSS Redis caches
-**** Higher throughput, lower latency, better availability, and more features
+****_ High-performance OSS Redis caches
+****_ Higher throughput, lower latency, better availability, and more features
 *** Enterprise Tier
-**** High-performance caches powered by Redis Enterprise software
-**** Redis modules support (RediSearch, RedisBloom, RedisTimeSeries)
-**** Higher availability than the Premium tier
+****_ High-performance caches powered by Redis Enterprise software
+****_ Redis modules support (RediSearch, RedisBloom, RedisTimeSeries)
+****_ Higher availability than the Premium tier
 *** Enterprise Flash Tier
-**** Cost-effective large caches powered by Redis Enterprise software
-**** Extends Redis data storage to nonvolatile memory
-**** Reduces overall per-GB memory cost
+****_ Cost-effective large caches powered by Redis Enterprise software
+****_ Extends Redis data storage to nonvolatile memory
+****_ Reduces overall per-GB memory cost
 @endmindmap
