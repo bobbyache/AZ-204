@@ -1,0 +1,52 @@
+@startmindmap "Shared Access Signatures"
++ SAS
+++ Types
++++ User Delegation
+++++_ Secured with AAD credentials + specified permissions
+++++_ Applies to blob storage only
+++++_ Most secure
++++ Service SAS
+++++_ Secured with Storage Account Key
+++++_ Access to Blob, Queue, Table, Azure files storage resources
++++ Account SAS
+++++_ Secured with Storage Account Key
+++++_ Access to one or more storage services
+++++_ Least secure
+++ Shared Access Parts
++++_ Uri
++++_ SAS Token
+++++_ **sp=acdlrw** controls access rights
+++++_ st - start of access
+++++_ se - end of access`
+++++_ sv = version of storage API
+++++_ **sr=b** type of storage (blob)
+++++_ sig = cryptographic signature
+
++ Best Practices
+++_ Use HTTPS
+++_ Prefer user delegation SAS
+--_ Smallest useful expiration time
+--_ Least priviledge
+--_ Prefer middle-tier service alternative if big risk
+
++ Stored Access Policies
+++ More restrictions
++++_ Specify all/or some parameters
+++++_ On signature URI
+++++_ On stored access policy
+++ Change
++++_ Immediately effects all SAS associated with it
++++_ start time
++++_ expiry time
++++_ permissions
+++ Revoke after issue
++++_ Delete it
++++_ Rename it
++++_ Set expiry time to the past
+++ Supports
++++_ Blob containers
++++_ File shares
++++_ Queues
++++_ Tables
+
+@endmindmap

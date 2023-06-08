@@ -1,0 +1,21 @@
+@startmindmap "Microsoft Authentication Library"
++ MSAL
+++ Benefits
++++_ Supports many platforms: .NET, JavaScript, Java, Python, Android and iOS.
++++_ No direct use of OAuth libraries
++++_ Token management
+++++_ Maintains cache
+++++_ Handles refresh before expiry
++++ Helps with
+++++_ Setup via configuration files
+++++_ Troubleshooting exceptions, logging, and telemetry
+
+++ Authentication Flows
++++ Common
+++++_ Authorization Code - securely obtain tokens for client/user
+++++_ Implicit - Used in browser-based applications
++++ Others
++++_ On-behalf-of, Client credentials, Device Code, Integrated Windows, Interactive
++++_ Username/Password
+
+@endmindmap

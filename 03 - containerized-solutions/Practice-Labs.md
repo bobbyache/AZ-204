@@ -78,6 +78,8 @@ az container create --resource-group demo --file deployment.yml
 
 # Build and Deploy a Container Instance and Container App Environment (Lab 5)
 
+- [What is the difference between Container Apps and Container Instances?](https://www.youtube.com/watch?v=YU-MKS0rmTE)
+
 ```PowerShell
 dotnet new console --output . --name ipcheck --framework net6.0
 

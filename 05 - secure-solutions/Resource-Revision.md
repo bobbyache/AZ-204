@@ -10,3 +10,4 @@ Since security is such a cross cutting concern, briefly read over these pages ag
 - [Blob Storage](https://learn.microsoft.com/en-us/training/modules/explore-azure-blob-storage/4-blob-storage-security)
 
 - [Implement authentication and authorization in Azure Container Apps](https://learn.microsoft.com/en-us/training/modules/implement-azure-container-apps/5-container-apps-authentication)
+

@@ -1,32 +1,151 @@
 @startmindmap "Landscape"
-+[#lightgreen] Landscape
--- Message\nQueues
+
+'Icons https://plantuml.com/sprite
+
+caption The Azure Landscape
+title The Azure Landscape (AZ-204)
+
+center footer The Azure landscape as mapped out in AZ-204
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+<style>
+
+    mindMapDiagram {
+        
+        LineColor lightblue
+        RoundCorner 5
+        BackgroundColor white
+        Shadowing 2.0
+
+        ' rootNode {
+        '     LineColor white
+        '     BackgroundColor white
+        ' }
+
+        node {
+            LineColor blue
+            BackgroundColor lightblue
+        }
+        :depth(0) {
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor blue
+            BackgroundColor white
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
+'=========================================================
+'Root (Cloud)
+'=========================================================
++ <$osa_cloud,scale=1.5>
+
+'=========================================================
+'Message Queues
+'=========================================================
+-- <$osa_padlock,scale=0.5> Message Queues
+
 ---_ Queues are commonly used to create a backlog of work to process asynchronously.
 --- Azure Service Bus
-----_ Long-polling, FIFO delivery, duplicate detection,\n   parallel processing and transactions
+----_ Long-polling, FIFO delivery, duplicate detection,    parallel processing and transactions
 --- Storage Queues
-----_ Large message storage, progress tracking\n   transaction server-side logs
-++ Caching
-+++_ Backend caching
-+++ Azure Cache for Redis\n**Backend Caching**
-++++_ In-memory data store\nImproved performance and scalability
-+++_ Frontend Caching
-+++ Azure CDN\n**Frontend Caching**
-++++_ Distributed network of (edge) servers that store cached content\nin point-of-presence(POP) locations close to end users to minimize latency.
-++++_ Store session data, cached HTML or JSON, job or message queueing systems,\nin front of a database or storage account
+----_ Large message storage, progress tracking    transaction server-side logs
+
+'=========================================================
+'Caching
+'=========================================================
+++ <$osa_padlock,scale=0.5> Caching
+
++++ Azure Cache for Redis **Backend Caching**
+++++_ In-memory data store Improved performance and scalability
+
++++ Azure CDN **Frontend Caching**
+++++_ Distributed network of (edge) servers that store cached content in point-of-presence(POP) locations close to end users to minimize latency.
+++++_ Store session data, cached HTML or JSON, job or message queueing systems, in front of a database or storage account
 ++++_ Aside-cache pattern
 
-++ Containerization
+'=========================================================
+'Containers
+'=========================================================
+++ <$osa_padlock,scale=0.5> Containerization
+
 +++ Azure Container Registry (ACR)
 ++++_ Registry for Docker images.
 ++++_ Deployment targets
-+++++_ Scalable orchestration systems\nKubernetes, DC/OS, and Docker Swarm
-+++++_ Azure services\nAzure Kubernetes Service (AKS), App Service,\nBatch, Service Fabric, and others
++++++_ Scalable orchestration systems Kubernetes, DC/OS, and Docker Swarm
++++++_ Azure services Azure Kubernetes Service (AKS), App Service, Batch, Service Fabric, and others
 ++++_ Push to ACR as part of a container development workflow
 ++++ Azure Container Registry Tasks
-+++++_ Schedule, automate, trigger a container image builds, multi-step tasks\nbased on source code updates, base image updates, or by scheduling tasks.
++++++_ Schedule, automate, trigger a container image builds, multi-step tasks based on source code updates, base image updates, or by scheduling tasks.
 +++ Azure Container Instances (ACI)
 ++++_ Simple solutions that can run in isolated containers
 ++++_ Simple applications, task automation, and build jobs
++++ Azure Container Apps
+++++_ Useful in place of Docker swarm or Docker compose
+++++_ Orchestration tasks where don't need full blown Kubernetes Service
+++++_ run microservices and containerized applications on a serverless platform that runs on top of Azure Kubernetes Service
+++++_ Deploying API endpoints, hosting background processing, handling event driven processing and running microservices
+
+++++ Azure Container Apps Environment
++++++_ Secure boundary around multiple Container Apps
++++++_ Container Apps deployed to same virtual network
++++++_ Write logs to same Log Analytics workspace
+
+'=========================================================
+'Security
+'=========================================================
+-- <$osa_padlock,scale=0.5> Security
+
+--- Microsoft Identity Platform
+----_ The Microsoft identity platform for developers is a set of tools that includes authentication service, open-source libraries, and application management tools.
+----_ The Microsoft identity platform helps you build applications your users and customers can sign in to using their Microsoft identities or social accounts, and provide authorized access to your own APIs or Microsoft APIs like Microsoft Graph.
+----_ For devlopers: passwordless authentication, step-up authentication, and Conditional Access
+
+--- Microsoft Authentication Library (MSAL)
+----_ Acquire tokens from the Microsoft identity platform
+----_ authenticate users and access secured web APIs.
+----_ Consistent API for many platforms.
+----_ Many platforms: .NET, JavaScript, Java, Python, Android, and iOS
+
+--- Secure Access Signatures (SAS)
+----_ Signed URI (with token) to authorize access to storage resources
+---- Stored Access Policies
+-----_ extra level of control over service-level    shared access signatures (SAS) on the server-side
+-----_ change the start time, expiry time, or permissions    for a signature, or to revoke it after it has been issued.
+
+--- Microsoft Graph
+----_ Build apps that interact with millions of users.
+----_ A unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows 10, and Enterprise Mobility + Security.
+
+--- Azure Key Vaults
+----_ Two types of containers.
+----- Vaults
+------_ Storing software and HSM-backed keys, secrets, and certificates
+----- Managed HSM Pools
+------_ HSM Backed Keys
+----_ Store secrets such as API keys, passwords, certificates, or cryptographic keys <<my_style>>
 
 @endmindmap 

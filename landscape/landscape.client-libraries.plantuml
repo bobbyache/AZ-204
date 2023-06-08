@@ -20,4 +20,13 @@
 +++_ Visual Studio
 ++++_ Visual Studio Container Tools
 
+++ Security
++++ MSAL (.NET)
+++++_ Microsoft.Identity.Client
+
++++ MS Graph
+++++_ Microsoft.Graph (Access to v.10 services and models)
+++++_ Microsoft.Graph.Beta
+++++_ Microsoft.Graph.Core\n(Retries, auth, redirects, payload compression)
+
 @endmindmap 

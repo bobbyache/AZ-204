@@ -1,0 +1,16 @@
+@startuml "SAS with Proxy"
+title Lightweight proxy
+
+actor Client
+participant FrontEndProxy
+participant LightweightService
+participant StorageAccount
+
+Client -> FrontEndProxy: Upload/Download Request
+FrontEndProxy -> LightweightService: Authenticate Client
+LightweightService -> LightweightService: Generate SAS
+LightweightService -> Client: Return SAS
+Client -> StorageAccount: Access resource (directly) with SAS
+StorageAccount --> Client: resource
+
+@enduml

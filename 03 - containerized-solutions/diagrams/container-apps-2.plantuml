@@ -2,12 +2,11 @@
 skinparam nodeWidth 200
 skinparam nodeHeight 30
 
-+ Feature architecture
-++ The authentication and authorization \nmiddleware component
-+++_ Authenticates users and clients with the specified identity provider(s)
-+++_ Manages the authenticated session
-+++_ Injects identity information into HTTP request headers
 
++ Authentication and authorization\nmiddleware component
+++_ Authenticates users and clients with the specified identity provider(s)
+++_ Manages the authenticated session
+++_ Injects identity information into HTTP request headers
 ++ The platform middleware
 +++_ Runs in a separate container, isolated from the application code
 +++_ ** Sidecar Design Pattern**
@@ -21,7 +20,7 @@ skinparam nodeHeight 30
 +++_ Manually signs users into the provider
 +++_ Submits the authentication token to Container Apps for validation
 
-+ Manage revisions and secrets in Azure Container Apps
++ Manage revisions and secrets
 ++ Container app revisions
 +++_ Immutable snapshots of a container app version
 +++_ Used to release a new version or revert to an earlier version
@@ -30,11 +29,10 @@ skinparam nodeHeight 30
 +++_ Generates a new revision if there are revision-scope changes
 ++ Manage secrets
 +++_ Securely store sensitive configuration values
-+++_ Scoped to an application, not specific revisions
 +++_ Secrets can be referenced by multiple revisions
 +++_ Updated or deleted secrets don't automatically affect existing revisions
 
-+ Explore Dapr integration with Azure Container Apps
++ Dapr integration
 ++ Distributed Application Runtime (Dapr)
 +++_ Simplifies the authoring of distributed, microservice-based applications
 +++_ Provides capabilities for intercommunication and service-to-service calls

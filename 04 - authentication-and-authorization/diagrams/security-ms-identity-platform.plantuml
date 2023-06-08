@@ -1,0 +1,52 @@
+@startmindmap "Microsoft Identity Platform"
++ Microsoft Identity\nPlatform
+
+++ Components
++++ OAuth 2.0 + Open ID Connect
+++++_ Home and school accounts
+++++_ Application Management Portal
+++++_ PowerShell
++++ Application Management Portal
++++ Application Configuration API and PowerShell
+++++_ Microsoft Graph
+++++_ PowerShell
+++ Topology
++++ Home\nTenant
+++++ Application Object
+
++++++_ 1:n\nfor each tenant
+++++++ Application\nService Principal
++++++++_ describes...
+++++++++_ how a token can be issued
+++++++++_ what an application can access
++++++++_ policy and access permissions
++++++++_ type of Security Principal
++++++++_ instance of Application Object
+
++_ Types of Service Principal
+++ Application
++++_ Local representation of Application Object
++++_ Instance created in every instance where used
+++ Managed Identity
++++_ Provide identiy for applications requiring access to resources
+++ Legacy
++++_ Do not have associated app registrations
+
++_ Permissions (**Scopes**)
+++_ 2 types
++++ Delegated
+++++_ Logged in user is present
+++++_ Client app acts on behalf of user
++++ App-only access
+++++_ Background processes and daemons
+++++_ Requires admin consent
+
++_ Consent Types
+++_ 3 types
++++_ Static user consent - requires all permissions up front
++++_ Incremental and dynamic
+++++_ Ask for minimal set up front, request more over time\n   in scopes parameter.
+++++_ Only applies to delegated permissions
++++_ Required for elevated permissions (scopes) and background services (daemons)
++++_ Still requires static permission entries in the app registration
+@endmindmap
