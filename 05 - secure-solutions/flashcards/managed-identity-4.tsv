@@ -1,0 +1,16 @@
+What can a client application request for accessing a given resource in Azure?	A client application can request a managed identity for Azure resources app-only access token.
+How is the token for accessing a resource based on managed identities for Azure resources obtained?	The token is obtained from the managed identities for Azure resources service principal.
+What is the recommended method for obtaining the managed identities for Azure resources app-only access token?	The recommended method is to use the DefaultAzureCredential.
+What does the Azure Identity library support?	The Azure Identity library supports a DefaultAzureCredential type.
+How does the DefaultAzureCredential authenticate?	The DefaultAzureCredential automatically attempts to authenticate via multiple mechanisms, including environment variables or an interactive sign-in.
+Can the DefaultAzureCredential be used in both development and production environments?	Yes, the DefaultAzureCredential can be used in both development environments using your own credentials and production Azure environments using a managed identity.
+Are code changes required when deploying an application that uses DefaultAzureCredential?	No, code changes are not required when deploying the application.
+What are the mechanisms used by the DefaultAzureCredential for authentication, in order?	The mechanisms used by the DefaultAzureCredential for authentication, in order, are: Environment, Managed Identity, Visual Studio, Azure CLI, Azure PowerShell, Interactive browser.
+How does the DefaultAzureCredential read account information for authentication?	The DefaultAzureCredential reads account information specified via environment variables and uses it to authenticate.
+How does the DefaultAzureCredential authenticate if deployed to an Azure host with Managed Identity enabled?	The DefaultAzureCredential authenticates with the account associated with the Azure host's Managed Identity.
+How does the DefaultAzureCredential authenticate if the developer has authenticated via Visual Studio?	The DefaultAzureCredential authenticates with the account used for authentication in Visual Studio.
+How does the DefaultAzureCredential authenticate if the developer has authenticated via Azure CLI?	The DefaultAzureCredential authenticates with the account used for authentication via the Azure CLI's "az login" command.
+How does the DefaultAzureCredential authenticate if the developer has authenticated via Azure PowerShell?	The DefaultAzureCredential authenticates with the account used for authentication via the Azure PowerShell's "Connect-AzAccount" command.
+Is interactive authentication supported by the DefaultAzureCredential?	Yes, if enabled, the DefaultAzureCredential will interactively authenticate the developer via the default browser of the system.
+What package is used with .NET for utilizing the DefaultAzureCredential?	The package used with .NET is "Azure.Identity".
+What is recommended for advanced users who want to customize the credentials considered during authentication?	For advanced users, the ChainedTokenCredential is recommended to combine multiple credential instances and define a customized chain of credentials.

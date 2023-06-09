@@ -1,0 +1,40 @@
+@startmindmap
+
+skinparam node {
+  BackgroundColor LightYellow
+}
+
+* Application Insights
+** Log-based metrics
+*** Analyze the health of monitored apps
+*** Create powerful dashboards
+*** Translated into Kusto queries from stored events
+** Standard metrics
+*** Stored as pre-aggregated time series
+*** Better performance at query time
+*** Suitable for dashboarding and real-time alerting
+** SDK
+*** Manual event sending
+*** Automatic collection from auto-instrumentation
+** Application Insights blades
+*** Analytical and diagnostic tool in Azure portal
+*** Visualize event-based data from logs
+** Retaining a complete set of events using logs
+*** Analytical and diagnostic value
+*** Improved visibility into application health and usage
+** Telemetry volume reduction techniques
+*** Sampling and filtering
+** Pre-aggregated metrics
+*** Stored as pre-aggregated time series with key dimensions
+*** Faster data retrieval and lower compute power requirements
+*** Near real-time alerting and responsive dashboards
+** Pre-aggregated metrics in Application Insights UX
+*** Referred to as "Standard metrics (preview)"
+** Pre-aggregation of metrics during collection
+*** Newer SDKs (Application Insights 2.7 SDK or later for .NET)
+*** Reduced data ingestion and lower cost
+** Populating pre-aggregated metrics for SDKs without pre-aggregation
+*** Aggregating events received through the event collection endpoint
+** Ingestion sampling and accuracy of pre-aggregated metrics
+
+@endmindmap

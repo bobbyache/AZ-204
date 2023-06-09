@@ -1,0 +1,27 @@
+@startmindmap
+* Application Insights
+** Deployed Web App or Website Monitoring
+*** Recurring tests to monitor availability and responsiveness
+*** Application Insights sends web requests at regular intervals
+*** Alerts for unresponsive or slow applications
+** Types of Availability Tests
+*** URL ping test (classic)
+**** Validates endpoint response and measures performance
+**** Custom success criteria and advanced features
+*** Standard test (Preview)
+**** Includes SSL certificate validity, proactive lifetime check, custom headers, etc.
+*** Custom TrackAvailability test
+**** Long-term supported solution for multi-request or authentication tests
+** Setting Up Availability Tests
+*** Any HTTP or HTTPS endpoint accessible from the public internet
+*** No changes required to the tested website
+*** REST API availability testing supported
+** Number of Tests and Test Types
+*** Up to 100 availability tests per Application Insights resource
+*** URL ping test, Standard test, Custom TrackAvailability test
+** Custom Application Integration
+*** TrackAvailability() method for sending test results to Application Insights
+** Considerations for URL Ping Tests with Private DNS
+*** Reliance on public domain name servers for resolving domain names
+*** Use custom TrackAvailability tests if private DNS cannot resolve the names
+@endmindmap

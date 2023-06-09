@@ -1,0 +1,11 @@
+How does authentication with Key Vault work?	Azure Active Directory is responsible for authenticating the identity of any given security principal.
+What are the two ways to obtain a service principal for applications?	The two ways are: 1. Enable a system-assigned identity. 2. Use a managed identity.
+What is the recommended approach for obtaining a service principal for applications?	It is recommended to use a system-assigned managed identity.
+What is the benefit of using a managed identity for an application?	Azure internally manages the application's service principal and automatically authenticates the application with other Azure services.
+What should you do if you can't use managed identity for an application?	Instead, you should register the application with your Azure AD tenant, which creates a second application object that identifies the app across all tenants.
+How can authentication be done to Key Vault with REST?	Access tokens must be sent to the service using the HTTP Authorization header.
+What happens if an access token is not supplied or not accepted by the Key Vault service?	An HTTP 401 error is returned to the client, and it will include the WWW-Authenticate header.
+What are the parameters on the WWW-Authenticate header for Key Vault authentication?	The parameters are "authorization" and "resource". The "authorization" parameter contains the address of the OAuth2 authorization service, while the "resource" parameter contains the name of the resource (https://vault.azure.net) to use in the authorization request.
+What Azure CLI command is used to create a key vault?	Use `az keyvault create` to create a key vault in Azure CLI.
+What Azure CLI command is used to create a secret in a key vault?	Use `az keyvault secret set` to create a secret.
+What Azure CLI command is used to show the value of a secret in a key vault?	Use `az keyvault secret show` to show the secret value.

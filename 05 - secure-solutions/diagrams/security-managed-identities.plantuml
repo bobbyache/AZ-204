@@ -1,0 +1,22 @@
+@startmindmap
+
+* Managed Identities
+** System-assigned managed identities
+*** Enabled on Azure resources
+*** Shared lifecycle with the resource
+*** Single association with an Azure resource
+** User-assigned managed identities
+*** Created as standalone Azure resources
+*** Independent lifecycle management
+*** Multiple associations with Azure resources
+** Granting access using managed identities
+*** VMs
+*** App Services
+*** Functions
+*** Container Instances
+*** Azure Storage
+*** Azure Kubernetes Service
+** Purpose of managed identities for Azure resources
+*** Authentication to services supporting Azure AD authentication
+
+@endmindmap

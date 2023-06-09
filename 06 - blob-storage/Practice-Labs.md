@@ -58,9 +58,7 @@ Here are some labs:
 - [AzCopy](https://www.udemy.com/course/70532-azure/learn/lecture/32254716#overview) without having to download and then upload.
 - [Use AZCopy to copy files to Storage Accounts](https://app.exampro.co/student/material/az-204/2527)
 - [Interact with blob storage through an SDK](https://app.exampro.co/student/material/az-204/4246)
-
 - [Use Visual Studio](https://www.udemy.com/course/70532-azure/learn/lecture/32254726#overview)
-
 - [Retrieve and create blob storage object metadata](https://app.exampro.co/student/material/az-204/4245)
 - [Transfer data between blobs within a storage account](https://app.exampro.co/student/material/az-204/4244)
 

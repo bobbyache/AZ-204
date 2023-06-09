@@ -1,0 +1,10 @@
+What are keys used for in App Configuration?	Keys serve as the name for key-value pairs and are used to store and retrieve corresponding values.
+How are keys organized in App Configuration?	It's a common practice to organize keys into a hierarchical namespace by using a character delimiter, such as / or :.
+Are keys case-sensitive in App Configuration?	Yes, keys stored in App Configuration are case-sensitive, unicode-based strings.
+Can any unicode character be used in key names?	Yes, you can use any unicode character in key names entered into App Configuration, except for *, ,, and \.
+What is the size limit for a key-value pair in App Configuration?	There is a combined size limit of 10,000 characters on a key-value pair in App Configuration. This limit includes all characters in the key, its value, and all associated optional attributes.
+What are the advantages of using hierarchical key naming in App Configuration?	Easier to read: Delimiters in a hierarchical key name function as spaces in a sentence. Easier to manage: A key name hierarchy represents logical groups of configuration data. Easier to use: It's simpler to write a query that pattern-matches keys in a hierarchical structure and retrieves only a portion of configuration data.
+Can key values in App Configuration have labels?	Yes, key values in App Configuration can optionally have a label attribute.
+How can labels be used in App Configuration?	Labels are used to differentiate key values with the same key. They provide a convenient way to create variants of a key, such as specifying multiple environments for the same key.
+Does App Configuration automatically version key values?	No, App Configuration doesn't version key values automatically. Labels can be used to create multiple versions of a key value.
+How is configuration data stored in App Configuration protected?	Configuration data stored in an App Configuration store, including all keys and values, is encrypted at rest and in transit. However, it is important not to store application secrets in App Configuration as it is not a replacement solution for Azure Key Vault.

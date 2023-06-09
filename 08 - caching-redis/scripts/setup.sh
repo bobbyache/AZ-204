@@ -1,8 +1,8 @@
 #!/bin/bash
 
-resourceGroup="robazresourcegroup3"
+resourceGroup="resourcegroupo"
 location="eastus"
-redisCacheName="robazrediscachebasic"
+redisCacheName="rediscachebasic"
 location="eastus"
 
 # Careful here because this is charged monthly and can get quite expensive.

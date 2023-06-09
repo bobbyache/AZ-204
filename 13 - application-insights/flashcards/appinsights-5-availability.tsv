@@ -1,0 +1,10 @@
+How can you monitor the availability and responsiveness of your deployed web app or website?	By setting up recurring tests using Application Insights.
+What does Application Insights do to monitor the availability and responsiveness of your application?	It sends web requests to your application at regular intervals from points around the world and alerts you if your application isn't responding or responds too slowly.
+What types of endpoints can you set up availability tests for in Application Insights?	You can set up availability tests for any HTTP or HTTPS endpoint that's accessible from the public internet, even if you don't own the site being tested.
+How many availability tests can you create per Application Insights resource?	You can create up to 100 availability tests per Application Insights resource.
+What are the three types of availability tests in Application Insights?	The three types of availability tests are URL ping test (classic), Standard test (Preview), and Custom TrackAvailability test.
+What is an URL ping test used for in Application Insights?	It is used to validate whether an endpoint is responding and measure performance associated with that response. It can also have custom success criteria and advanced features like parsing dependent requests and allowing retries.
+What is a Standard test in Application Insights?	It is similar to an URL ping test but includes additional features like SSL certificate validity, proactive lifetime check, HTTP request verb, custom headers, and custom data associated with the HTTP request.
+How can you send the results of custom availability tests to Application Insights?	By using the TrackAvailability() method in your custom application.
+What is the recommended solution for multi-request or authentication test scenarios in Application Insights?	The recommended solution is to use Custom TrackAvailability tests.
+What should be considered when using URL ping tests in Application Insights with private DNS?	If using private DNS, ensure that the public domain name servers can resolve every domain name of your test. If that's not possible, use custom TrackAvailability tests instead.

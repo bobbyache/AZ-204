@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # az login
 
@@ -18,7 +18,20 @@ az vm identity assign -g robazresourcegroup -n myVM
 az identity create -g robazresourcegroup -n myUserAssignedIdentity
 az vm identity assign -g robazresourcegroup -n myVM --identities myUserAssignedIdentity
 
+## Can also...
+# az webapp identity assign -g MyResourceGroup -n MyUniqueApp --role reader --scope /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/MyResourceGroup
+# az functionapp identity assign -g MyResourceGroup -n MyUniqueApp --role reader --scope /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/MyResourceGroup
 
 az vm list --show-details --output table
 
 # az group delete --name robazresourcegroup
+
+# az vm create \
+# --resource-group robazresourcegroup \
+# --name myVM2 \
+# --image UbuntuLTS \
+# --admin-username azureuser \
+# --admin-password myPassword12 \
+# --assign-identity myUserAssignedIdentity \
+# --role <ROLE> \
+# --scope <SUBSCRIPTION>

@@ -7,8 +7,6 @@ storageAccount="robazstorageaccount"
 identityName="myUserAssignedIdentity"
 roleName="Contributor"
 
-#!/bin/bash
-
 # Check if you're logged in to Azure
 if [ -z "$(az account show --query user.name)" ]; then
   # If you're not logged in, perform az login
@@ -38,7 +36,6 @@ az storage account create \
 echo "Storage account $storageAccount created."
 
 az identity create -g $resourceGroup -n $identityName
-
 
 # Get the client ID of the user-defined managed identity
 identityClientId=$(az identity show -g $resourceGroup -n $identityName --query "clientId" -otsv)

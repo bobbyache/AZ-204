@@ -13,7 +13,6 @@ az login
 
 az group create --name $resourceGroup --location $location
 
-
 # Set the storage account SKU and kind
 $sku="Standard_LRS"
 $kind="StorageV2"

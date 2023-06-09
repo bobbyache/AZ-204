@@ -64,6 +64,9 @@ center footer The Azure landscape as mapped out in AZ-204
 '=========================================================
 + <$osa_user_audit,scale=1.5>
 
+'=========================================================
+'App Service
+'=========================================================
 ++ App Service (Web Apps)
 +++_  **Shared** Compute\nAllocated CPU quotas\nNo Scaling
 ++++_  **Free**
@@ -76,8 +79,26 @@ center footer The Azure landscape as mapped out in AZ-204
 ++++_  **Premium**V3
 +++_  **Isolated**\n**Single tenant**\nDedicated tiers &\nNetwork isolation
 ++++_  **Isolated**
-++++_  **Isolated**V2
+++++_  **Isolated**V2 (ASE)
 
+'=========================================================
+'Functions
+'=========================================================
+-- Functions
+---_ Consumption
+----_ (auto scaling, pay per use, serverless)
+---_ Premium
+----_ (pre-warmed workers, VN connectivity, powerfull VMs)
+---_ Dedicated
+----_ (App Service Plan, long running scenarios)
+---_ ASE (App Service Environment)
+----_ Fully isolated and runs at high scale
+---_ Kubernetes (Direct or Azure Arc)
+----_ Fully isolated run on Kubernetes platform
+
+'=========================================================
+'Containers
+'=========================================================
 -- Containers
 --- Azure Container Registry
 ----_ Paid per day
@@ -111,6 +132,28 @@ center footer The Azure landscape as mapped out in AZ-204
 -----_ In-use memory encryption
 -----_ Hardware level isolation
 
+'=========================================================
+'Blog Storage
+'=========================================================
+-- Blob Storage
+---_ General Purpose V2
+----_ Archived, Cool, Hot
+---_ Premium
+----_ Optimized for fast interaction
+
+'=========================================================
+'Cosmos DB
+'=========================================================
+-- Cosmos DB
+---_ Provisioned Throughput
+----_ Per-hour basis for the RU/s provisioned
+---_ Serverless
+----_ Per-hour basis for the number of RUs consumed
+
+
+'=========================================================
+'Redis Caching
+'=========================================================
 ++ Azure Cache\nfor Redis
 +++_  **Basic**
 ++++_ OSS Redis, Single VM, no SLA
@@ -123,14 +166,51 @@ center footer The Azure landscape as mapped out in AZ-204
 ++++_ Lower latency, more powerful VMs
 +++_  **Enterprise**
 ++++_ Redis Labs  **Enterprise**, Higher performance + availability
-++++_ Redis modules
+++++_ Redis modulesDedicated Ti
 +++_  **Enterprise** Flash
 ++++_ Redis Labs Enterpise, non-volatile memory
 ++++_ Cost effective large caches
 
+'=========================================================
+'Azure CDN
+'=========================================================
 ++ Azure CDN
-+++_ CDN  **Standard** from Verizon (S1)
-+++_ CDN  **Standard** from Akamai (S2)
-+++_ Microsoft (classic) (S3)
++++_ Standard
+++++_ Content delivery optimized
+++++_ CDN  **Standard** from Verizon (S1)
+++++_ CDN  **Standard** from Akamai (S2)
+++++_ Microsoft (classic) (S3)
++++_ Premium
+++++_ Security optimized
 
+'=========================================================
+'Service Bus
+'=========================================================
+++ Service Bus
++++_ Standard
+++++_ Pay as you go pricing. Variable throughput and latency.
++++_ Premium
+++++_ Fixed pricing. High throughput and predictable performance.
+
+
+'=========================================================
+'Key Vaults
+'=========================================================
+
+++ Key Vaults
++++_ Standard
+++++_ encrypts with a softrware key
++++_ Premium
+++++_ includes hardware security module(HSM)-protected keys
+
+'=========================================================
+'API Management
+'=========================================================
+
+++ API Management
++++_ Developer (No SLA)
++++_ Basic (99.95% SLA)
++++_ Standard (99.95% SLA)
++++_ Premium (99.95% or 99.99% SLA)
++++_ Consumption (99.95% SLA)
 @endmindmap 

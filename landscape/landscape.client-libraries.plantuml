@@ -1,32 +1,271 @@
+
+
 @startmindmap "Client Libraries"
-+ Client Libaries
+
+'Icons https://plantuml.com/sprite
+
+
+caption The Azure Landscape - Logging and Monitoring
+title The Azure Landscape - Logging and Monitoring
+
+center footer The Azure landscape as mapped out in AZ-204
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+<style>
+
+    mindMapDiagram {
+        
+        LineColor lightblue
+        RoundCorner 5
+        BackgroundColor white
+        Shadowing 2.0
+
+        ' rootNode {
+        '     LineColor white
+        '     BackgroundColor white
+        ' }
+
+        node {
+            LineColor blue
+            BackgroundColor lightblue
+        }
+        :depth(0) {
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor blue
+            BackgroundColor white
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
+'=========================================================
+'Root (User Audit)
+'=========================================================
++ <$osa_media_flash,scale=1.5>
+
 -- Azure Service Bus
----_ Azure Service Bus for .NET
+---_ Azure Service Bus for .NET\nAzure.Messaging.ServiceBus\nServiceBusClient and ServiceBusSender
 ---_ Azure Service Bus libraries
 ----_ Java
 ----_ Python
 ---_ Azure Service Bus provider for Java JMS 2.0
 ---_ Azure Service Bus modules for\n   JavaScript and TypeScript
+--- CLI
+----_ az servicebus namespace create
+----_ az servicebus queue create
 -- Storage Queues
 ---_ .NET client libaries
 ---_ Azure.Storage.Common, Azure.Storage.Queues
-++ Azure Cache\nfor Redis
-+++_ Redis command-line tools for Windows
-+++_ Available for other platforms too
-+++_ Nuget Package - StackExchange.Redis
-+++_ Redis CLI
 
-++ Containers
+'=========================================================
+'MS Graph
+'=========================================================
+++ MS Graph
++++_ Microsoft.Graph (Access to v.10 services and models)
++++_ Microsoft.Graph.Beta
++++_ Microsoft.Graph.Core\n(Retries, auth, redirects, payload compression)
+
+'=========================================================
+'MSAL
+'=========================================================
+
+-- MSAL
+--- .NET
+----_ Microsoft.Identity.Client
+----_ PublicClientApplicationBuilder, ConfidentialClientApplicationBuilder
+
+'=========================================================
+'Functions
+'=========================================================
+
+-- Functions
+---_ Install Azure Functions Core Tools
+---_ func init, func new
+---_ func azure functionapp publish
+--- .NET
+----_ Microsoft.NET.Sdk.Functions
+--- Durable Functions
+----_  Install Azure Functions Core Tools
+----_  Microsoft.Azure.WebJobs.Extensions.DurableTask
+
+
+'=========================================================
+'Redis Caching
+'=========================================================
+
+-- Redis Caching
+--- .NET
+----_ Nuget Package\nStackExchange.Redis\nConnectionMultiplexer 
+--- Other
+----_ Redis command-line tools for Windows
+----_ Available for other platforms too
+--- CLI
+----_ az redis create
+
+'=========================================================
+'CDN
+'=========================================================
+
+-- CDN
+--- .NET
+----_ Microsoft.Azure.Management.Cdn.Fluent\nCdnManagementClient
+--- Other
+----_ az cdn endpoint purge
+----_ az cdn endpoint load
+
+
+'=========================================================
+'Key Vaults
+'=========================================================
+
+-- Key Vaults
+--- .NET
+----_ Azure Identity Client Library (Azure.Identity)
+--- Other
+----_ Administration: Portal, Azure CLI, PowerShell
+'=========================================================
+'Message Queues
+'=========================================================
+
+-- Message Queues
+--- .NET
+--- Other
+
+'=========================================================
+'Event Grid
+'=========================================================
+
+-- Event Grid
+--- .NET
+----_ Azure.Messaging.EventGrid
+----_ Microsoft.Azure.Management.EventGrid
+--- Other
+----_ az eventgrid topic create
+----_ az eventgrid event-subscription create
+
+'=========================================================
+'Event Hubs
+'=========================================================
+
+++ Event Hubs
++++ .NET
+++++_ Event Hubs client library (Azure.Messaging.EventHubs)
+++++_ EventHubProducerClient, EventHubConsumerClient
+
+'=========================================================
+'Container Registry
+'=========================================================
+
+++ Container Registry
++++ CLI
+++++_ az acr create, az acr build, az acr repository list, az acr repository show-tags, az acr run
+
+'=========================================================
+'Container Apps
+'=========================================================
+
+++ Container Apps
 +++_ Visual Studio
-++++_ Visual Studio Container Tools
++++_ Visual Studio Container Tools
++++_ az containerapp create, az containerapp update, az containerapp revision list
 
-++ Security
-+++ MSAL (.NET)
-++++_ Microsoft.Identity.Client
+'=========================================================
+'Container Instances
+'=========================================================
 
-+++ MS Graph
-++++_ Microsoft.Graph (Access to v.10 services and models)
-++++_ Microsoft.Graph.Beta
-++++_ Microsoft.Graph.Core\n(Retries, auth, redirects, payload compression)
+++ Container Instances
++++_ az container create
+
+'=========================================================
+'Web Apps
+'=========================================================
+
+++ Web Apps
++++ CLI
+++++_ az appservice plan create, az webapp create
+++++_ az webapp deployment, az webapp up
+
+'=========================================================
+'Storage
+'=========================================================
+
+++ Storage
++++ .NET
+++++_ Azure.Storage.Blobs
+++++_ BlobServiceClient, BlobContainerClient
+++++_ container.SetMetadataAsync(), container.GetPropertiesAsync()
++++ Other
+++++_ az storage account create
+
++++ Stored Access Policies
+++++ .NET
++++++_ Azure.Storage.Blobs
++++++_ BlobContainerClient.SetAccessPolicyAsync
+++++_ az storage container policy create
+++++ REST
++++++_ x-ms-rehydrate-priority
++++++_ https://myaccount.blob.core.windows.net/mycontainer/myblob
++++++_ https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=tier
+
+
++++ Lifecycle Policies
+++++_ az storage account management-policy create
+
+'=========================================================
+'Cosmos DB
+'=========================================================
+
+++ Cosmos DB
++++ .NET
+++++_  Azure Cosmos DB .NET SDK v3 for API for NoSQL\nMicrosoft.Azure.Cosmos
+++++_ CosmosClient, DatabaseResponse, Container, ContainerResponse, QueryDefinition
++++ Other
+++++_ az cosmosdb create
+++++_ az cosmosdb keys list
+
+'=========================================================
+'API Management
+'=========================================================
+
+++ API Management
++++_ Create backend API
+++++_ Call API with subscription key (REST) - Ocp-Apim-Subscription-Key
+++++_ API Management Policies (XML) - inbound, backend, outbound, on-error
+++++_ **az apim create**
+
+++ Application Insights
++++ .NET
+++++_ Microsoft.ApplicationInsights.AspNetCore
+++++_ services.AddApplicationInsightsTelemetry()
+
+++ Microsoft Graph
++++ .NET
+++++_ Microsoft.Graph, Microsoft.Graph.Beta, Microsoft.Graph.Core
+++++_ GraphServiceClient
++++ REST
+++++_ GET https://graph.microsoft.com/v1.0/me/messages?filter=emailAddress eq 'jon@contoso.com'
 
 @endmindmap 

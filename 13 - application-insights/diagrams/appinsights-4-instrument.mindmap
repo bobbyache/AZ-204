@@ -1,0 +1,34 @@
+@startmindmap
+* Application Insights
+** Enablement Methods
+*** Auto-Instrumentation (agent)
+**** Eliminates future SDK overhead
+**** No developer investment
+**** Works without source code access
+*** Application Insights SDK
+**** Custom events and metrics
+**** Control over telemetry flow
+**** When auto-instrumentation isn't available
+** Auto-Instrumentation
+*** Enable and configure the agent
+*** Collects telemetry automatically
+** Application Insights SDK
+*** Installation in the app
+*** Instrumentation of web app, components, and JavaScript
+*** Monitors the app and directs telemetry data
+** Supported Languages and Technologies
+*** .NET
+*** .NET Core
+*** Java
+*** Node.js
+*** JavaScript
+** Distributed Tracing
+*** Native support in .NET, .NET Core, Java, Node.js, and JavaScript SDKs
+*** OpenCensus integration for other technologies
+** Manual Tracking
+*** TrackDependency on TelemetryClient
+** OpenCensus
+*** Open source distribution
+*** Metrics collection and distributed tracing
+*** Supports tracing popular technologies
+@endmindmap

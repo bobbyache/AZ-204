@@ -1,10 +1,10 @@
-@startmindmap "Client Libraries"
+@startmindmap "Service Tiers"
 
 'Icons https://plantuml.com/sprite
 
 
-caption The Azure Landscape - Security
-title The Azure Landscape - Security
+caption The Azure Landscape - Logging and Monitoring
+title The Azure Landscape - Logging and Monitoring
 
 center footer The Azure landscape as mapped out in AZ-204
 
@@ -62,175 +62,133 @@ center footer The Azure landscape as mapped out in AZ-204
 '=========================================================
 'Root (User Audit)
 '=========================================================
-+ <$osa_user_white_hat,scale=1.5>
-
--- Queues
---- Azure Service Bus
-----_ Shared Access Signatures (SAS)
-----_ Role-based Access Control (RBAC)
-----_ Managed Identities for Azure Resources
---- Storage Queues
-----_ Shared Access Signatures (SAS)
-----_ Role-based Access Control (RBAC)
-----_ Managed Identities for Azure Resources
-
-
-++ App Services\n(Web Apps)
-+++_ Provider integration.\nFederated identity\nFor example, Azure AD, Facebook, Google, Twitter.
-+++_ Built-in Authentication and authorization module (requires no SDKs)
-+++_ Authentiation Flow:
-++++_ Without Provider SDK (browser)\nserver-directed-flow
-++++_ With Provider SDK (browserless)\nclient-directed flow
-
-++ Key Vaults
-+++_ RBAC for Vault Management
-+++_ Key vault access policy for accessing vault data
-+++ Tiers
-++++_ Standard is software protected
-++++_ Premium can be hardware protected (HSMs)
-+++_ Authenticate to using:
-++++_ **Managed Identities**
-++++_ App Registration\nNot recomended because\nof key rotation requirements:
-+++++_ Service Principal and certificate
-+++++_ Service Principal and secret
-+++ Transit:
-++++_ TLS
-++++_ Perfect Forward Secrecy (PFS)
-++++_ RSA-based 2,048-bit encryption key lengths
++ <$osa_user_audit,scale=1.5>
 
 '=========================================================
 'Functions
 '=========================================================
 
-'++ Functions
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+-- Functions
+--- Logs
+--- Monitoring
 
 '=========================================================
 'Redis Caching
 '=========================================================
 
-'++ Redis Caching
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+-- Redis Caching
+--- Logs
+--- Monitoring
 
 '=========================================================
 'CDN
 '=========================================================
 
-'++ CDN
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+-- CDN
+--- Logs
+--- Monitoring
 
 '=========================================================
 'Key Vaults
 '=========================================================
 
-'++ Key Vaults
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+-- Key Vaults
+--- Logs
+--- Monitoring
+----_ Archive to storage account
+----_ Stream to event hub
+----_ Send logs to Azure Monitor logs
+---_ Turn on monitoring and alerts
+
 
 '=========================================================
 'Message Queues
 '=========================================================
 
-'++ Message Queues
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+-- Message Queues
+--- Logs
+--- Monitoring
 
 '=========================================================
 'Azure Service Bus
 '=========================================================
 
-'++ Azure Service Bus
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+-- Azure Service Bus
+--- Logs
+--- Monitoring
 
 '=========================================================
 'Event Grid
 '=========================================================
 
-'++ Event Grid
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+-- Event Grid
+--- Logs
+--- Monitoring
 
 '=========================================================
 'Event Hubs
 '=========================================================
 
-'++ Event Hubs
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+-- Event Hubs
+--- Logs
+--- Monitoring
 
 '=========================================================
 'Container Registry
 '=========================================================
 
-'++ Container Registry
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+++ Container Registry
++++ Logs
++++ Monitoring
 
 '=========================================================
 'Container Apps
 '=========================================================
 
-'++ Container Apps
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+++ Container Apps
++++ Logs
++++ Monitoring
 
 '=========================================================
 'Container Instances
 '=========================================================
 
-'++ Container Instances
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+++ Container Instances
++++ Logs
++++ Monitoring
 
 '=========================================================
 'Web Apps
 '=========================================================
 
-'++ Web Apps
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+++ Web Apps
++++ Logs
++++ Monitoring
 
 '=========================================================
 'Storage
 '=========================================================
 
-'++ Storage
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+++ Storage
++++ Logs
++++ Monitoring
 
 '=========================================================
 'Cosmos DB
 '=========================================================
 
-'++ Cosmos DB
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+++ Cosmos DB
++++ Logs
++++ Monitoring
 
 '=========================================================
 'API Management
 '=========================================================
 
-'++ API Management
-'+++_ Role-based Access Control (RBAC)
-'+++_ Share Access Signatures (SAS)
-'+++_ <s>Managed Identities</s>
+++ API Management
++++ Logs
++++ Monitoring
+
+
 
 @endmindmap 

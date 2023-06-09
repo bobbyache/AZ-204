@@ -66,18 +66,18 @@ center footer The Azure landscape as mapped out in AZ-204
 '=========================================================
 'Message Queues
 '=========================================================
--- <$osa_padlock,scale=0.5> Message Queues
+-- <$osa_lifecycle,scale=0.5> Message Queues
 
 ---_ Queues are commonly used to create a backlog of work to process asynchronously.
 --- Azure Service Bus
 ----_ Long-polling, FIFO delivery, duplicate detection,    parallel processing and transactions
---- Storage Queues
+--- Queue Storage
 ----_ Large message storage, progress tracking    transaction server-side logs
 
 '=========================================================
 'Caching
 '=========================================================
-++ <$osa_padlock,scale=0.5> Caching
+++ <$osa_server_file,scale=0.5> Caching
 
 +++ Azure Cache for Redis **Backend Caching**
 ++++_ In-memory data store Improved performance and scalability
@@ -90,7 +90,7 @@ center footer The Azure landscape as mapped out in AZ-204
 '=========================================================
 'Containers
 '=========================================================
-++ <$osa_padlock,scale=0.5> Containerization
+++ <$osa_firewall,scale=0.5> Containerization
 
 +++ Azure Container Registry (ACR)
 ++++_ Registry for Docker images.
@@ -113,6 +113,14 @@ center footer The Azure landscape as mapped out in AZ-204
 +++++_ Secure boundary around multiple Container Apps
 +++++_ Container Apps deployed to same virtual network
 +++++_ Write logs to same Log Analytics workspace
+
+'=========================================================
+'Configuration
+'=========================================================
++++ App Configuration
+++++_ Centrally manage app settings and feature flags
+++++_ Store settings for your app and secure access in one place.
+++++_ App Configuration complements Azure Key Vault
 
 '=========================================================
 'Security
@@ -147,5 +155,45 @@ center footer The Azure landscape as mapped out in AZ-204
 ----- Managed HSM Pools
 ------_ HSM Backed Keys
 ----_ Store secrets such as API keys, passwords, certificates, or cryptographic keys <<my_style>>
+
+--- Managed Identities
+----_ provide an automatically managed identity in Azure Active Directory (Azure AD) for applications
+----_ Eliminate the need for developers to manage credentials.
+----_ types
+-----_ system assigned
+-----_ user assigned
+
+'=========================================================
+'API Management
+'=========================================================
+
+--- API Management
+----_ API Management provides the core functionality to ensure a successful API program through developer engagement, business insights, analytics, security, and protection.
+----_ Developers subscribe and use the API, subject to any active usage policies.
+----_ Components
+----- API Gateway
+------_ Reverse proxy routing requests to clients and services. Enforce quotas and rate limits. Verifies API keys.Logs and metrics. Request transformation.
+----- Management Plane\n(Azure API Management)
+------_ Administrative interface. Policies allow the publisher to change the behavior of the API through configuration.
+----- Developer Portal
+------_ An automatically generated, fully customizable website with API documentation, interactive console, API key management and usage analytics.
+
+'=========================================================
+'Monitoring
+'=========================================================
+++ <$osa_padlock,scale=0.5> Monitoring
++++ Azure Monitor
+++++_ ...
++++ Application Insights
+++++_ Application Insights is an extension of Azure Monitor and provides Application Performance Monitoring (also known as “APM”) features
+++++_ APM tools are useful to monitor applications from development, through test, and into production
+
+'=========================================================
+'Software
+'=========================================================
+++ <$osa_media_flash,scale=0.5> Software
++++ App Service
++++ Functions
+++++ Durable Functions
 
 @endmindmap 

@@ -1,0 +1,13 @@
+What types of containers does Azure Key Vault support?	Vaults and managed hardware security module (HSM) pools.
+What can be stored in Azure Key Vault vaults?	Software and HSM-backed keys, secrets, and certificates.
+What is the purpose of managed HSM pools in Azure Key Vault?	Managed HSM pools only support HSM-backed keys.
+What problems does Azure Key Vault help solve?	Secrets management, key management, and certificate management.
+What can be securely stored and tightly controlled using Azure Key Vault?	Tokens, passwords, certificates, API keys, and other secrets.
+How can Azure Key Vault be used as a key management solution?	Azure Key Vault allows easy creation and control of encryption keys used for data encryption.
+What can Azure Key Vault be used for in relation to certificates?	Azure Key Vault can be used to provision, manage, and deploy SSL/TLS certificates for Azure and connected resources.
+What are the two service tiers available in Azure Key Vault?	Standard (encrypts with a software key) and Premium (includes HSM-protected keys).
+What are some key benefits of using Azure Key Vault?	Centralized application secrets, secure storage of secrets and keys, and monitoring access and use.
+How can access to a key vault be controlled in Azure Key Vault?	Access requires proper authentication via Azure Active Directory and authorization via Azure RBAC or Key Vault access policy.
+How can activity be monitored in Azure Key Vault?	By enabling logging for the vaults and configuring options such as archiving, streaming, or sending logs to Azure Monitor logs.
+How does Azure Key Vault simplify administration of application secrets?	By removing the need for in-house knowledge of Hardware Security Modules, scaling up on short notice, replicating data for high availability, and providing standard administration options.
+What tasks related to certificates can be automated in Azure Key Vault?	Tasks such as enrollment and renewal of certificates purchased from Public CAs.

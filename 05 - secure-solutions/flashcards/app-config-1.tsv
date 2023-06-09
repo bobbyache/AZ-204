@@ -1,0 +1,15 @@
+What does App Configuration offer?	App Configuration offers a fully managed service that can be set up in minutes.
+What does App Configuration offer in terms of key representations and mappings?	App Configuration offers flexible key representations and mappings.
+What feature does App Configuration offer in terms of tagging?	App Configuration offers tagging with labels.
+What feature does App Configuration offer for settings?	App Configuration offers point-in-time replay of settings.
+What does App Configuration offer in terms of feature flag management?	App Configuration offers a dedicated UI for feature flag management.
+How does App Configuration allow for comparison of configurations?	App Configuration offers comparison of two sets of configurations on custom-defined dimensions.
+How does App Configuration enhance security?	App Configuration offers enhanced security through Azure-managed identities.
+How does App Configuration handle sensitive information?	App Configuration offers encryption of sensitive information at rest and in transit.
+How does App Configuration integrate with frameworks?	App Configuration offers native integration with popular frameworks.
+What does Azure App Configuration provide?	Azure App Configuration provides a service to centrally manage application settings and feature flags.
+Why is it important to use App Configuration for managing configuration settings?	Spreading configuration settings across distributed components can lead to hard-to-troubleshoot errors during application deployment. App Configuration allows you to store all the settings for your application in one place, making it easier to manage and secure their accesses.
+How does App Configuration complement Azure Key Vault?	App Configuration complements Azure Key Vault, which is used to store application secrets. While Azure Key Vault focuses on secret management, App Configuration is specifically designed for managing configuration settings and feature flags.
+What scenarios does App Configuration make it easier to implement?	App Configuration makes it easier to implement the following scenarios: - Centralize management and distribution of hierarchical configuration data for different environments and geographies - Dynamically change application settings without the need to redeploy or restart an application - Control feature availability in real-time
+How can you add an App Configuration store to your application?	The easiest way to add an App Configuration store to your application is through a client library that Microsoft provides.
+In .NET, what namespace is used to programmatically work with App Configuration?	In .NET, the namespace used to programmatically work with App Configuration is `Microsoft.Extensions.Configuration.AzureApp`.

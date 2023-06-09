@@ -1,0 +1,15 @@
+What is Azure Key Vault?	Azure Key Vault is a tool for securely storing and accessing secrets.
+How is a secret defined in Azure Key Vault?	A secret in Azure Key Vault is anything that you want to tightly control access to, such as API keys, passwords, or certificates.
+What is a vault in Azure Key Vault?	A vault in Azure Key Vault is a logical group of secrets.
+How can you authenticate to Key Vault using a managed identity?	You can authenticate to Key Vault using a managed identity, which can be assigned to a virtual machine or other Azure resources.
+What is the benefit of using a managed identity to authenticate to Key Vault?	The benefit of using a managed identity is that Azure automatically rotates the service principal client secret associated with the identity, relieving the app or service from managing the rotation.
+What are the three ways to authenticate to Key Vault?	The three ways to authenticate to Key Vault are managed identities, service principal with a certificate, and service principal with a secret.
+Why is using a service principal with a certificate not recommended for Key Vault authentication?	Using a service principal with a certificate is not recommended because the application owner or developer must manually rotate the certificate.
+Why is using a service principal with a secret not recommended for Key Vault authentication?	Using a service principal with a secret is not recommended because it's difficult to automatically rotate the bootstrap secret used for authentication.
+What protocol does Azure Key Vault enforce to protect data during transit?	Azure Key Vault enforces the Transport Layer Security (TLS) protocol to protect data during transit.
+How does Perfect Forward Secrecy (PFS) protect connections to Azure Key Vault?	Perfect Forward Secrecy (PFS) protects connections between clients' systems and Azure Key Vault by using unique keys and RSA-based 2,048-bit encryption.
+What is the recommended approach for using vaults in different environments?	The recommended approach is to use a vault per application per environment (Development, Pre-Production, and Production) to avoid sharing secrets across environments and reduce the threat in case of a breach.
+Why is it important to control access to your Key Vault?	It is important to control access to your Key Vault because the data stored in the vault is sensitive and business-critical, and you need to ensure that only authorized applications and users can access it.
+What action should you take to protect your Key Vault data from accidental loss or deletion?	You should create regular backups of your vault on update/delete/create of objects within the vault to protect against accidental loss or deletion.
+What should you do to enhance the security of your Key Vault?	You should turn on logging and alerts to monitor and detect any suspicious activities or breaches in your Key Vault.
+What additional protection features can you enable for your Key Vault?	You can enable soft-delete and purge protection to guard against the forceful deletion of secrets, providing an extra layer of security.
