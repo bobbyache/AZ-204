@@ -1,4 +1,63 @@
 @startmindmap
+
+'Icons https://plantuml.com/sprite
+
+caption The Azure Landscape
+title The Azure Landscape (AZ-204)
+
+center footer The Azure landscape as mapped out in AZ-204
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+<style>
+
+    mindMapDiagram {
+        
+        LineColor lightblue
+        RoundCorner 5
+        BackgroundColor white
+        Shadowing 2.0
+
+        ' rootNode {
+        '     LineColor white
+        '     BackgroundColor white
+        ' }
+
+        node {
+            LineColor blue
+            BackgroundColor lightblue
+        }
+        :depth(0) {
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor blue
+            BackgroundColor white
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
 * Azure App Service
 ** Built-in Authentication
 *** Time and effort-saving

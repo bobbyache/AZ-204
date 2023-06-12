@@ -212,9 +212,9 @@ center footer The Azure landscape as mapped out in AZ-204
 'Storage
 '=========================================================
 
-++ Storage
+++ Blob Storage
 +++ .NET
-++++_ Azure.Storage.Blobs
+++++_ Azure.Storage.Blobs, Azure.Storage.Blobs.Models
 ++++_ BlobServiceClient, BlobContainerClient
 ++++_ container.SetMetadataAsync(), container.GetPropertiesAsync()
 +++ Other
@@ -226,6 +226,7 @@ center footer The Azure landscape as mapped out in AZ-204
 +++++_ BlobContainerClient.SetAccessPolicyAsync
 ++++_ az storage container policy create
 ++++ REST
++++++_ Azure Storage REST API
 +++++_ x-ms-rehydrate-priority
 +++++_ https://myaccount.blob.core.windows.net/mycontainer/myblob
 +++++_ https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=tier

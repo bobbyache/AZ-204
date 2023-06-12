@@ -127,6 +127,7 @@
 - [Lab 10: Asynchronously process messages by using Azure Service Bus Queues
 ](https://microsoftlearning.github.io/AZ-204-DevelopingSolutionsforMicrosoftAzure/Instructions/Labs/AZ-204_lab_10.html)
 - [Create and manage Azure Queue Storage and messages by using .NET](https://learn.microsoft.com/en-us/training/modules/discover-azure-message-queue/8-queue-storage-code-examples)
+- [Service Bus (Wintellect)](https://youtu.be/vcWpmv8tJBQ) - Follow the video to create both topics and queues. All code visible at some point. Good exercise using Node.js that can easily be converted to .NET.
 
 ## Event Grid
 

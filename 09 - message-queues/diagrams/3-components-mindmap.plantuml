@@ -1,32 +1,33 @@
 @startmindmap
 *[#lightgreen] Service Bus\nQueues, Topics\nDescriptions
-** First In, First Out (FIFO)
-***_ message delivery to one or more competing consumers
-***_  Receivers typically receive and process messages in the order in which they were added to the queue
-***_  Only one message consumer receives and processes each message
-** Messages are stored durably in the queue,
-***_ so producers and consumers don't have to process messages concurrently
-** Load-leveling
-***_  enables producers and consumers to send and receive messages at different rates
-** De-coupling
-***_ Using queues to intermediate between message producers and consumers provides an inherent loose coupling between the components
-***_ Consumers can be upgraded without having any effect on the producer
-** Implementation
-***_ Queues can be created using the Azure portal, PowerShell, CLI, or Resource Manager templates
-***_ Messages can be sent and received using clients written in C#, Java, Python, and JavaScript
-** Receive modes
-*** Receive and delete
-****_ Service Bus marks the message as being consumed and returns it to the consumer application
-*** Peek lock
-**** Receive operation becomes two-stage
-*****_ Locks next message to be consumed, prevents other consumers from receiving it
-*****_ After message processed, the application requests the Service Bus service\n   to complete the second stage of the receive process
-*****_ If the application is unable to process the message,\n   it can request the Service Bus service to abandon the message
-*****_ If the application fails to process the message before the lock timeout expires,\n   Service Bus unlocks the message and makes it available to be received again
+**[#lightblue] Queues
+*** First In, First Out (FIFO)
+****_ Message delivery to one or more competing consumers
+****_  Receivers typically receive and process messages in the order in which they were added to the queue
+****_  Only **one message consumer** receives and processes each message
+*** Messages are stored durably in the queue,
+****_ so producers and consumers don't have to process messages concurrently
+*** Load-leveling
+****_  Enables producers and consumers to send and receive messages at different rates
+*** De-coupling
+****_ Using queues between message producers and consumers provides an inherent loose coupling
+****_ Consumers can be upgraded without having any effect on the producer
+*** Implementation
+****_ Queues can be created using the Azure portal, PowerShell, CLI, or Resource Manager templates
+****_ Messages can be sent and received using clients written in C#, Java, Python, and JavaScript
+***[#gold] Receive modes
+****[#gold] Receive and delete
+*****_ Service Bus marks the message as being consumed and returns it to the consumer application
+****[#gold] Peek lock
+***** two-stage
+******_ **Locks** next message to be consumed, prevents other consumers from receiving it
+******_ After **message processed**, the application requests the Service Bus service\n   to complete the second stage of the receive process
+******_ If **unable** to process the message,\n   Service Bus service is **notified** and **unlocks** the message
+******_ If the **lock timeout expires**,\n   Service Bus unlocks the message and makes it **available** to be received again
 ** Topics and Subscriptions
-*** Queues
-****_ Allows processing by single consumer
-***_ One-to-many publish and subscribe pattern
+*** Multiple consumers
+****_ Allows processing by more than one consumer
+***_ One-to-many **publish and subscribe** pattern
 ***_ Publisher sends message, one or more consumers subscribe to receive messages
 *** Subscriptions
 ****_ See all messages sent by topic

@@ -4,31 +4,31 @@
 * Azure Blob Storage
 
 ** Blob storage is designed for:
-*** Serving images or documents directly to a browser.
-*** Storing files for distributed access.
-*** Streaming video and audio.
-*** Writing to log files.
-*** Storing data for backup and restore, disaster recovery, and archiving.
-*** Storing data for analysis by an on-premises or Azure-hosted service.
+***_ Serving images or documents directly to a browser.
+***_ Storing files for distributed access.
+***_ Streaming video and audio.
+***_ Writing to log files.
+***_ Storing data for backup and restore, disaster recovery, and archiving.
+***_ Storing data for analysis by an on-premises or Azure-hosted service.
 
 ** Accessing Blob storage:
-*** HTTP/HTTPS
-*** Azure Storage REST API
-*** Azure PowerShell
-*** Azure CLI
-*** Azure Storage client library
+***_ HTTP/HTTPS
+***_ Azure Storage REST API
+***_ Azure PowerShell
+***_ Azure CLI
+***_ Azure Storage client library
 
 ** Azure Storage Account
-*** Top-level container for Azure Blob storage
-*** Provides a unique namespace
-*** Accessible worldwide over HTTP/HTTPS
+***_ Top-level container for Azure Blob storage
+***_ Provides a unique namespace
+***_ Accessible worldwide over HTTP/HTTPS
 
 ** Types of Storage Accounts
 *** Standard (recommended for most scenarios)
 *** Premium (higher performance using solid-state drives)
-**** Block blobs
-**** Page blobs
-**** File shares
+****_ Block blobs
+****_ Page blobs
+****_ File shares
 
 ** Access Tiers for Blob Data
 *** Hot (frequent access, highest storage costs, lowest access costs)

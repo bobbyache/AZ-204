@@ -1,7 +1,7 @@
-@startmindmap " Playloads and Serialization"
-* Service Bus\nMessage Payloads\nand Serialization
-** Message Structure
-*** Metadata\n(Key-Value Pair Properties)
+@startmindmap "Service Bus Routing"
+* Service Bus Routing
+**[#gold] Message Structure
+***[#gold] Metadata\n(Key-Value Pair Properties)
 ****_ Describes Payload
 ****_ Handling Instructions to Service Bus and applications
 **** Broker Properties
@@ -13,28 +13,29 @@
 *****_ SessionId
 **** User Properties
 *****_ Application defined key-value pairs
-*** Payload (Opaque, Binary Block)
+***[#gold] Payload (Binary Block)
 **** ContentType (MIME content-type)
 **** Serialization
 *****_ .NET Framework
 *****_ Legacy SBMP Protocol
 *****_ AMQP Protocol
-** Object Model (for .NET and Java Clients)
-** Binary Payload Section
-
 
 ** Routing and Correlation\nPatterns
 *** Simple Request/Reply
+****_ A publisher sends a message into a **queue**.
+****_ Expects a reply from the message consumer.
+****_ The publisher **owns a queue** to receive the replies.
 *** Multicast Request/Reply
+****_ a publisher sends the message into a **topic**.
+****_ **Multiple** subscribers consume the message.
+****_ Each might respond.
 *** Multiplexing
+****_ Streams of related messages sent through a single **queue** or **subscription**.
+****_ Identified by **matching Session Ids**.
+****_ Routed to a specific receiver while the receiver holds the session under **lock**.
+
 *** Multiplexed Request/Reply
-** Routing and Namespacing
-*** Autoforward Chaining
-*** Topic Subscription Rules
-*** Azure LogicApps
-*** To Property (Reserved for Future Use)
-** Payload Serialization
-*** ContentType Property
-*** Serialization Control
-** Explicit Object Serialization Control
+****_ Enables multiplexed replies.
+****_ Several publishers to share a reply queue.
+****_ Consumer(s) to copy the ReplyToSessionId value into the SessionId property of the reply message.
 @endmindmap

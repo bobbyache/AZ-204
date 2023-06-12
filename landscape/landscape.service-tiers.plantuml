@@ -71,7 +71,7 @@ center footer The Azure landscape as mapped out in AZ-204
 +++_  **Shared** Compute\nAllocated CPU quotas\nNo Scaling
 ++++_  **Free**
 ++++_  **Shared**
-+++_ Dedicated Compute\nDedicated Azure VMs
++++_ **Dedicated** Compute\nDedicated Azure VMs
 ++++_  **Basic**
 ++++_  **Standard** - (and above have Deployment Slots)
 ++++_  **Premium**
@@ -85,11 +85,11 @@ center footer The Azure landscape as mapped out in AZ-204
 'Functions
 '=========================================================
 -- Functions
----_ Consumption
-----_ (auto scaling, pay per use, serverless)
----_ Premium
+---_ **Consumption**
+----_ (auto scaling, pay per use, **Serverless**)
+---_ **Premium**
 ----_ (pre-warmed workers, VN connectivity, powerfull VMs)
----_ Dedicated
+---_ **Dedicated**
 ----_ (App Service Plan, long running scenarios)
 ---_ ASE (App Service Environment)
 ----_ Fully isolated and runs at high scale
@@ -120,7 +120,7 @@ center footer The Azure landscape as mapped out in AZ-204
 -----_ First 180 000 vCPU seconds
 -----_ 360 000 GiB seconds of memory
 -----_ 2 000 000 requests
-----_ Serverless (can scale to zero)
+----_ **Serverless** (can scale to zero)
 ----_ Pay per vCPU second and memory used
 ----_ Per million requests
 
@@ -138,7 +138,7 @@ center footer The Azure landscape as mapped out in AZ-204
 -- Blob Storage
 ---_ General Purpose V2
 ----_ Archived, Cool, Hot
----_ Premium
+---_ **Premium**
 ----_ Optimized for fast interaction
 
 '=========================================================
@@ -147,7 +147,7 @@ center footer The Azure landscape as mapped out in AZ-204
 -- Cosmos DB
 ---_ Provisioned Throughput
 ----_ Per-hour basis for the RU/s provisioned
----_ Serverless
+---_ **Serverless**
 ----_ Per-hour basis for the number of RUs consumed
 
 
@@ -175,21 +175,21 @@ center footer The Azure landscape as mapped out in AZ-204
 'Azure CDN
 '=========================================================
 ++ Azure CDN
-+++_ Standard
++++_ **Standard**
 ++++_ Content delivery optimized
 ++++_ CDN  **Standard** from Verizon (S1)
 ++++_ CDN  **Standard** from Akamai (S2)
 ++++_ Microsoft (classic) (S3)
-+++_ Premium
++++_ **Premium**
 ++++_ Security optimized
 
 '=========================================================
 'Service Bus
 '=========================================================
 ++ Service Bus
-+++_ Standard
++++_ **Standard**
 ++++_ Pay as you go pricing. Variable throughput and latency.
-+++_ Premium
++++_ **Premium**
 ++++_ Fixed pricing. High throughput and predictable performance.
 
 
@@ -198,9 +198,9 @@ center footer The Azure landscape as mapped out in AZ-204
 '=========================================================
 
 ++ Key Vaults
-+++_ Standard
++++_ **Standard**
 ++++_ encrypts with a softrware key
-+++_ Premium
++++_ **Premium**
 ++++_ includes hardware security module(HSM)-protected keys
 
 '=========================================================
@@ -210,7 +210,7 @@ center footer The Azure landscape as mapped out in AZ-204
 ++ API Management
 +++_ Developer (No SLA)
 +++_ Basic (99.95% SLA)
-+++_ Standard (99.95% SLA)
-+++_ Premium (99.95% or 99.99% SLA)
-+++_ Consumption (99.95% SLA)
++++_ **Standard** (99.95% SLA)
++++_ **Premium** (99.95% or 99.99% SLA)
++++_ **Consumption** (99.95% SLA)
 @endmindmap 

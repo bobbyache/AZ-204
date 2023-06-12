@@ -64,15 +64,26 @@ center footer The Azure landscape as mapped out in AZ-204
 + <$osa_cloud,scale=1.5>
 
 '=========================================================
-'Message Queues
+'Message-based
 '=========================================================
--- <$osa_lifecycle,scale=0.5> Message Queues
+-- <$osa_lifecycle,scale=0.5> Message-based
 
----_ Queues are commonly used to create a backlog of work to process asynchronously.
---- Azure Service Bus
-----_ Long-polling, FIFO delivery, duplicate detection,    parallel processing and transactions
+--- Service Bus
+----_ **Integrate application components** spanning multiple communication protocols, data contracts, and trust domains
 --- Queue Storage
-----_ Large message storage, progress tracking    transaction server-side logs
+----_ Part of the Azure Storage infrastructure.
+----_ Allow you to store large numbers of messages.
+----_ Queues are commonly used to **create a backlog of work to process asynchronously**.
+
+'=========================================================
+'Event-based
+'=========================================================
+-- <$osa_lightning,scale=0.5> Event-based
+
+--- Event Grid
+----_ A **serverless event broker** used to integrate applications using events.
+----_ Event Grid allows you to easily build applications with **event-based architectures**.
+--- Event Hubs
 
 '=========================================================
 'Caching
@@ -115,14 +126,6 @@ center footer The Azure landscape as mapped out in AZ-204
 +++++_ Write logs to same Log Analytics workspace
 
 '=========================================================
-'Configuration
-'=========================================================
-+++ App Configuration
-++++_ Centrally manage app settings and feature flags
-++++_ Store settings for your app and secure access in one place.
-++++_ App Configuration complements Azure Key Vault
-
-'=========================================================
 'Security
 '=========================================================
 -- <$osa_padlock,scale=0.5> Security
@@ -157,7 +160,7 @@ center footer The Azure landscape as mapped out in AZ-204
 ----_ Store secrets such as API keys, passwords, certificates, or cryptographic keys <<my_style>>
 
 --- Managed Identities
-----_ provide an automatically managed identity in Azure Active Directory (Azure AD) for applications
+----_ **Provide an automatically managed identity** in Azure Active Directory (Azure AD) for applications
 ----_ Eliminate the need for developers to manage credentials.
 ----_ types
 -----_ system assigned
@@ -167,33 +170,67 @@ center footer The Azure landscape as mapped out in AZ-204
 'API Management
 '=========================================================
 
---- API Management
-----_ API Management provides the core functionality to ensure a successful API program through developer engagement, business insights, analytics, security, and protection.
-----_ Developers subscribe and use the API, subject to any active usage policies.
-----_ Components
------ API Gateway
-------_ Reverse proxy routing requests to clients and services. Enforce quotas and rate limits. Verifies API keys.Logs and metrics. Request transformation.
------ Management Plane\n(Azure API Management)
-------_ Administrative interface. Policies allow the publisher to change the behavior of the API through configuration.
------ Developer Portal
-------_ An automatically generated, fully customizable website with API documentation, interactive console, API key management and usage analytics.
+-- <$osa_site_head_office,scale=0.5> API Management
+---_ API Management provides the core functionality to ensure a successful API program through developer engagement, business insights, analytics, security, and protection.
+---_ Developers subscribe and use the API, subject to any active usage policies.
+---_ Components
+---- API Gateway
+-----_ Reverse proxy routing requests to clients and services. Enforce quotas and rate limits. Verifies API keys.Logs and metrics. Request transformation.
+---- Management Plane\n(Azure API Management)
+-----_ Administrative interface. Policies allow the publisher to change the behavior of the API through configuration.
+---- Developer Portal
+-----_ An automatically generated, fully customizable website with API documentation, interactive console, API key management and usage analytics.
 
 '=========================================================
 'Monitoring
 '=========================================================
 ++ <$osa_padlock,scale=0.5> Monitoring
 +++ Azure Monitor
-++++_ ...
+++++_ Azure Monitor is a cloud-based monitoring service by Microsoft Azure that collects and analyzes data from various sources to provide insights into the performance and health of applications, infrastructure, and services.
 +++ Application Insights
 ++++_ Application Insights is an extension of Azure Monitor and provides Application Performance Monitoring (also known as “APM”) features
 ++++_ APM tools are useful to monitor applications from development, through test, and into production
++++ Azure Log Analytics
+++++_ A service that collects and analyzes log and performance data from various sources, offering advanced querying capabilities and insights for troubleshooting and monitoring.
+'=========================================================
+'Web Solutions
+'=========================================================
+++ <$osa_media_flash,scale=0.5> Web Solutions
++++ App Service
+++++_ PaaS
+++++_ Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends.
+++++ Deployment slots
++++++_ Deployment slots are live apps with their own host names.
++++++_ App content and configurations elements can be swapped between two deployment slots, including the production slot.
 
 '=========================================================
-'Software
+'Functions
 '=========================================================
-++ <$osa_media_flash,scale=0.5> Software
-+++ App Service
-+++ Functions
++++ Function Apps
+++++_ Azure Functions is a serverless solution that allows you to write less code, maintain less infrastructure, and save on costs.
 ++++ Durable Functions
++++++_ Durable Functions is a serverless compute extension of Azure Functions that allows you to write stateful functions.
+
+'=========================================================
+'Configuration
+'=========================================================
++++ App Configuration
+++++_ Centrally manage app settings and feature flags
+++++_ Store settings for your app and secure access in one place.
+++++_ App Configuration complements Azure Key Vault
+
+'=========================================================
+'Storage
+'=========================================================
+++ <$osa_database,scale=0.5> Storage
+
++++ Blob Storage
+++++_ Azure Blob storage is Microsoft's object storage solution for the cloud.
+++++_ Blob storage is optimized for **storing massive amounts of unstructured data**.
+++++ Static content
++++++_ Serve up static content for your web app.
+
++++ Cosmos DB
+++++_ Azure Cosmos DB is a **fully managed NoSQL database** designed to provide low latency, elastic scalability of throughput, well-defined semantics for data consistency, and high availability.
 
 @endmindmap 
