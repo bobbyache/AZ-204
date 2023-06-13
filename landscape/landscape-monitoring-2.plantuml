@@ -1,0 +1,127 @@
+@startmindmap "Monitoring"
+
+'Icons https://plantuml.com/sprite
+
+
+caption The Azure Landscape - Security
+title The Azure Landscape - Monitoring
+
+center footer The Azure landscape as mapped out in AZ-204
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+<style>
+
+    mindMapDiagram {
+        
+        LineColor lightblue
+        RoundCorner 5
+        BackgroundColor white
+        Shadowing 2.0
+
+        ' rootNode {
+        '     LineColor white
+        '     BackgroundColor white
+        ' }
+
+        node {
+            LineColor blue
+            BackgroundColor lightblue
+        }
+        :depth(0) {
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor blue
+            BackgroundColor white
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
+'=========================================================
+'Root (User Audit)
+' What scope do I need to monitor?
+'=========================================================
++ <$osa_ics_thermometer,scale=1.5>
+
+++ Application Level
++++ Application Insights
+++++_ Monitor web and desktop applications
+++++_ Alert on
++++++_ Availability
++++++_ Performance
++++++_ Failures
++++++_ Usage
++++++_ Ping and multi-step tests
+++++_ Send data to 
++++++ Log Analytics Workspace
+++++++_ bucket that collects data
+++++++_ Query with Kusto query language
+++++_ Continuous export of raw data
++++++_ JSON
++++++_ ... to Blob storage
+++++ Application Map
+
++++ App Center
+
+++ Subscription/Resource Group Level
++++ Azure Monitor
+++++_ monitors...
++++++ Azure Resources
++++++ Applications
++++++ VM Agents
++++++ Data Collector APIs
+++++_ logs to...
++++++ Azure Monitor Logs
+++++++_ Web server logs, ...
++++++ Azure Monitor Metrics
+++++++_ Time-series based metrics
+++++++_ Memory, CPU usage...
+++++_ logs and metrics\nanalyzed with...
++++++ Log Analytics Workspace
+++++++_ Diagnose the Monitor Logs and Metrics
+++++++_ Query with Kusto query language
+
+
+
++++ Network watcher
+
++++_ Security
+++++ Security Center
++++++_ Use for collection and prevention
+
+++++ Sentinel
++++++_ Detection, investigation and responding
++++++_ More focused on overall picture
+
++++ Advisor
+++++_ Recommendations for...
++++++_ Cost
++++++_ Security
++++++_ Performance
+
+
+
+
+@endmindmap 

@@ -1,0 +1,82 @@
+@startmindmap "Monitoring"
+
+'Icons https://plantuml.com/sprite
+
+
+caption The Azure Landscape - Security
+title The Azure Landscape - Monitoring
+
+center footer The Azure landscape as mapped out in AZ-204
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+<style>
+
+    mindMapDiagram {
+        
+        LineColor lightblue
+        RoundCorner 5
+        BackgroundColor white
+        Shadowing 2.0
+
+        ' rootNode {
+        '     LineColor white
+        '     BackgroundColor white
+        ' }
+
+        node {
+            LineColor blue
+            BackgroundColor lightblue
+        }
+        :depth(0) {
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor blue
+            BackgroundColor white
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
+'=========================================================
+'Root (User Audit)
+'=========================================================
++ <$osa_ics_thermometer,scale=1.5>
+
+++_ Monitor a web or desktop application
++++ App Insights
+++_ Monitor a mobile app`
++++ Visual Studio App Center
+++_ Investigate and respond to security issues
++++ Azure Sentinal
+--_ Inspect network traffic to diagnose problems
+--- Network watcher
+--_ Get an overview of all monitoring data
+--- Azure Monitor
+--_ Monitor and prevent security issues
+--- Security Center
+--_ Get an overview of actionable recommendations
+--- Azure Advisor
+
+@endmindmap 

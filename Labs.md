@@ -140,6 +140,7 @@
 - [Quickstart: Send events to and receive events from Azure Event Hubs using .NET](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-dotnet-standard-getstarted-send?tabs%3Dpasswordless%2Croles-azure-portal)
 - [Quickstart: Create an event hub using Azure CLI](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-quickstart-cli)
 - [Quickstart: Create an event hub by using an ARM template](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-resource-manager-namespace-event-hub)
+- [A YouTube Practical example](https://www.youtube.com/watch?v=zm1XUTAa9sc&t=29s)
 
 
 

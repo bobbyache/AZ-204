@@ -213,4 +213,15 @@ center footer The Azure landscape as mapped out in AZ-204
 +++_ **Standard** (99.95% SLA)
 +++_ **Premium** (99.95% or 99.99% SLA)
 +++_ **Consumption** (99.95% SLA)
+
+++ Monitoring and Logging
++++ Application Insights
+++++_ **Free** to sign up, choose the basic pricing plan
+++++_ No charge until your application has grown to have substantial usage.
+
+-- Event-based
+--- Event Hubs
+----_ Standard tier Scales automatically with Event Hubs throughput units
+----_ Processing units in the premium tier.
+
 @endmindmap 

@@ -83,8 +83,11 @@ center footer The Azure landscape as mapped out in AZ-204
 --- Event Grid
 ----_ A **serverless event broker** used to integrate applications using events.
 ----_ Event Grid allows you to easily build applications with **event-based architectures**.
+----_ lightweight... in serverless scenarios
 --- Event Hubs
-
+----_ Azure Event Hubs represents the "front door" for an event pipeline, often called an **event ingestor** in solution architectures.
+----_  Designed for **high-throughput** data streaming and pub/sub messaging with **multiple consumers**.
+----_ Azure Event Hubs is a **big data streaming platform** and event ingestion service. It can receive and process millions of events per second.
 '=========================================================
 'Caching
 '=========================================================

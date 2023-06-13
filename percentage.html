@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pie Chart Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="pieChart"></canvas>
+    <script>
+        // JavaScript code to create the pie chart
+        const ctx = document.getElementById('pieChart').getContext('2d');
+        const data = {
+            labels: [
+                    'Azure Compute Solutions', 
+                    'Azure Security', 
+                    'Azure Storage', 
+                    'Monitoring and optimizing', 
+                    'Third Party Services'
+                ],
+            datasets: [{
+                data: [27, 22, 17, 17, 17],
+                backgroundColor: ['#FF6384', '#FF6384', '#FF6384', '#4BC0C0', '#9966FF']
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Pie Chart'
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

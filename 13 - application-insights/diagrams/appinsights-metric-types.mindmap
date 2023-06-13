@@ -1,0 +1,26 @@
+@startmindmap
+skinparam node {
+    BorderColor Black
+    BackgroundColor LightYellow
+}
+
++ 2 kinds of metrics
+++ Log-based metrics
++++_ Translated to kusto queries behind the scenes
++++_ Complete... detailed set of events.. lots of properties
++++_ Great analytical and diagnostic value
++++ Types
+++++ SDK sent events
+++++ Auto instrumentation
++++ Volume reduction techniques
+++++_ Sampling and filtering to reduce no. collected and stored events.
+++++_ Lowers accuracy of metrics
+++++_ Necessary when volume of events is too high. 
+
+++ Standard metrics
++++ Stored as pre-aggregated time series
++++_ Only key dimensions available
++++_ Retrieval of data is faster and requires less compute power
++++ Pre-aggregate behavior
+++++_ Pre-aggregates before ingestion sampling, so never an impact to pre-aggregated metrics.
+@endmindmap
