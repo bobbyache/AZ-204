@@ -1,0 +1,85 @@
+@startmindmap "CDN"
+
++ Benefits
+++ Caching content at **strategically placed** physical nodes across the world
+++ Dynamic content*
++++_ Dynamic site acceleration
++++_ Cannot be cached
+++++_ accelerated using network optimizations
+++++_ eg. Bypass Border Gateway Protocol
+++_ Decrease hops and multiple round trips improve user experience
+++ Handle large loads
++++_ Start of product launch
++++_ Front-page news
+++ Distribution of user requests
++++_ Serve content from edge servers
++++_ Less traffic sent to origin server
+
++ CDN Profile
+++_ Pricing organized and applied at this level
+++_ Use multiple profiles to mix and match pricing tiers
+++_ collection of
++++ CDN Endpoint
+++++ Web browser accesses the CDN URL (via your front-facing Web App or SPA) to fetch static content
+++++_ to access
++++++ Origin server
+++++++_ where your original content is
++++++++_ can be
+++++++++_ Storage
+++++++++_ Cloud service
+++++++++_ Web app
+++++++++_ Custom origin
+++++_ organized by
++++++ Internet Domain
++++++ Web Application
++++++_ some other criteria...
+++ Subscription Limitations
++++_ No. of CDN profiles
++++_ No. of endpoints for a CDN profile
++++_ No. of custom domains mapped to endpoints.
+
++ Caching behavior
+++ Caching rules
++++ Global rules
+++++_ apply to all content from a specified endpoint
++++ Custom rules
+++++_ apply to specific paths and file extensions
+++ Query string caching
++++_ Configurable response to query strings
+++++_ No effect on uncached files
+++ Azure CDN Standard for Microsoft caching rules
++++_ Ignore query strings (default) - cache the assets regardless
++++_ Bypass caching for query strings
+++++_ Request passed directly to origin server
++++_ Cache every unique URL
+++++_ Inefficient for unique URL requests
+
++ Time to Live (TTL)
+++ Cache-Control header
++++_ determines TTL duration
+++ Azure CDN sets a default value
++++ Defaults
+++++_ General web delivery - 7 days
+++++_ Large files - 1 day
+++++_ Media streamings - 1 year
++++_ Set up
+++++ caching rules
++++++_ to override it
+
++ Ensure lastest by...
+++_ Include version string to ensure users always receive latest version.
+++_ Purge cached content from edge nodes when publishing new web app version.
+++ Purge
++++_ endpoint by endpoint basis
++++_ select a path or specific file
++++_ wildcards (*)
++++_ using the root (/)
++++_ Azure CLI provides **az cdn endpoint purge**
+++ Preload
++++_ assets into an endpoint **az cdn endpoint load**
+
++ Geo-filtering
+++ Block content
++++_ specifc countries/regions
++++_ Verizon and Akamai tiers - set up restrictions on directory paths
+@endmindmap

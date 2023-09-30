@@ -1,5 +1,5 @@
 @startmindmap
-*[#lightgreen] Service Bus\nQueues, Topics\nDescriptions
+*[#lightgreen] Service Bus\nQueues, Topics\nSubscriptions
 **[#lightblue] Queues
 *** First In, First Out (FIFO)
 ****_ Message delivery to one or more competing consumers

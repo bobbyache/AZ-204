@@ -2,7 +2,7 @@
 
 + Azure Container Registry (ACR)
 ++ Use cases
-+++ Pull from...
++++ Deploy to...
 ++++ Scalable orchestration systems
 +++++_ Kubernetes, DC/OS, Docker Swarm
 ++++ Azure services
@@ -49,5 +49,6 @@
 ++++_ for repositories, images, layers, and tags
 +++ Maintenance for Performance
 ++++_ periodic deletion (repos, tags) for maintenance
+++++_ otherwise performance may be affected
 
 @endmindmap

@@ -1,0 +1,118 @@
+@startmindmap "Service Tiers"
+
+'Icons https://plantuml.com/sprite
+
+'Content Source: Azure Friday (Scott Hanselman & Barry) https://www.youtube.com/watch?v=IQ_j41zBy0k&list=PLW3OZVw6aG18YpObklxM87HABE-hw7LTv&index=10
+
+caption The Azure Landscape - Messaging Services
+title The Azure Landscape - Messaging Services
+
+center footer The Azure landscape as mapped out in AZ-204
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+<style>
+
+    mindMapDiagram {
+        
+        LineColor lightblue
+        RoundCorner 5
+        BackgroundColor white
+        Shadowing 2.0
+
+        ' rootNode {
+        '     LineColor white
+        '     BackgroundColor white
+        ' }
+
+        node {
+            LineColor blue
+            BackgroundColor lightblue
+        }
+        :depth(0) {
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor blue
+            BackgroundColor white
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
+'=========================================================
+'Root (User Audit)
+'=========================================================
++ <$osa_user_audit,scale=1.5>
+
+++_ Send a message to make something happen
++++_ to one subscriber
+++++ Service Bus Queue
+++++ Storage Queue
+
++++_ to multiple subscribers
+++++ Service Bus Topics
+++++ IoT Hub
+++++ Logic Apps
+++++ Signal R
+
+++_ Subscribe to and publish discrete events\n(multiple subscribers)
++++ Signal R
++++ Event Grid
++++ Notification Hubs
+
+--_ Analyze contextual data in bulk
+--- Event Hubs
+
+--_ Orchestrate a message-driven workflow
+--- Logic Apps
+
+--_ Receive and send messages to IoT devices
+--- IoT Hub
+
+--_ Send notifications to many devices over different protocols
+--- Notification Hubs
+
+'=========================================================
+'Queues comparison
+'=========================================================
++ <$osa_user_audit,scale=1.5>
+
+++ Azure Storage Queues
++++_ Message lifetime <= 7 days
++++_ Queue size > 80 GB
++++_ Transaction logs (a feature of Azure storage)
++++_ Message size <= 64 KB
++++_ Simple queue for basic queue functionality
+
+-- Azure Service Bus Queues
+---_ Message lifetime > 7 days
+---_ Guaranteed FIFO
+---_ Duplicate detection
+---_ Message size <= 1MB
+---_ Fancier, lots more features
+---- Topics
+---- Subscriptions
+---- Dead Message Queues
+---- Message Sessions\n(guaranteed FIFO)
+@endmindmap 

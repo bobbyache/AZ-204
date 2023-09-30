@@ -1,0 +1,149 @@
+<policies>
+  <inbound>
+    <!-- statements to be applied to the request go here -->
+  </inbound>
+  <backend>
+    <!-- statements to be applied before the request is forwarded to 
+         the backend service go here -->
+  </backend>
+  <outbound>
+    <!-- statements to be applied to the response go here -->
+  </outbound>
+  <on-error>
+    <!-- statements to be applied if there is an error condition go here -->
+  </on-error>
+</policies>
+
+<policies>
+    <inbound>
+        <cross-domain />
+        <base />
+        <find-and-replace from="xyz" to="abc" />
+    </inbound>
+</policies>
+
+
+<policies>
+	<inbound>
+		<base />
+		<ip-filter action="allow">
+			<address>10.100.7.1</address>
+		</ip-filter>
+	</inbound>
+	...
+</policies>
+
+<choose>
+	<when condition="">
+		
+	</when>
+	<when condition="">
+		
+	</when>
+	<when condition="">
+		
+	</when>
+	<otherwise>
+	<otherwise>
+</choose>
+
+
+<check-header name="header name" failed-check-httpcode="code" failed-check-error-message="message" ignore-case="true | false">
+    <value>Value1</value>
+    <value>Value2</value>
+</check-header>
+
+<get-authorization-context
+    provider-id="authorization provider id" 
+    authorization-id="authorization id" 
+    context-variable-name="variable name" 
+    identity-type="managed | jwt"
+    identity="JWT bearer token"
+    ignore-error="true | false" />
+
+
+<!-- Add to inbound policy. -->
+<get-authorization-context
+    provider-id="github-01" 
+    authorization-id="auth-01" 
+    context-variable-name="auth-context" 
+    identity-type="managed" 
+    ignore-error="false" />
+<!-- Attach the token to the backend call -->
+<set-header name="Authorization" exists-action="override">
+    <value>@("Bearer " + ((Authorization)context.Variables.GetValueOrDefault("auth-context"))?.AccessToken)</value>
+</set-header>
+<set-header name="Authorization" exists-action="override">
+	<value>@("Bearer " + ((Authorization)context.Variables.GetValueOrDefault("auth-context"))?.AccessToken)</value>
+</set-header>
+<return-response>
+    <set-status code="200" />
+    <set-body template="none">@(((Authorization)context.Variables.GetValueOrDefault("auth-context"))?.AccessToken)</set-body>
+</return-response>
+
+
+<policies>
+    <inbound>
+        <base />
+        <rate-limit-by-key  calls="10"
+              renewal-period="60"
+              increment-condition="@(context.Response.StatusCode == 200)"
+              counter-key="@(context.Request.IpAddress)"
+              remaining-calls-variable-name="remainingCallsPerIP"/>
+    </inbound>
+    <outbound>
+        <base />
+    </outbound>
+</policies>
+
+<ip-filter action="allow">
+    <address>13.66.201.169</address>
+    <address-range from="13.66.140.128" to="13.66.140.143" />
+</ip-filter>
+<ip-filter action="forbid">
+    <address>196.66.201.169</address>
+</ip-filter>
+
+<ip-filter action="allow">
+	<address-range from="13.55.140.128" to="13.66.140.143" />
+	<address>196.223.156.12</address>
+</ip-filter>
+
+
+<quota calls="number" bandwidth="kilobytes" renewal-period="seconds">
+    <api name="API name" id="API id" calls="number">
+        <operation name="operation name" id="operation id" calls="number" />
+    </api>
+</quota>
+
+<policies>
+    <inbound>
+        <base />
+        <quota calls="10000" bandwidth="40000" renewal-period="3600" />
+    </inbound>
+    <outbound>
+        <base />
+    </outbound>
+</policies>
+
+
+<foward-request timeout="25" follow-redirects="true" />
+
+<limit-concurrency key="expression" max-count="10">
+</limit-concurrency>
+
+
+<log-to-eventhub logger-id"" partition-id="part1">
+</log-to-eventhub>
+
+<mock-response status-code="200" content-type="media-type" />
+
+<retry
+	condition=""
+	count=""
+	interval=""
+	max-interval=""
+	delta=""
+	first-fast-retry="false"
+>
+</retry>

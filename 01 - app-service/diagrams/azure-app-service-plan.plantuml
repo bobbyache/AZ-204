@@ -1,0 +1,45 @@
+@startmindmap "App Service Plan"
+
+caption App Service Plan Overview
+title App Service Plan Overview
+
+center footer App Service Plan as mapped out in AZ-204
+
++ App Service Plan
+++_ has 1:n
++++ Apps
+++++_ Web App
+++++_ Mobile App
+++++_ Api
+++++_ App Function
+++++_ 1:n
++++++ Deployment Slots
+++++++_ Standard tier and up
++++++ Others
+++++++_ Diagnostic logs
+++++++_ Backups
+++++++_ WebJobs
++++_ **Scale Unit**\nShare provisioned VMs
+++_ Set of
++++ compute resources
+++++_ OS
+++++_ Region
+++++_ No. and size of VM instances
+++++ Pricing tier
++++++ Shared
+++++++_ **Free and Shared**
+++++++_ Allocated CPU quotas
+++++++_ Runs on shared resources
+++++++_ Can't scale out
+++++++_ **Development purposes**
++++++ Dedicated
+++++++_ **Basic, Standard, Premium, PremiumV2, PremiumV3**
+++++++_ Dedicated VMs
+++++++_ Higher the tier, more VMs to scale out
++++++ Isolated
+++++++_ **Isolated and IsolatedV2**
+++++++_ Dedicated VMs and dedicated Virtual Networks
+++++++_ Compute + **network isolation**
+++++++_ Maximum scale-out capabilities
+
+@endmindmap

@@ -5,8 +5,8 @@
 'Icons https://plantuml.com/sprite
 
 
-caption The Azure Landscape - Logging and Monitoring
-title The Azure Landscape - Logging and Monitoring
+caption The Azure Landscape - Client Libraries
+title The Azure Landscape - Client Libraries
 
 center footer The Azure landscape as mapped out in AZ-204
 
@@ -261,6 +261,11 @@ center footer The Azure landscape as mapped out in AZ-204
 +++ .NET
 ++++_ Microsoft.ApplicationInsights.AspNetCore
 ++++_ services.AddApplicationInsightsTelemetry()
++++ Other
+++++ OpenCensus
++++++_ Open source, vendor-agnostic, single distribution of libraries
++++++_ Metrics collection and distributed tracing for services
++++++_ enable distributed tracing with popular technologies like Redis, Memcached, or MongoDB
 
 ++ Microsoft Graph
 +++ .NET

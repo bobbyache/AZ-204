@@ -1,0 +1,101 @@
+@startmindmap "Message Types and Services"
+
+'Icons https://plantuml.com/sprite
+
+'Content Source: Azure Friday (Scott Hanselman & Barry) https://www.youtube.com/watch?v=IQ_j41zBy0k&list=PLW3OZVw6aG18YpObklxM87HABE-hw7LTv&index=10
+
+caption The Azure Landscape - Message Types and Services
+title The Azure Landscape - Message Types and Services
+
+center footer The Azure landscape as mapped out in AZ-204
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+<style>
+
+    mindMapDiagram {
+        
+        LineColor lightblue
+        RoundCorner 5
+        BackgroundColor white
+        Shadowing 2.0
+
+        ' rootNode {
+        '     LineColor white
+        '     BackgroundColor white
+        ' }
+
+        node {
+            LineColor blue
+            BackgroundColor lightblue
+        }
+        :depth(0) {
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor blue
+            BackgroundColor white
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
+'=========================================================
+'Root (User Audit)
+'=========================================================
++ <$osa_contract,scale=1.5> Messages
+
+++ of Intent
++++ Command
+++++_ You want something to happen
+++++_ Could get a message back
+++++_ **Real World:** Increase the temperature on a thermostat
+++++_ **Services:**
++++++ Storage Queues
++++++ Service Bus Queues and Topics
++++++ IoT Hub
++++++ Logic Apps
++++++ Signal R
+
+++ of Fact
++++ Discrete Data
+++++_ Does not happen continually
+++++_ **Real World:** Door open/closed
+++++_ **Services:**
++++++ Event Grid
+++++++_ Subscribe to this fact and have it sent somewhere for processing
++++++ Signal R
+++++++_ **Real World:** Auction - price has changed... display it on all screens
++++++ Notification Hubs
+++++++_ Push to phones as a push notification
++++ Stream of Data
+++++_ Continuous stream of related data
+++++_ **Real World:** Temperature data in a temperature sensor sending data every second to your app
+++++_ **Services:**
++++++ Event Hubs
+++++++_ Ingest and distribute massive amounts of data for analytics etc.
++++++ IoT Hub
+++++++_ Ingest and distribute massive amounts of data for analytics etc.
+++++++_ Also bi-directional and can send back to your devices.
+
+@endmindmap 

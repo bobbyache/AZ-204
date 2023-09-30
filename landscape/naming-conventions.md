@@ -44,6 +44,7 @@
 - Must not end with '-'
 
 ### Azure Cache for Redis
+- Must be globally unique (public facing URL)
 - Must be between 1 and 63 characters long
 - Contain only lowercase letters and numbers and '-'
 - Cannot contain consecutive hyphens
@@ -110,6 +111,7 @@
 - Must not start or end with '-'
 
 ### Event Hubs
+- Name becomes DNS namespace must be unique throughout Azure
 - Must be between 6 and 50 characters long
 - Contain alphanumeric characters and '-'
 - Cannot contain consecutive hyphens

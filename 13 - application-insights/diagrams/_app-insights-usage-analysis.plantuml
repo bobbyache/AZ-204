@@ -1,0 +1,45 @@
+@startmindmap "Usage Analysis"
+
+skinparam node {
+  BackgroundColor LightYellow
+}
+
++ Usage Analysis
+
+++ Funnels
++++_ a progression through a **series of steps** in a web app
++++_ Know if customers are preogressing through the entire process
+
+++ Cohorts
++++_ a set of users, sessions, events, or operations\n   that have **something in common**
++++_ Analyze a specific set of users or events repeatedly.
++++_ Example: a cohort of users who have all tried a new feature
+
+++ Impact
++++_ Find out... how best to balance optimization, performance
++++_ ... and other dimensions...
++++_ ...to maximize user conversion
++++_ Is the slowness of your app affecting usage?
++++_ uses
+++++_ the Pearson correlation coefficient
+
+++ Retention
++++_ How many users return to your app
++++_ How often do they perform particular tasks
+
+++ User flows
++++_ visualizes how users move between the pages, features
++++_ Requires page views or custom events
+
++ Heart Framework
+-- Happiness
+---_ Measure of user attitude
+++ Engagement
++++_ Level of user involvement
+++ Adoption
++++_ Target audience penetration
+++ Retention
++++_ Rate at which users return
+-- Task Success
+---_ Productivity empowerment
+@endmindmap

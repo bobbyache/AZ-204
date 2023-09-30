@@ -1,62 +1,11 @@
-@startmindmap
+@startmindmap "App Service Environment"
 
 'Icons https://plantuml.com/sprite
 
+title App Service Environment
 caption The Azure Landscape
-title The Azure Landscape (AZ-204)
 
-center footer The Azure landscape as mapped out in AZ-204
-
-!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
-!include osaPuml/Common.puml
-!include osaPuml/User/all.puml
-!include osaPuml/Hardware/all.puml
-!include osaPuml/Misc/all.puml
-!include osaPuml/Server/all.puml
-!include osaPuml/Site/all.puml
-
-<style>
-
-    mindMapDiagram {
-        
-        LineColor lightblue
-        RoundCorner 5
-        BackgroundColor white
-        Shadowing 2.0
-
-        ' rootNode {
-        '     LineColor white
-        '     BackgroundColor white
-        ' }
-
-        node {
-            LineColor blue
-            BackgroundColor lightblue
-        }
-        :depth(0) {
-            LineColor black
-            BackgroundColor white
-            Shadowing 5.0
-        }
-        :depth(1) {
-            FontColor blue
-            BackgroundColor white
-        }
-
-        arrow {
-            LineStyle 4
-            LineThickness 0.5
-            LineColor green
-        }
-
-        boxless {
-            FontColor black
-            Margin 10
-            Padding 10
-            MaximumWidth 400
-        }
-    }
-</style>
+center footer App Service Environment
 
 * App Service Environment (ASE)
 ** Fully isolated and dedicated environment

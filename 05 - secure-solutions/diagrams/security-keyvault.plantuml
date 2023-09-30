@@ -23,17 +23,20 @@
 
 ++ Best Practices
 +++ Authentication
-++++_ Managed identities
+++++_ Managed identities (Recommended)
 ++++_ Service principal
 +++++_ and certificate
 +++++_ and secret
-+++_ Encryption of data in transit (TLS)
++++ Encryption
+++++_ Data in Transit
++++++_ Clients and the Key Vault - TLS
++++++_ Customer clients and Cloud services\nwith Perfect forward secrecy (PFS)
 +++ Other
 ++++_ Use seperate key Vaults
 ++++_ Control access to vault
-++++_ Backup
-++++_ Recovery options
-++++_ Logging
+++++_ Backup (on update/delete/create)
+++++_ Recovery options - soft delete and purge options
+++++_ Turn on logging
 ++ Authenticate with AAD
 +++_ Managed Identity recommended
 +++_ Otherwise, register w/ AD tenant\napplication object identifies across tenants

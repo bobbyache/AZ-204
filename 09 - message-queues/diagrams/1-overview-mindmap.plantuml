@@ -1,19 +1,19 @@
 @startmindmap
-* Azure Queue Mechanisms
-** Service Bus queues
-***_ Integration of applications/components
-***_ Queuing and publish/subscribe pattern
-***_ Long-polling receive operation
-***_ Guaranteed FIFO ordered delivery
-***_ Automatic duplicate detection
-***_ Parallel long-running streams
-***_ Transactional behavior and atomicity
-** Storage queues
-***_ Large message storage
-***_ Accessible via HTTP/HTTPS
-***_ Maximum message size of 64 KB
-***_ Backlog of work for asynchronous processing
-***_ Over 80 GB storage capacity
-***_ Progress tracking for message processing
-***_ Server-side transaction logs
++[#gold] Queue Differences
+--[#lightblue] Service Bus queues
+---_ Integration of applications/components
+---_ Queuing and publish/subscribe pattern
+---_ Long-polling receive operation
+---_ Guaranteed FIFO ordered delivery
+---_ Automatic duplicate detection
+---_ Parallel long-running streams
+---_ Transactional behavior and atomicity
+++[#lightblue] Storage queues
++++_ Large message storage
++++_ Accessible via HTTP/HTTPS
++++_ Maximum message size of 64 KB
++++_ Backlog of work for asynchronous processing
++++_ Over 80 GB storage capacity
++++_ Progress tracking for message processing
++++_ Server-side transaction logs
 @endmindmap

@@ -1,0 +1,87 @@
+@startmindmap "API Management"
+
++ API Management
+++ Benefits
++++_ Facade for backend services
++++_ Caches responses to improve performance
++++_ Limit (throttle) number of API calls.
++++_ Secure the APIs and granting of access
++++_ Support for creating product using API groups
++++_ Developer portal for developers to consume
++++_ Provides insight into utilization of APIs
+
+++ Components
+
++++[#lightblue] Developer Portal
+++++ Documentation
++++++_ Automatically generated,\nfully customizable website with the documentation of your APIs.
++++++_ Read API documentation
+++++_ developers can...
++++++_ Call an API via an interactive console
++++++_ Create an account subscribe (and manage) API keys
++++++_ Assess analytics on their own usage
++++++_ Download API permissions
+++++ Intercepts requests...
++++++_ Verifies API keys and other credentials
++++++_ Routes them to appropriate backends
++++++_ Enforces usage quotas and rate limits
++++++_ Transforms according to specified policy statements
++++++_ Caches responses
++++++_ Emits logs, metrics an traces
+
++++[#lightblue] API Gateway
+++++_ (also called data plane or runtime)
++++++_ a service component
++++++_  that's responsible
+++++++_ proxying API requests
+++++++_ applying policies
++++++++_ Rate limiting
++++++++_ XML to JSON format conversion
+++++++_ and collecting telemetry.
+
++++[#lightblue] Management Plane
+++++_ Provision settings
++++++_ Set up
+++++++ Users
++++++++_ ... are developers
++++++++_ Manage
+++++++[#yellow] Policies
++++++++_ for
+++++++++_ quotas
+++++++++_ transformations
++++++++_ executed sequentially on request/response
++++++++_ applied at different scopes
+++++_ import
++++++ API Schema
+++++++_ Package into
++++++++[#yellow] Products
+++++++++_ One or more APIs
+++++++++_ can be
++++++++++_ Open
++++++++++_ Protected\n(subscription-based, approved)
++++++++ Groups
+++++++++_ Immutable
++++++++++_ Administrators
++++++++++_ Developers
++++++++++_ Guests
+++++++++_ Custom
+++++_ Secure APIs using
++++++ Subscriptions
+++++++_ Developers can get subscriptions without needing approval
+++++++_ API publishers can create subscriptions for developers
+++++++ (Primary and Secondary)\nSubscriptions Keys
++++++++_ in requests
+++++++++_ using headers **Ocp-Apim-Subscription-Key**
+++++++++_ using query params **subscription-key**
++++++++ tested
++++++++_ developer portal
+++++++++_ curl
+++++++ Scoped
++++++++_ All APIs
++++++++_ Single API
++++++++_ Product
++++++ Certificates
+++++ Analytics
++++++_ Get insights into analytics
+
+@endmindmap

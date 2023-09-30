@@ -1,27 +1,55 @@
 @startmindmap
-* Azure Event Hubs
-** "Front door" for an event pipeline
-** Event Ingestor
-*** Component or service between event publishers and event consumers
-** Unified streaming platform
-*** Time retention buffer
-*** Decoupling event producers from event consumers
-** Fully managed Platform-as-a-Service (PaaS)
-*** Little configuration or management overhead
-*** Focus on business solutions
-** Event Hubs for Apache Kafka ecosystems
-*** PaaS Kafka experience
-*** No need to manage, configure, or run clusters
-** Partitioned consumer model
-*** Enables multiple applications to process the stream concurrently
-** Data capture
-*** Near-real time
-**** Azure Blob storage
-**** Azure Data Lake Storage
-*** Long-term retention or micro-batch processing
-** Scaling options
-*** Auto-inflate
-*** Scale number of throughput units
-** Rich ecosystem
-*** Enables Apache Kafka clients and applications to talk to Event Hubs
+
++ Start
+++ Event Producer(s)
++++_ Authorization
+++++_ Shared Access Policy (Namespace or Event Hub level)
+++++_ Managed Identity
++++ Partition Key
+++++_ Used to determine destination partition
+++++_ Avoid data skewness by making good decison.
+++ Event Hubs Namespace
++++_ Pricing Tier
+++++_ Basic
+++++_ Standard
++++++_ Throughput units (TU)
+++++++_ 1 TU = 1000 events /sec or 1 MB /sec (ingress)
+++++++_ twice the amount on egress
+++++++_ Enable auto inflate to...
++++++++_ Max. no TUs 40
++++++++_ Avoid runaway costs
+++++_ Premium...
++++++_ Processing units (PU)
+++++++_ max 16
++++_ many...
+++++ Event Hub
++++++_ many...
+++++++ Partition
++++++++_ Up to 32
++++++++_ Ordered from oldest to newest
+++++++++ Event
++++++++ Retention
+++++++++_ Min 1 hour
+++++++++_ Max 7 days (168 hours)
++++++++ Offset
+++++++++_ Offset of an event within a partition
+++++++++ Checkpointing
++++++++++_ Each consumer group for each partition
++++++++++_ checkpoints an offset when an event at that position is read.
+++ Capture
++++ Storage
+++++_ Azure Blob Storage
+++++_ Azure Data Lake Storage
+++++ Apache Avro
++++++ File
+++++++_ http://storagecontainer.../eventhubs/eventhub/partition_id/2023/06/16/06/17/36
++++++_ Structured data
++++++_ Storage in binary
+++ Consumer Group(s)
++++_ $Default
++++_ Each group linked to application
++++_ May read same partition(s) but for different processing reasons
+
+
+
 @endmindmap

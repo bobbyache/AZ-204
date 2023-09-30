@@ -2,6 +2,14 @@
 + App Configuration
 
 ++ Benefits
++++_ Fully managed service
++++_ Flexible key creations and mappings
++++_ Tagging with labels
++++_ Dedicated UI for feature flag management
++++_ Point in time replay of settings
++++ Security 
+++++_ Encryption of sensitive information at rest and in transit
+++++_ Enhanced security through Azure Managed Identities
 ++ Storing Information
 +++_ Query key values that match a pattern (Key + Label)
 +++_ Hierarchical delimited with : or /

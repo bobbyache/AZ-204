@@ -1,0 +1,34 @@
+@startmindmap "App Service Authentication and Authorization"
+
+caption App Service Authentication and Authorization Overview
+title App Service Authentication and Authorization Overview
+
+center footer App Service Authentication and Authorization as mapped out in AZ-204
+
++ Built in Support
+++_ Auth with  multiple
++++ Identity providers
+++_ /.auth/login/**providerName**
+++ Authentication and Authorization\nModule
++++_ Runs in same sandbox as
+++++ Application Code
++++_ handles
+++++_ Authentication with identity providers
+++++_ Validation, storage, refresh
++++++ OAuth tokens
+++++_ Manages
++++++ authenticated Session
+++++_ Injects identity information into HTTP headers
++++_ configured
+++++_ ARM settings
++++++_ Config file
+
++ Authentication Flow
+--_ Without provider SDK
+---_ Server-directed flow
+---_ Present the provider's login page to the user
+++_ With provider SDK
++++_ Client-directed flow
++++_ App code manages sign-in process
+
+@endmindmap

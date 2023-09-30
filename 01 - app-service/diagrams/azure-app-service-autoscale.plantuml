@@ -1,0 +1,50 @@
+@startmindmap "App Service Autoscale"
+
+caption App Service Autoscale Overview
+title App Service Autoscale Overview
+
+center footer App Service Autoscale as mapped out in AZ-204
+
++[#lightgreen] Autoscale
+++[#lightgreen] Scales out/in
++++_ Adding or removing nodes (VMs)
++++[#lightgreen] Instance Limit
+++++_ to prevent run away scaling
+++[#lightgreen] Scale options
++++[#lightgreen] By Metric
+++++_ length of queue
+++++_ no. of HTTP requests
++++[#lightgreen] By Schedule
+++++_ Scale to specific instant count
++++_ Allows combinations
++++[#lightgreen] Rules
+++++_ based on conditions
+++++[#lightgreen] Metrics
++++++_ CPU %
++++++_ Memory %
++++++[#lightgreen] length
+++++++_ Disk Queue
+++++++_ Http Queue Length
++++++[#lightgreen] Data
+++++++_ in
+++++++_ out
+++++_ default condition used if no other applicable
+
++[#lightblue] Autoscale
+++_ analyzes trends over time
+++_ Aggregates values across
++++[#lightblue] Time grain
+++++_ typically 1 min
+++++_ Aggregated again by\nLonger user specified period
++++++[#lightblue] Duration
+++++++_ Minimum 5 min
+++++++_ Autoscale!
++++[#lightblue] Cool down period
+++++_ Minimum 5 min
+++_ Define in
++++[#lightblue] Pairs
+++++_ scale out
++++++[#lightblue] if any
+++++_ scale in
++++++[#lightblue] if all
+@endmindmap

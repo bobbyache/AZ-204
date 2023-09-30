@@ -1,22 +1,31 @@
 @startmindmap
 
-* Managed Identities
-** System-assigned managed identities
-*** Enabled on Azure resources
-*** Shared lifecycle with the resource
-*** Single association with an Azure resource
-** User-assigned managed identities
-*** Created as standalone Azure resources
-*** Independent lifecycle management
-*** Multiple associations with Azure resources
-** Granting access using managed identities
-*** VMs
-*** App Services
-*** Functions
-*** Container Instances
-*** Azure Storage
-*** Azure Kubernetes Service
-** Purpose of managed identities for Azure resources
-*** Authentication to services supporting Azure AD authentication
++ Managed Identities
+++ System-assigned managed identities
++++_ Enabled on Azure resources
++++_ Shared lifecycle with the resource
++++_ Single association with an Azure resource
++++_ create requires\nrole
+++++ Virtual Machine Contributor
+++ User-assigned managed identities
++++_ Created as standalone Azure resources
++++_ Independent lifecycle management
++++_ Multiple associations with Azure resources
++++_ create requires\nrole
+++++ Virtual Machine Contributor
+++++ Managed Identity Operator
+++ Grant access to...
++++_ VMs
++++_ App Services
++++_ Functions
++++_ Container Instances
++++_ Azure Storage
++++_ Azure Kubernetes Service
++++ When
+++++_ During or after creation of resource (VM, ...)
+++_ To create
++++ System Assigned
+++ Purpose
++++_ Authentication to services supporting Azure AD authentication
 
 @endmindmap

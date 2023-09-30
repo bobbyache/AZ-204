@@ -1,0 +1,44 @@
+@startmindmap "API Management"
+
++ Policy Expressions
+++[#lightgreen] Apply changes to both inbound request and outbound response
+++ can be
++++_ single C# statement **@(<i>expression</i>)**
++++_ single C# code block **@{<i>expression</i>}**
+++_ access to **context** variable
+++ Structure
++++ Inbound
+++++_ <base>
+++++_ set-header
+++++_ <find-and-replace from="a" to="b" />
++++ Backend
++++ Outbound
++++ On-Error
+++++_ Errors occuring in preceding sections jump directly here.
+++++_ **context.LastError**
+++++_ Inspect and customize response with **set-body** policy
+++ Scopes
+++ Filters
++++_ <when condition="">\n   <choose></choose>\n</condition>
+
+++ Advanced
++++ Control Flow
+++++_ Conditionally applies policy statements based on the results of the evaluation of Boolean expressions
+++++_ <choose>\n    <when></when>\n    <otherwise></otherwise>\n</choose>
++++ Forward request
+++++_ <forward-request timeout="time in seconds" follow-redirects="true | false"/>
++++ Limit concurrency
+++++_ <limit-concurrency key="expression" max-count="number">\n    ...\n</limit-concurrency>
+++++_ Upon exceeding that number, new requests will fail immediately with a\n   **429** Too Many Requests status code
++++ Log to Event Hub
++++ Mock response
+++++_ Mock APIs and operations
+++++_ <mock-response status-code="code" content-type="media type"/>
++++ Retry
+++++_ Executes and retries until retry condition is false
++++ Return response
+++++_ Aborts pipeline execution and returns either a default or custom response
+++++_ Default response is 200 OK with no body
+
+
+@endmindmap

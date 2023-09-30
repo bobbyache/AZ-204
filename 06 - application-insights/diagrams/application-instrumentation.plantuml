@@ -1,0 +1,42 @@
+@startmindmap "Application Instrumentation"
+
+'https://youtu.be/CdcApjTBLEM
+
++ Application Instrumentation
+
+++ Logging
++++_ Recording stuff
++++ What happened?
+++++_ Errors and warnings and state changes
+++++_ Important state changes
+++++_ Always logged
+
+++_ **Keep logging and tracing seperate !!!**
+
+++ Tracing
++++_ Following stuff...
++++ How did that happen?
+++++_ Circumstantial data for following flow
+++++_ Available on request
+++++_ Publish/subscribe model mostly
+++++_ High volume
+
+-- Metrics
+---_ Numbers
+---_ How much is happening?
+----_ Information indicating status
+----_ Suitable for aggregation and trends
+
+-- Health
+---_ How are we doing?
+---_ Information indicating health status
+---_ Internally determined by component
+
+++ Audit
++++_ Who made it happen?
+++++_ Data regarding actions performed by someone
+++++_ Always
+++++_ Security and Identity
+++++_ Proof for non-repudiability
+
+@endmindmap

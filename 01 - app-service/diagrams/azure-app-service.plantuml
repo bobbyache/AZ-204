@@ -1,94 +1,44 @@
-@startmindmap
+@startmindmap "App Service"
 
-'Icons https://plantuml.com/sprite
+caption App Service Overview
+title App Service Overview
 
-caption The Azure Landscape
-title The Azure Landscape (AZ-204)
+center footer App Service as mapped out in AZ-204
 
-center footer The Azure landscape as mapped out in AZ-204
++ Azure App Service
+++ Hosting Options
++++ Web Apps
+++++_ for hosting web applications
++++ Mobile Apps
+++++_ for mobile applications on iOS and Android
++++ API Apps
+++++_ for building RESTful APIs
++++ Function Apps
+++++_ for serverless applications with Azure Functions
 
-!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
-!include osaPuml/Common.puml
-!include osaPuml/User/all.puml
-!include osaPuml/Hardware/all.puml
-!include osaPuml/Misc/all.puml
-!include osaPuml/Server/all.puml
-!include osaPuml/Site/all.puml
++ Scaling
+++ Scale up/down
++++_ resources = no. of cores and RAM available
++++_ Change pricing tier of plan
+++ Scale out/in
++++_ Increase or decrease no. of machine (host) instances
 
-<style>
++ Deployment
+++ Deployment Slots
++++_ Standard service plan and above
++++_ Live apps with own host names
++++_ Allows for swapping
+++ Continuous integration
++++_ Auto-sync code and any future changes
 
-    mindMapDiagram {
-        
-        LineColor lightblue
-        RoundCorner 5
-        BackgroundColor white
-        Shadowing 2.0
++ Linux and containers
+++ Support languages
++++_ Node.js, Java, PHP, Python, Ruby
++++_ **or** deploy as custom container
++++_ **az webapp list-runtimes --os-type linux**
++++ Limitations
+++++_ Not supported on Shared Tier
+++++_ Some features not available to Linux Apps
+++++_ Storage volumes have higher disk latency
 
-        ' rootNode {
-        '     LineColor white
-        '     BackgroundColor white
-        ' }
-
-        node {
-            LineColor blue
-            BackgroundColor lightblue
-        }
-        :depth(0) {
-            LineColor white
-            BackgroundColor white
-            Shadowing 0.0
-        }
-        :depth(1) {
-            FontColor blue
-            BackgroundColor white
-        }
-
-        arrow {
-            LineStyle 4
-            LineThickness 0.5
-            LineColor green
-        }
-
-        boxless {
-            FontColor black
-            Margin 10
-            Padding 10
-            MaximumWidth 400
-        }
-    }
-</style>
-
-* Azure App Service
-** Cloud-based platform for building, deploying, and scaling web and mobile applications
-*** Supports programming languages: .NET, Node.js, Java, PHP
-*** Supports platforms: Windows, Linux, Docker containers
-*** Offers automatic scaling, load balancing, and high availability
-** Hosting Options
-*** Web Apps for hosting web applications
-*** Mobile Apps for mobile applications on iOS and Android
-*** API Apps for building RESTful APIs
-*** Function Apps for serverless applications with Azure Functions
-** Integration with Other Azure Services
-*** Virtual Machines
-*** SQL Database
-*** Active Directory
-** Azure DevOps for automation and application updates
-** App Service Plan
-*** Defines compute resources for effective app execution
-*** Multiple apps can share resources within a plan
-**** Operating system choice (Windows or Linux)
-**** Region for resource location
-**** Number and size of VM instances
-**** Pricing tier selection
-** Pricing Tiers
-*** Shared Compute (Free and Shared)
-**** Multiple apps run on the same Azure VM
-**** Allocated CPU quotas per app
-**** No support for scaling out
-*** Dedicated Compute (Basic, Standard, Premium, PremiumV2, PremiumV3)
-**** Apps run on dedicated Azure VMs
-**** Scaling capabilities based on tier
-*** Isolated Compute (Isolated, IsolatedV2)
-**** Compute and network isolation for apps
-**** Maximum scale-out capabilities
 @endmindmap

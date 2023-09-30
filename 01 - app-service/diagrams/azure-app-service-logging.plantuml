@@ -1,0 +1,49 @@
+@startmindmap "App Service Diagnostic Logging"
+
+caption App Service Diagnostic Logging Overview
+title App Service Diagnostic Logging Overview
+
+center footer App Service Diagnostic Logging as mapped out in AZ-204
+
+- Linux
+--_ supported by
+---_ Application logging
+---_ Deployment logging
+
++ App Service File System (Windows)
+++_ Is for temporary storage which turns off after 12 hours
+++_ Used for temporary debugging purposes
+
+- Azure Blob Storage
+++_ Long term logging storage
+--_ can write to
+---_ Application logging
+---_ Web Server logging
+
++ Logging
+-- Application logging
+---_ Logs from application **code** or framework
+---_ Categories: Critical, Error, Warning, Info, Debug, Trace
+-- Web Server logging
+---_ HTTP **request** data
+---_ such as
+----_ method
+----_ resource URI
+----_ client IP and port
+----_ user agent
+----_ response code
+----_ ...
+
+++ Detailed error logging
++++_ Copies of HTML error **pages**
++++_ HTTP code 400 or greater
+++ Failed request tracing
++++_ Detailed trace of IIS components, time taken...
++++_ Folder per request
+++++_ XML log file
+++++_ XSL stylesheet
+++ Deployment logging
++++_ Why did the deployment fail?
++++_ No configurable settings
+
+@endmindmap

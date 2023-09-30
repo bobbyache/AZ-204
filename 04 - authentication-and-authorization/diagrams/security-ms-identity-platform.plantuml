@@ -43,10 +43,12 @@
 
 +_ Consent Types
 ++_ 3 types
-+++_ Static user consent - requires all permissions up front
-+++_ Incremental and dynamic
++++ Static user
+++++_ requires all permissions up front
++++ Incremental and dynamic
 ++++_ Ask for minimal set up front, request more over time\n   in scopes parameter.
 ++++_ Only applies to delegated permissions
-+++_ Required for elevated permissions (scopes) and background services (daemons)
-+++_ Still requires static permission entries in the app registration
++++ Admin
+++++_ Required for elevated permissions (scopes) and background services (daemons)
+++++_ Still requires static permission entries in the app registration
 @endmindmap

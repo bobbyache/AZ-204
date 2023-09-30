@@ -1,0 +1,195 @@
+@startmindmap "Landscape"
+
+'Icons https://plantuml.com/sprite
+
+caption The Azure Landscape
+title The Azure Landscape (AZ-204)
+
+center footer The Azure landscape as mapped out in AZ-204
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+<style>
+
+    mindMapDiagram {
+        
+        LineColor lightblue
+        RoundCorner 5
+        BackgroundColor white
+        Shadowing 2.0
+
+        ' rootNode {
+        '     LineColor white
+        '     BackgroundColor white
+        ' }
+
+        node {
+            LineColor blue
+            BackgroundColor lightblue
+        }
+        :depth(0) {
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor blue
+            BackgroundColor white
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
++ <$osa_cloud,scale=1.5>
+
+-- <$osa_lifecycle,scale=0.5> Message-based
+
+--- Service Bus
+----_ Integrate application components using multiple communication protocols, data contracts, trust domains
+
+--- Queue Storage
+----_ Part of the Azure Storage infrastructure.
+----_ Store large numbers of messages.
+----_ Create a backlog of work to process asynchronously.
+
+-- <$osa_lightning,scale=0.5> Event-based
+
+--- Event Grid
+----_ A low cost, lightweight serverless event broker.
+----_ Easily build event-based architectures.
+----_ 24 hour event retry reliability
+--- Event Hubs
+----_ Front door for an event pipeline (event ingestor).
+----_ High-throughput data streaming and pub/sub messaging, multiple consumers.
+----_ Big data streaming platform. Receive and process millions of events per second.
+
+++ <$osa_server_file,scale=0.5> Caching
+
++++ Azure Cache for Redis **Backend Caching**
+++++_ In-memory data store improved performance and scalability
+
++++ Azure CDN **Frontend Caching**
+++++_ Distributed network of (edge) servers store cached content in point-of-presence(POP) locations close to end users to minimize latency.
+++++_ Store session data, cached HTML or JSON, job or message queueing systems, in front of a database or storage account
+++++_ Aside-cache pattern
+
+++ <$osa_firewall,scale=0.5> Containerization
+
++++ Azure Container Registry (ACR)
+++++_ Registry for Docker images.
+++++_ Deployment targets
++++++_ Scalable orchestration systems Kubernetes, DC/OS, and Docker Swarm
++++++_ Azure services Azure Kubernetes Service (AKS), App Service, Batch, Service Fabric, and others
+++++_ Push to ACR as part of a container development workflow
+++++ Azure Container Registry Tasks
++++++_ Schedule, automate, trigger a container image builds, multi-step tasks based on source code updates, base image updates, or by scheduling tasks.
++++ Azure Container Instances (ACI)
+++++_ Simple solutions that can run in isolated containers
+++++_ Simple applications, task automation, and build jobs
++++ Azure Container Apps
+++++_ Alternative to Docker swarm or Docker compose
+++++_ Light-weight orchestration
+++++_ Run microservices, containerized apps on a serverless platform
+++++_ Runs on top of Azure Kubernetes Service
+++++_ Deploy API endpoints, do background and event driven processing
+
+++++ Azure Container Apps Environment
++++++_ Secure boundary around multiple Container Apps
++++++_ Container Apps deployed to same virtual network
++++++_ Write logs to same Log Analytics workspace
+
+-- <$osa_padlock,scale=0.5> Security
+
+--- Microsoft Identity Platform
+----_ Authentication service, open-source libraries, and application management tools.
+----_ Build applications for users and customers - sign-in to using Microsoft identities or social accounts
+----_ Provide authorized access to APIs or Microsoft APIs.
+----_ Developers - Passwordless authentication, Step-up authentication, and Conditional access
+
+--- Microsoft Authentication Library (MSAL)
+----_ Acquire tokens from the MS Identity Platform
+----_ Authenticate users and access secured Web APIs.
+----_ Consistent API for many platforms.
+----_ .NET, JavaScript, Java, Python, Android, and iOS
+
+--- Secure Access Signatures (SAS)
+----_ Signed URI (with token) - authorize access to storage resources
+---- Stored Access Policies
+-----_ Extra level of control
+-----_ Service-level shared access signatures (SAS)
+-----_ Change the start time, expiry time, or permissions or revoke after issue
+
+--- Microsoft Graph
+----_ Build apps to interact with millions of users.
+----_ A unified programmability model to access data in Microsoft 365, ...
+
+--- Azure Key Vaults
+----_ Types
+----- Vaults
+------_ Store software, HSM-backed keys, secrets, and certificates
+----- Managed HSM Pools
+------_ HSM Backed Keys
+----_ Store secrets: API keys, passwords, certificates, or cryptographic keys
+
+--- Managed Identities
+----_ Automatically managed identity in AAD
+----_ Eliminate need for developers to manage credentials.
+----_ Types
+-----_ System assigned
+-----_ User assigned
+
+-- <$osa_site_head_office,scale=0.5> API Management
+---_ Successful API program - developer engagement, business insights, analytics, security, and protection.
+---_ Developers subscribe, use the API, subject to usage policies.
+---_ Components
+---- API Gateway
+-----_ Reverse proxy routing requests to clients and services.
+-----_ Enforce quotas and rate limits.
+-----_ Verifies API keys.Logs and metrics.
+-----_ Request transformation.
+---- Management Plane\n(Azure API Management)
+-----_ Administrative interface
+-----_ Policies to change the behavior of the API through configuration.
+---- Developer Portal
+-----_ Generated, customizable website
+------_ API documentation
+------_ Interactive console
+------_ API key management and usage analytics.
+
+++ <$osa_padlock,scale=0.5> Monitoring
++++ Azure Monitor
+++++_ Azure Monitor is a cloud-based monitoring service by Microsoft Azure that collects and analyzes data from various sources to provide insights into the performance and health of applications, infrastructure, and services.
++++ Application Insights
+++++_ Application Insights is an extension of Azure Monitor and provides Application Performance Monitoring (also known as “APM”) features
+++++_ APM tools are useful to monitor applications from development, through test, and into production
++++ Azure Log Analytics
+++++_ A service that collects and analyzes log and performance data from various sources, offering advanced querying capabilities and insights for troubleshooting and monitoring.
+
+++ <$osa_media_flash,scale=0.5> Web Solutions
++++ App Service
+++++_ PaaS
+++++_ Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends.
+++++ Deployment slots
++++++_ Deployment slots are live apps with their own host names.
++++++_ App content and configurations elements can be swapped between two deployment slots, including the production slot.
+
+
+@endmindmap 
