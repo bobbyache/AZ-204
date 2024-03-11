@@ -1,30 +1,52 @@
 # Build a container registry
 
 - [Build and run a container registry](https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-azure-container-registry/6-build-run-image-azure-container-registry)
-
+- [Building and Running Container Images with ACR, ACI and the Azure CLI](https://markheath.net/post/build-container-images-with-acr)
 
 ```bash
-az group create --name robazresourcegroup1 --location eastus
-az acr create --resource-group robazresourcegroup1 --name robazcontainerregistry1 --sku Basic
+az group create --name robazresourcegroup --location eastus
+az acr create --resource-group robazresourcegroup --name robazcontainerregistry --sku Basic
 
 cd /c/code/azure
 mkdir container-docker-file
 cd container-docker-file/
 
+# Create a simple docker file
 echo FROM mcr.microsoft.com/hello-world > Dockerfile
 cat Dockerfile
 
-az acr build --image sample/hello-world:v1 --registry robazcontainerregistry1 --file Dockerfile .
+az acr build --image sample/hello-world:v1 --registry robazcontainerregistry --file Dockerfile .
 
-az acr repository list --name robazcontainerregistry1 --output table
+az acr repository list --name robazcontainerregistry --output table
 
-az acr repository show-tags --name robazcontainerregistry1 --repository sample/hello-world --output table
+az acr repository show-tags --name robazcontainerregistry --repository sample/hello-world --output table
 
-az acr run --registry robazcontainerregistry1 --cmd '$Registry/sample/hello-world:v1' /dev/null
+# to get what you need for --cmd
+az acr list
+
+# example uses $Registry to specify the registry where you run the command
+# When your using /dev/null it's a place where output goes to die. With the command > /dev/null it tells the program to direct any output to this so it doesn't come up on the screen
+# Can't seem to get this to work...
+az acr run --registry robazcontainerregistry --cmd 'robazcontainerregistry.azurecr.io/sample/hello-world:v1' /dev/null
 ```
 
-# Deploy a container instance
 
+- [Exercize - Deploy a container instance by using Azure CLI](https://learn.microsoft.com/en-us/training/modules/create-run-container-images-azure-container-instances/3-run-azure-container-instances-cloud-shell)
+
+# Deploy a container instance
+### Legacy
+
+This specific example is [sourced from this video location](https://youtu.be/qMzYRyHKydA?t=1096). It uses `docker compose` and is being retired. Show for information purposes only...
+```bash
+docker login azure
+# Must create a context to link docker compose to azure
+docker context create aci robazacicontext
+docker context use robazacicontext
+# Now can use docker compose
+docker compose up
+```
+
+### Relevant
 - [Deploy a container instance by using the Azure CLI](https://learn.microsoft.com/en-us/training/modules/create-run-container-images-azure-container-instances/3-run-azure-container-instances-cloud-shell)
 
 ```bash
@@ -38,6 +60,27 @@ az container show --resource-group robazresourcegroup --name $DNS_NAME_LABEL --q
 curl robazcoolwebapp.eastus.azurecontainer.io
 
 az group delete --name robazresourcegroup --no-wait
+```
+
+# Build and Deploy Using Docker
+- [Source](https://youtu.be/qMzYRyHKydA?t=976)
+- [Node Sample Web App available here](https://github.com/Azure-Samples/acr-build-helloworld-node)
+- Go to Settings -> Access keys. You'll see the login server and when Admin user is checked, the Username and two possible passwords will be shown.
+
+```bash
+# Build the image
+cd /c/Code/azure/acr/acr-build-helloworld-node
+docker build -t robazcontainerregistry.azurecr.io/acr-helloworld .
+
+# Run it locally to test
+docker run -d -p 8080:80 robazcontainerregistry.azurecr.io/acr-helloworld
+
+# Login to your ACR.
+# More secure to use --password-stdin
+docker login robazcontainerregistry.azurecr.io --username robazcontainerregistry --password CLBBAuBy7e/RXL/J2NbHaBdeH4bzg...
+
+# Push image up to the registry
+docker push robazcontainerregistry.azurecr.io/acr-helloworld
 ```
 
 # Environment Variables and Restart Values
