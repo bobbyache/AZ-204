@@ -131,10 +131,6 @@
 - [Explore authentication and authorization in App Service](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-app-service/5-authentication-authorization-app-service)
 - [Discover App Service networking features](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-app-service/6-network-features)
 
-### Functions
-
-- [Source for C# Function Code](https://learn.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library?tabs=v4%2Ccmd#functions-class-library-project)
-
 ### API Management
 
 - [Secure APIs using certificates](https://learn.microsoft.com/en-us/training/modules/explore-api-management/7-secure-access-api-certificates)

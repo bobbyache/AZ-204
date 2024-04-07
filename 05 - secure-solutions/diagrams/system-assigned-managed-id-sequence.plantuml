@@ -1,0 +1,57 @@
+@startuml "System-assigned Managed Identity"
+title System-assigned managed identity
+
+actor User as user
+control "Azure Resource Manager" as arm
+entity "Client Resource" as client
+boundary "Microsoft Entra ID" as idprovider
+entity "System-assigned Managed Identity" as id
+actor "Azure Instance Metadata Service" as metadata
+entity "Resource Service" as resource
+
+
+user -> arm: please create new resource
+arm -> client: creates a new resource
+arm <- client: new resource
+arm -> idprovider: creates a new system-managed identity
+idprovider -> id: create
+id -> idprovider: new system-managed identity
+idprovider -> arm: new system-managed identity
+
+'Fix: can only do this by using Azure Instance Metadata, see Point 3
+'https://learn.microsoft.com/en-us/training/modules/implement-managed-identities/3-managed-identities-auzre-virtual-machines
+arm -> metadata: configure and assign new serivce principal and certificate (using endpoint)
+user -> arm: use RBAC...
+arm -> idprovider: assign the appropriate role to service principal
+
+
+
+
+' actor User as Alice
+' boundary "CDN Server" as CDN
+' boundary "POP Server" as POP
+' boundary "Edge Server" as edge
+' boundary "Origin Server" as Origin
+
+' Alice -> CDN: Request File (URL)\n<endpoint name>.azureedge.net
+' CDN -> POP: Route request to POP
+' note over CDN
+' Find best performing/closest
+' end note
+
+' loop for each edge server
+'     POP -> edge: Check cache for file
+'     edge -> edge: Check cache for file
+'     alt File in cache
+'         edge -> Alice: Return file from cache
+
+'     else file NOT in cache
+'         POP -> Origin: Request file
+'         Origin -> POP: Return file
+'         POP -> edge: Cache file
+'         POP -> Alice: Return file
+'     end
+' end
+
+
+@enduml

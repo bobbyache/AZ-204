@@ -32,21 +32,6 @@
 
 - [Lab 11: Monitor services that are deployed to Azure](https://microsoftlearning.github.io/AZ-204-DevelopingSolutionsforMicrosoftAzure/Instructions/Labs/AZ-204_lab_11.html)
 
-## Functions
-
-**Full Labs**
-
-- [Exercise: Create an Azure Function by using Visual Studio Code](https://learn.microsoft.com/en-us/training/modules/develop-azure-functions/5-create-function-visual-studio-code)
-- [Lab 02: Implement task processing logic by using Azure Functions](https://microsoftlearning.github.io/AZ-204-DevelopingSolutionsforMicrosoftAzure/Instructions/Labs/AZ-204_lab_02.html)
-- [Quickstart: Create a C# function in Azure using Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-csharp)
-- [Connect Azure Functions to Azure Cosmos DB using Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/functions-add-output-binding-cosmos-db-vs-code?pivots%3Dprogramming-language-csharp%26tabs%3Disolated-process%2Cv1)
-- [Connect Azure Functions to Azure Storage using Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code?pivots%3Dprogramming-language-csharp%26tabs%3Disolated-process%2Cv1)
-
-**Other Practicals**
-
-- [Create triggers and bindings](https://learn.microsoft.com/en-us/training/modules/develop-azure-functions/3-create-triggers-bindings)
-
-
 ## Containers
 
 **Full Labs**
