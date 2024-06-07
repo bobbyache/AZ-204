@@ -1,40 +1,180 @@
 @startmindmap "Azure App Configuration"
+
+title Azure App Configuration
+
+' caption .......
+' footer ...
+
+
+' List of available themes:
+' https://plantuml.com/theme
+' !theme sketchy
+'!theme carbon-gray
+'!theme cyborg
+'!theme mars
+' skinparam backgroundColor #e8edec
+
+skinparam backgroundColor #969998
+
+<style>
+    mindMapDiagram {
+        .root {
+            BackgroundColor darkblue
+            LineColor black
+            FontColor white
+        }
+
+        .blue {
+            FontColor darkblue
+        }
+
+
+        node {
+            FontColor white
+            LineColor black
+            BackgroundColor black
+            Shadowing 2.0
+            RoundCorner 25
+        }
+        :depth(0) {
+            FontColor black
+            LineColor white
+            BackgroundColor white
+            Shadowing 0.0
+        }
+        :depth(1) {
+            FontColor black
+            BackgroundColor darkgrey
+            Shadowing 2.0
+        }
+
+        arrow {
+            LineStyle 4
+            LineThickness 0.5
+            LineColor green
+        }
+
+        boxless {
+            FontColor black
+            Margin 10
+            Padding 10
+            MaximumWidth 400
+        }
+    }
+</style>
+
++ Benefits
+++_ Fully managed service
++++ Centralize
+++++_ management and distribution of
++++++ hierarchical configuration
+++++_ for different environments and geographies
+
+++_ Flexible key creations and mappings
+++_ Tag with
++++ Labels
+++_ Dedicated UI for
++++ Feature flag management
+++_ Point in time replay of settings
+++ Security 
++++ Encryption
+++++_ of sensitive information at rest and in transit
++++_ Enhanced security through
+++++ Azure Managed Identities
+-- Compare
+---_ two sets of configuration\n\ton custom-defined dimensions
+--_ Native integration\n\twith popular frameworks
+--- .NET
+----_ **Microsoft.Extensions.Configuration.AzureAppConfiguration**
+--- Java
+--- JavaScript/Node
+--- Python
+
 + App Configuration
 
-++ Benefits
-+++_ Fully managed service
-+++_ Flexible key creations and mappings
-+++_ Tagging with labels
-+++_ Dedicated UI for feature flag management
-+++_ Point in time replay of settings
-+++ Security 
-++++_ Encryption of sensitive information at rest and in transit
-++++_ Enhanced security through Azure Managed Identities
 ++ Storing Information
-+++_ Query key values that match a pattern (Key + Label)
++++ Query
+++++_ key values that match a pattern
++++++ (Key + Label)
 +++_ Hierarchical delimited with : or /
-+++_ Keys are case sensitive
++++_ Keys are unicode strings that are case sensitive
 +++_ Reserved chars (*,\) are escaped with \.
 +++_ Full single config setting content limited to 10,000 chars
-++++ Example Structure
+++++ Hierarchical Structure
 +++++_ Based on component services:\n   **AppName:Service1:ApiEndpoint**
 +++++_ Based on deployment regions:\n   **AppName:Region1:DbEndpoint**
++++++ Benefits
+++++++_ Easier to
++++++++_ read
++++++++_ manage
++++++++_ use
+
 +++ Labels
 ++++_ Optional and default to null (or empty)
 ++++_ Commonly usage
 +++++_ Specify multi environments\n  **Key = AppName:DbEndpoint: & Label = Production**
 +++++_ Create multiple versions\n  Git commit ID or App version number
 
-++ Feature management
-+++_ Turn on and off features
-+++_ Requires client support ie. .NET **Microsoft.FeatureManagement**
-+++_ Can be configured in the resource and supported by appSettings.json
+-- Feature management
+---_ Components
+---- Feature Flag
+-----_ on/off toggle
+---- Feature Manager
+-----_ application package handles feature
+------_ life-cycle
+------_ caching
+------_ state updates
+---- Filter
+-----_ Evaluation rules
+------_ by user group
+------_ by device or browse type
+------_ by geographic window location
+------_ by time window
+---_ Turn on and off features
+---_ Requires client support ie. .NET **Microsoft.FeatureManagement**
+---_ Can be configured in the resource and supported by appSettings.json
+---_ Should be externalized
+----_ Decoupled from deployment process
+----_ Centralized repository
 
-++ Secure access
-+++ Customer-managed keys
-++++_ Alternative to standard Microsoft Managed Key
-++++_ Requires managed identity with access to a specially configured Key Vault\n  containing the wrapped access key
-+++ Private endpoints
-++++_ Clients connect over private virtual network (VNET)
++ Secure access
+++ Customer-managed keys
++++_ Alternative to standard Microsoft Managed Key
++++_ Requires
+++++ Standard Tier
++++++_ for the app configuration service
+++++ Managed identity
++++++_ assigned to the app configuration service
+++++ Key Vault
++++++ Access Policy
+++++++_ grant
++++++++_ GET
++++++++_ WRAP
++++++++_ UNWRAP
++++++_ specially configured
+++++++_ enabled
++++++++_ soft delete
++++++++_ purge protection
+++++++ Key
++++++++_ RSA or RSA-HSM
++++++++_ enabled (not expired)
++++++++_ wrap and unwrap capabilities enabled
+-- Managed Identities
+---_ **az identity create**
+--- System-assigned
+----_ One only
+----_ Lifecycle tied to resource
+--- User-assigned
+----_ Standalone
+----_ Multiple allowed
+-- Private endpoints
+---_ Clients connect over private virtual network (VNET)
+
+legend right
+Azure App Configuration provides a service to centrally manage
+application settings and feature flags.
+
+App Configuration complements (is not a replacement for) Key Vault
+endlegend
 
 @endmindmap

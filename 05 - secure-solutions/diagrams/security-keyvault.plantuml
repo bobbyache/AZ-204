@@ -11,7 +11,7 @@
 
 ++ Benefits
 +++_ Centralized application secrets
-+++_ Securely stores secrets + keys (AAD)
++++_ Securely stores secrets + keys (Microsoft Entra ID)
 ++++_ RBAC - vault management
 ++++_ Key Vault access policy\n(stored access policy)\n - vault access
 +++_ Simplified administration of secrets
@@ -37,7 +37,7 @@
 ++++_ Backup (on update/delete/create)
 ++++_ Recovery options - soft delete and purge options
 ++++_ Turn on logging
-++ Authenticate with AAD
+++ Authenticate with\nMicrosoft Entra ID
 +++_ Managed Identity recommended
 +++_ Otherwise, register w/ AD tenant\napplication object identifies across tenants
 +++ Options
